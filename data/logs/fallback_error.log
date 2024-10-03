@@ -1,5 +1,0 @@
-2024/10/01 15:20:58 [alert] 205#205: 512 worker_connections are not enough
-2024/10/01 15:20:58 [error] 205#205: *579 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "198.211.106.234"
-2024/10/01 15:20:58 [error] 205#205: *581 open() "/var/www/html/robots.txt" failed (2: No such file or directory), client: 101.36.114.198, server: localhost-nginx-proxy-manager, request: "GET /robots.txt HTTP/1.1", host: "198.211.106.234"
-2024/10/01 15:20:58 [error] 205#205: *582 open() "/var/www/html/sitemap.xml" failed (2: No such file or directory), client: 101.36.114.198, server: localhost-nginx-proxy-manager, request: "GET /sitemap.xml HTTP/1.1", host: "198.211.106.234"
-2024/10/01 15:20:59 [error] 205#205: *583 open() "/var/www/html/config.json" failed (2: No such file or directory), client: 101.36.114.198, server: localhost-nginx-proxy-manager, request: "GET /config.json HTTP/1.1", host: "198.211.106.234"

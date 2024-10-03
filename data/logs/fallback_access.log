@@ -1,7 +1,0 @@
-[01/Oct/2024:15:18:16 +0000] 200 - GET http 198.211.106.234 "/" [Client 45.156.129.57] [Length 568] [Gzip 1.86] "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36" "-"
-[01/Oct/2024:15:20:29 +0000] 400 - - http localhost-nginx-proxy-manager "-" [Client 101.36.114.198] [Length 154] [Gzip -] "-" "-"
-[01/Oct/2024:15:20:39 +0000] 200 - GET http 198.211.106.234 "/" [Client 101.36.114.198] [Length 1033] [Gzip -] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" "-"
-[01/Oct/2024:15:20:58 +0000] 404 - GET http 198.211.106.234 "/robots.txt" [Client 101.36.114.198] [Length 183] [Gzip 3.21] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11" "-"
-[01/Oct/2024:15:20:58 +0000] 404 - GET http 198.211.106.234 "/sitemap.xml" [Client 101.36.114.198] [Length 183] [Gzip 3.21] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11" "-"
-[01/Oct/2024:15:20:59 +0000] 404 - GET http 198.211.106.234 "/config.json" [Client 101.36.114.198] [Length 183] [Gzip 3.21] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11" "-"
-[01/Oct/2024:15:25:04 +0000] 400 - GET http localhost-nginx-proxy-manager "/" [Client 112.46.217.71] [Length 154] [Gzip -] "-" "-"
