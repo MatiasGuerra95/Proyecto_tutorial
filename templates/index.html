@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Lista de Trabajadores{% endblock %}
+{% block content %}
+<h1>Trabajadores</h1>
+<ul>
+    {% for worker in workers %}
+    <li>{{ worker.name }}
+        <ul>
+            {% for contract in worker.contracts %}
+            <li>{{ contract.details }}</li>
+            {% else %}
+            <li>Sin contratos</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
