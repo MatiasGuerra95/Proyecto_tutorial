@@ -10,3 +10,7 @@ class ContractForm(FlaskForm):
     details = StringField('Detalles del Contrato', validators=[DataRequired()])
     worker_id = SelectField('Trabajador', coerce=int, validators=[DataRequired()])
     submit = SubmitField('Agregar Contrato')
+
+class AfpForm(FlaskForm):
+    name = StringField('Nombre de la AFP', validators=[DataRequired()])
+    submit = SubmitField('Agregar AFP')

@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from forms import WorkerForm, ContractForm
-from models import db, Worker, Contract
+from forms import WorkerForm, ContractForm, AfpForm
+from models import db, Worker, Contract, Afp
 import time
 from sqlalchemy.exc import OperationalError
 
@@ -53,6 +53,16 @@ def add_contract():
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('add_contract.html', form=form)
+
+@app.route('/add_afp', methods=['GET', 'POST'])
+def add_afp():
+    form = AfpForm()
+    if form.validate_on_submit():
+        new_afp = Afp(name=form.name.data)
+        db.session.add(new_afp)
+        db.session.commit()
+        return redirect(url_for('index'))
+    return render_template('add_afp.html', form=form)
 
 if __name__ == '__main__':
     wait_for_db()
