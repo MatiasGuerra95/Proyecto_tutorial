@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Gestión de Trabajadores y Contratos{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Inicio</a> |
+        <a href="{{ url_for('add_worker') }}">Agregar Trabajador</a> |
+        <a href="{{ url_for('add_contract') }}">Agregar Contrato</a>
+        <a href="{{ url_for('add_afp') }}">Agregar AFP</a>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>

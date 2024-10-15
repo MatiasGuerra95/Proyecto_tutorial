@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Agregar Trabajador{% endblock %}
+{% block content %}
+<h1>Agregar Trabajador</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.name.label }}<br>
+        {{ form.name(size=32) }}
+    </p>
+    <p>
+        {{ form.afp_id.label }}<br>
+        {{ form.afp_id() }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+{% endblock %}
