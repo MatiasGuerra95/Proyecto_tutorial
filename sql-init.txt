@@ -2,7 +2,7 @@ docker exec -it postgres_db psql -U postgres -d mydb
 
 CREATE TABLE contracts( id SERIAL PRIMARY KEY, details VARCHAR(200) NOT NULL,worker_id INTEGER NOT NULL, CONSTRAINT fk_worker FOREIGN KEY(worker_id) REFERENCES workers(id) ON DELETE CASCADE );
 
-CREATE TABLE workers ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );
+CREATE TABLE workers ( id SERIAL PRIMARY KEY, rut VARCHAR(10) NOT NULL, name VARCHAR(100) NOT NULL, apellidop VARCHAR(100) NOT NULL, apellidom VARCHAR(100), email VARCHAR(100) NOT NULL, fecha_nacimiento DATE NOT NULL, direccion_comuna_id INTEGER REFERENCES direccion_comuna(id), direccion_calle VARCHAR(100), direccion_numero VARCHAR(100), direccion_dpto VARCHAR(100), banco_id INTEGER REFERENCES banco(id), banco_cuenta_tipo_id INTEGER REFERENCES banco_tipo_cuenta(id), banco_cuenta_numero VARCHAR(100), afp_id INTEGER REFERENCES afp(id), pais_id INTEGER REFERENCES pais(id), prev_salud_id INTEGER REFERENCES prev_salud(id) );
 
 CREATE TABLE afp ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );
 
@@ -15,3 +15,5 @@ CREATE TABLE banco_tipo_cuenta ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NU
 CREATE TABLE pais ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );
 
 CREATE TABLE prev_salud ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );
+
+CREATE TABLE rut ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );

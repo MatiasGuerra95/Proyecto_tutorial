@@ -6,26 +6,28 @@ class Worker(db.Model):
     __tablename__ = 'workers'
     id = db.Column(db.Integer, primary_key=True)
     rut = db.Column(db.String(10), nullable=False)
-    nombres = db.Column(db.String(100), nullable=False)
-    apellidoP = db.Column(db.String(100), nullable=False)
-    apellidoM = db.Column(db.String(100), nullable=True)
+    name = db.Column(db.String(100), nullable=False)
+    apellidop = db.Column(db.String(100), nullable=False)
+    apellidom = db.Column(db.String(100), nullable=True)
     email = db.Column(db.String(100), nullable=False)
     fecha_nacimiento = db.Column(db.Date, nullable=False)
-
-    direccion_comuna = db.relationship('Comuna', backref='worker', lazy=True)
+    direccion_comuna_id = db.Column(db.Integer, db.ForeignKey('direccion_comuna.id'), nullable=True)
+    direccion_comuna = db.relationship('Comuna', backref='workers', lazy=True)
     direccion_calle = db.Column(db.String(100), nullable=True)
     direccion_numero = db.Column(db.String(100), nullable=True)
     direccion_dpto = db.Column(db.String(100), nullable=True)
-
-    banco = db.relationship('Bancos', backref='worker', lazy=True)
-    banco_cuenta_tipo = db.relationship('Tipo_cuenta', backref='worker', lazy=True)
+    banco_id = db.Column(db.Integer, db.ForeignKey('banco.id'), nullable=True)
+    banco = db.relationship('Bancos', backref='workers', lazy=True)
+    banco_cuenta_tipo_id = db.Column(db.Integer, db.ForeignKey('banco_tipo_cuenta.id'), nullable=True)
+    banco_cuenta_tipo = db.relationship('Tipo_cuenta', backref='workers', lazy=True)
     banco_cuenta_numero = db.Column(db.String(100), nullable=True)
-
-
-    contracts = db.relationship('Contract', backref='worker', lazy=True)
-    afp = db.relationship('Afp', backref='worker', lazy=True)
-    pais = db.relationship('Pais', backref='worker', lazy=True)
-    prev_salud = db.relationship('Prev_salud', backref='worker', lazy=True)
+    contracts = db.relationship('Contract', backref='workers', lazy=True)
+    afp_id = db.Column(db.Integer, db.ForeignKey('afp.id'), nullable=True)
+    afp = db.relationship('Afp', backref='workers', lazy=True)
+    pais_id = db.Column(db.Integer, db.ForeignKey('pais.id'), nullable=True)
+    pais = db.relationship('Pais', backref='workers', lazy=True)
+    prev_salud_id = db.Column(db.Integer, db.ForeignKey('prev_salud.id'), nullable=True)
+    prev_salud = db.relationship('Prev_salud', backref='workers', lazy=True)
     
     def __repr__(self):
         return f'<Worker {self.rut}>'
@@ -45,7 +47,7 @@ class Afp(db.Model):
     name = db.Column(db.String(200), nullable=False)
     
     def __repr__(self):
-        return f'<Afp {self.details}>'
+        return f'<Afp {self.name}>'
 
 class Comuna(db.Model):
     __tablename__ = 'direccion_comuna'
@@ -53,14 +55,14 @@ class Comuna(db.Model):
     name = db.Column(db.String(200), nullable=False)
     
     def __repr__(self):
-        return f'<Comuna {self.details}>'
+        return f'<Comuna {self.name}>'
 class Bancos(db.Model):
     __tablename__ = 'banco'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(200), nullable=False)
     
     def __repr__(self):
-        return f'<Bancos {self.details}>'
+        return f'<Bancos {self.name}>'
 
 class Tipo_cuenta(db.Model):
     __tablename__ = 'banco_tipo_cuenta'
@@ -68,7 +70,7 @@ class Tipo_cuenta(db.Model):
     name = db.Column(db.String(200), nullable=False)
     
     def __repr__(self):
-        return f'<Tipo_cuenta {self.details}>'
+        return f'<Tipo_cuenta {self.name}>'
 
 class Pais(db.Model):
     __tablename__ = 'pais'
@@ -76,7 +78,7 @@ class Pais(db.Model):
     name = db.Column(db.String(200), nullable=False)
     
     def __repr__(self):
-        return f'<Pais {self.details}>'
+        return f'<Pais {self.name}>'
 
 class Prev_salud(db.Model):
     __tablename__ = 'prev_salud'
@@ -84,4 +86,4 @@ class Prev_salud(db.Model):
     name = db.Column(db.String(200), nullable=False)
     
     def __repr__(self):
-        return f'<Prev_salud {self.details}>'
+        return f'<Prev_salud {self.name}>'

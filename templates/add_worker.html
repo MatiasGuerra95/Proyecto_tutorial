@@ -4,14 +4,99 @@
 <h1>Agregar Trabajador</h1>
 <form method="POST">
     {{ form.hidden_tag() }}
+
+    <!-- RUT -->
+    <p>
+        {{ form.rut.label }}<br>
+        {{ form.rut(size=32) }}
+    </p>
+
+    <!-- Nombre -->
     <p>
         {{ form.name.label }}<br>
         {{ form.name(size=32) }}
     </p>
+
+    <!-- Apellido Paterno -->
+    <p>
+        {{ form.apellidop.label }}<br>
+        {{ form.apellidop(size=32) }}
+    </p>
+
+    <!-- Apellido Materno (opcional) -->
+    <p>
+        {{ form.apellidom.label }}<br>
+        {{ form.apellidom(size=32) }}
+    </p>
+
+    <!-- Email -->
+    <p>
+        {{ form.email.label }}<br>
+        {{ form.email(size=32) }}
+    </p>
+
+    <!-- Fecha de Nacimiento -->
+    <p>
+        {{ form.fecha_nacimiento.label }}<br>
+        {{ form.fecha_nacimiento() }}
+    </p>
+
+    <!-- Comuna de Dirección -->
+    <p>
+        {{ form.direccion_comuna_id.label }}<br>
+        {{ form.direccion_comuna_id() }}
+    </p>
+
+    <!-- Dirección -->
+    <p>
+        {{ form.direccion_calle.label }}<br>
+        {{ form.direccion_calle(size=32) }}
+    </p>
+    <p>
+        {{ form.direccion_numero.label }}<br>
+        {{ form.direccion_numero(size=32) }}
+    </p>
+    <p>
+        {{ form.direccion_dpto.label }}<br>
+        {{ form.direccion_dpto(size=32) }}
+    </p>
+
+    <!-- Seleccionar Banco -->
+    <p>
+        {{ form.banco_id.label }}<br>
+        {{ form.banco_id() }}
+    </p>
+
+    <!-- Tipo de Cuenta Bancaria -->
+    <p>
+        {{ form.banco_cuenta_tipo_id.label }}<br>
+        {{ form.banco_cuenta_tipo_id() }}
+    </p>
+
+    <!-- Número de Cuenta -->
+    <p>
+        {{ form.banco_cuenta_numero.label }}<br>
+        {{ form.banco_cuenta_numero(size=32) }}
+    </p>
+
+    <!-- AFP -->
     <p>
         {{ form.afp_id.label }}<br>
         {{ form.afp_id() }}
     </p>
+
+    <!-- País -->
+    <p>
+        {{ form.pais_id.label }}<br>
+        {{ form.pais_id() }}
+    </p>
+
+    <!-- Previsión de Salud -->
+    <p>
+        {{ form.prev_salud_id.label }}<br>
+        {{ form.prev_salud_id() }}
+    </p>
+
     <p>{{ form.submit() }}</p>
 </form>
 {% endblock %}

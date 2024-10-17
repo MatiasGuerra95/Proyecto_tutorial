@@ -1,5 +1,6 @@
 /data
 /letsencrypt
 /entorno
+/__pycache__
 docker-compose.yml
 .env
