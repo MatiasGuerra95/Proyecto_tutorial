@@ -39,6 +39,10 @@ def add_worker():
     # Poblar afp_id con datos de la tabla Afp
     form.afp_id.choices = [(afp.id, afp.name) for afp in Afp.query.all()]
     form.banco_id.choices = [(banco.id, banco.name) for banco in Bancos.query.all()]
+    form.comuna_id.choices = [(comuna.id, comuna.name) for comuna in Comuna.query.all()]
+    form.cuenta_id.choices = [(cuenta.id, cuenta.name) for cuenta in Tipo_cuenta.query.all()]
+    form.pais_id.choices = [(pais.id, pais.name) for pais in Pais.query.all()]
+    form.prevision_id.choices = [(prevision.id, prevision.name) for prevision in Prev_salud.query.all()]
 
     if form.validate_on_submit():
         new_worker = Worker(
@@ -49,8 +53,13 @@ def add_worker():
             direccion_dpto=form.direccion_dpto.data,
             banco_id=form.banco_id.data,
             banco_cuenta_numero=form.banco_cuenta_numero.data,
-            afp_id=form.afp_id.data
+            afp_id=form.afp_id.data,
+            comuna_id=form.comuna_id.data,
+            cuenta_id=form.cuenta_id.data,
+            pais_id=form.pais_id.data,
+            prevision_id=form.prevision_id.data
         )
+
         db.session.add(new_worker)
         db.session.commit()
         return redirect(url_for('index'))
