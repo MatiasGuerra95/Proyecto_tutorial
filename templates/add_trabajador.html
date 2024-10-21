@@ -13,8 +13,8 @@
 
     <!-- Nombre -->
     <p>
-        {{ form.name.label }}<br>
-        {{ form.name(size=32) }}
+        {{ form.nombre.label }}<br>
+        {{ form.nombre(size=32) }}
     </p>
 
     <!-- Apellido Paterno -->
@@ -41,10 +41,34 @@
         {{ form.fecha_nacimiento() }}
     </p>
 
+     <!-- Teléfono -->
+     <p>
+        {{ form.telefono.label }}<br>
+        {{ form.telefono(size=32) }}
+    </p>
+
+    <!-- Género -->
+    <p>
+        {{ form.genero.label }}<br>
+        {{ form.genero(size=32) }}
+    </p>
+
+    <!-- Estado Civil -->
+    <p>
+        {{ form.estado_civil.label }}<br>
+        {{ form.estado_civil(size=32) }}
+    </p>
+
+    <!-- Nacionalidad -->
+    <p>
+        {{ form.nacionalidad.label }}<br>
+        {{ form.nacionalidad(size=32) }}
+    </p>
+
     <!-- Comuna de Dirección -->
     <p>
-        {{ form.direccion_comuna_id.label }}<br>
-        {{ form.direccion_comuna_id() }}
+        {{ form.comuna_id.label }}<br>
+        {{ form.comuna_id() }}
     </p>
 
     <!-- Dirección -->
@@ -69,8 +93,8 @@
 
     <!-- Tipo de Cuenta Bancaria -->
     <p>
-        {{ form.banco_cuenta_tipo_id.label }}<br>
-        {{ form.banco_cuenta_tipo_id() }}
+        {{ form.banco_tipo_cuenta_id.label }}<br>
+        {{ form.banco_tipo_cuenta_id() }}
     </p>
 
     <!-- Número de Cuenta -->

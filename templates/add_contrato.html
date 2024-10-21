@@ -5,12 +5,12 @@
 <form method="POST">
     {{ form.hidden_tag() }}
     <p>
-        {{ form.details.label }}<br>
-        {{ form.details(size=64) }}
+        {{ form.detalles.label }}<br>
+        {{ form.detalles(size=64) }}
     </p>
     <p>
-        {{ form.worker_id.label }}<br>
-        {{ form.worker_id() }}
+        {{ form.trabajador_id.label }}<br>
+        {{ form.trabajador_id() }}
     </p>
     <p>{{ form.submit() }}</p>
 </form>

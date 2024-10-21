@@ -1,19 +1,82 @@
 docker exec -it postgres_db psql -U postgres -d mydb
 
-CREATE TABLE contracts( id SERIAL PRIMARY KEY, details VARCHAR(200) NOT NULL,worker_id INTEGER NOT NULL, CONSTRAINT fk_worker FOREIGN KEY(worker_id) REFERENCES workers(id) ON DELETE CASCADE );
+-- Tabla afp (sin cambios)
+CREATE TABLE afp (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
 
-CREATE TABLE workers ( id SERIAL PRIMARY KEY, rut VARCHAR(10) NOT NULL, name VARCHAR(100) NOT NULL, apellidop VARCHAR(100) NOT NULL, apellidom VARCHAR(100), email VARCHAR(100) NOT NULL, fecha_nacimiento DATE NOT NULL, direccion_comuna_id INTEGER REFERENCES direccion_comuna(id), direccion_calle VARCHAR(100), direccion_numero VARCHAR(100), direccion_dpto VARCHAR(100), banco_id INTEGER REFERENCES banco(id), banco_cuenta_tipo_id INTEGER REFERENCES banco_tipo_cuenta(id), banco_cuenta_numero VARCHAR(100), afp_id INTEGER REFERENCES afp(id), pais_id INTEGER REFERENCES pais(id), prev_salud_id INTEGER REFERENCES prev_salud(id) );
+-- Tabla comuna (antes direccion_comuna, con nueva columna region)
+CREATE TABLE comuna (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    region VARCHAR(100)  -- Nueva columna
+);
 
-CREATE TABLE afp ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );
+-- Tabla banco (sin cambios)
+CREATE TABLE banco (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
 
-CREATE TABLE direccion_comuna ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );
+-- Tabla banco_tipo_cuenta (sin cambios)
+CREATE TABLE banco_tipo_cuenta (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
 
-CREATE TABLE banco ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );
+-- Tabla pais (sin cambios)
+CREATE TABLE pais (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
 
-CREATE TABLE banco_tipo_cuenta ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );
+-- Tabla prev_salud (sin cambios)
+CREATE TABLE prev_salud (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
 
-CREATE TABLE pais ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );
+-- Nueva tabla dia_contrato
+CREATE TABLE dia_contrato (
+    id SERIAL PRIMARY KEY,
+    contrato_id INTEGER REFERENCES contratos(id),
+    trabajador_id INTEGER REFERENCES trabajadores(id),
+    fecha DATE NOT NULL,
+    estado VARCHAR(50) NOT NULL
+);
 
-CREATE TABLE prev_salud ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );
+-- Tabla trabajadores (antes workers)
+CREATE TABLE trabajadores (
+    id SERIAL PRIMARY KEY,
+    rut VARCHAR(10) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    apellidop VARCHAR(100) NOT NULL,
+    apellidom VARCHAR(100),
+    email VARCHAR(100) NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    telefono VARCHAR(15),  -- Nueva columna
+    genero VARCHAR(10),  -- Nueva columna
+    estado_civil VARCHAR(50),  -- Nueva columna
+    nacionalidad VARCHAR(50),  -- Nueva columna
+    comuna_id INTEGER REFERENCES comuna(id),  -- Cambiado de direccion_comuna a comuna
+    direccion_calle VARCHAR(100),
+    direccion_numero VARCHAR(100),
+    direccion_dpto VARCHAR(100),
+    banco_id INTEGER REFERENCES banco(id),
+    banco_tipo_cuenta_id INTEGER REFERENCES banco_tipo_cuenta(id),
+    banco_cuenta_numero VARCHAR(100),
+    afp_id INTEGER REFERENCES afp(id),
+    pais_id INTEGER REFERENCES pais(id),
+    prev_salud_id INTEGER REFERENCES prev_salud(id)
+);
 
-CREATE TABLE rut ( id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL );
+-- Tabla contratos (antes contracts)
+CREATE TABLE contratos (
+    id SERIAL PRIMARY KEY,
+    detalles VARCHAR(200) NOT NULL,
+    trabajador_id INTEGER NOT NULL,  -- Cambiado worker_id a trabajador_id
+    fecha_inicio DATE,  -- Nueva columna
+    fecha_termino DATE,  -- Nueva columna
+    CONSTRAINT fk_trabajador FOREIGN KEY (trabajador_id) REFERENCES trabajadores(id) ON DELETE CASCADE
+);

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Agregar Día de Contrato{% endblock %}
+{% block content %}
+<h1>Agregar Día de Contrato</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    <!-- Seleccionar Contrato -->
+    <p>
+        {{ form.contrato_id.label }}<br>
+        {{ form.contrato_id() }}
+    </p>
+
+    <!-- Seleccionar Trabajador -->
+    <p>
+        {{ form.trabajador_id.label }}<br>
+        {{ form.trabajador_id() }}
+    </p>
+
+    <!-- Fecha -->
+    <p>
+        {{ form.fecha.label }}<br>
+        {{ form.fecha() }}
+    </p>
+
+    <!-- Estado -->
+    <p>
+        {{ form.estado.label }}<br>
+        {{ form.estado(size=32) }}
+    </p>
+
+    <p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

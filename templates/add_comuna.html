@@ -4,10 +4,19 @@
 <h1>Agregar Comuna</h1>
 <form method="POST">
     {{ form.hidden_tag() }}
+
+    <!-- Nombre de la Comuna -->
     <p>
         {{ form.name.label }}<br>
         {{ form.name(size=32) }}
     </p>
+
+    <!-- Región -->
+    <p>
+        {{ form.region.label }}<br>
+        {{ form.region(size=32) }}  <!-- Aquí especificas la región -->
+    </p>
+
     <p>{{ form.submit() }}</p>
 </form>
 {% endblock %}
