@@ -3,11 +3,11 @@
 {% block content %}
 <h1>Trabajadores</h1>
 <ul>
-    {% for trabajador in trabajadores %}
+    {% for trabajador in trabajador %}
     <li>{{ trabajador.nombre }}
         <ul>
             {% for contrato in trabajador.contratos %}
-            <li>{{ contrato.detalles }}</li>
+            <li>Contrato ID: {{ contrato.id }} (Inicio: {{ contrato.fecha_inicio }}, Término: {{ contrato.fecha_termino }})</li>
             {% else %}
             <li>Sin contratos</li>
             {% endfor %}

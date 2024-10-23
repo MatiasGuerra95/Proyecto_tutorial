@@ -10,7 +10,7 @@ CREATE TABLE afp (
 CREATE TABLE comuna (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
-    region VARCHAR(100)  -- Nueva columna
+    region_id INTEGER REFERENCES region(id)  -- Nueva columna
 );
 
 -- Tabla banco (sin cambios)
@@ -37,17 +37,28 @@ CREATE TABLE prev_salud (
     nombre VARCHAR(100) NOT NULL
 );
 
--- Nueva tabla dia_contrato
-CREATE TABLE dia_contrato (
+-- Tabla estado_civil (sin cambios)
+CREATE TABLE estado_civil (
     id SERIAL PRIMARY KEY,
-    contrato_id INTEGER REFERENCES contratos(id),
-    trabajador_id INTEGER REFERENCES trabajadores(id),
-    fecha DATE NOT NULL,
-    estado VARCHAR(50) NOT NULL
+    estado VARCHAR(100) NOT NULL
 );
 
--- Tabla trabajadores (antes workers)
-CREATE TABLE trabajadores (
+-- Tabla genero (sin cambios)
+CREATE TABLE genero (
+    id SERIAL PRIMARY KEY,
+    genero VARCHAR(100) NOT NULL
+);
+
+-- Tabla region (sin cambios)
+CREATE TABLE region (
+    id SERIAL PRIMARY KEY,
+    region VARCHAR(100) NOT NULL
+);
+
+
+
+-- Tabla trabajador (antes workers)
+CREATE TABLE trabajador (
     id SERIAL PRIMARY KEY,
     rut VARCHAR(10) NOT NULL,
     nombre VARCHAR(100) NOT NULL,
@@ -56,8 +67,8 @@ CREATE TABLE trabajadores (
     email VARCHAR(100) NOT NULL,
     fecha_nacimiento DATE NOT NULL,
     telefono VARCHAR(15),  -- Nueva columna
-    genero VARCHAR(10),  -- Nueva columna
-    estado_civil VARCHAR(50),  -- Nueva columna
+    genero_id INTEGER REFERENCES genero(id),  -- Nueva columna
+    estado_civil_id INTEGER REFERENCES estado_civil(id),  -- Nueva columna
     nacionalidad VARCHAR(50),  -- Nueva columna
     comuna_id INTEGER REFERENCES comuna(id),  -- Cambiado de direccion_comuna a comuna
     direccion_calle VARCHAR(100),
@@ -71,12 +82,20 @@ CREATE TABLE trabajadores (
     prev_salud_id INTEGER REFERENCES prev_salud(id)
 );
 
--- Tabla contratos (antes contracts)
-CREATE TABLE contratos (
+-- Tabla contrato (antes contracts)
+CREATE TABLE contrato (
     id SERIAL PRIMARY KEY,
-    detalles VARCHAR(200) NOT NULL,
-    trabajador_id INTEGER NOT NULL,  -- Cambiado worker_id a trabajador_id
+    trabajador_id INTEGER NOT NULL,  
     fecha_inicio DATE,  -- Nueva columna
-    fecha_termino DATE,  -- Nueva columna
-    CONSTRAINT fk_trabajador FOREIGN KEY (trabajador_id) REFERENCES trabajadores(id) ON DELETE CASCADE
+    fecha_termino DATE,  -- Nueva columna    
+    CONSTRAINT fk_trabajador FOREIGN KEY (trabajador_id) REFERENCES trabajador(id) ON DELETE CASCADE
+);
+
+-- Nueva tabla dia_contrato
+CREATE TABLE dia_contrato (
+    id SERIAL PRIMARY KEY,
+    contrato_id INTEGER REFERENCES contrato(id),
+    trabajador_id INTEGER REFERENCES trabajador(id),
+    fecha DATE NOT NULL,
+    estado VARCHAR(50) NOT NULL
 );

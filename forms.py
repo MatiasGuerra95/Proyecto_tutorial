@@ -11,8 +11,8 @@ class TrabajadorForm(FlaskForm):
     email = StringField('email', validators=[DataRequired()])
     fecha_nacimiento = DateField('Fecha de Nacimiento', validators=[DataRequired()])
     telefono = StringField('Teléfono', validators=[DataRequired()])  
-    genero = StringField('Género', validators=[DataRequired()])  
-    estado_civil = StringField('Estado Civil', validators=[DataRequired()])  
+    genero_id = SelectField('Género', coerce=int, validators=[DataRequired()])  
+    estado_civil_id = SelectField('Estado Civil', coerce=int, validators=[DataRequired()])  
     nacionalidad = StringField('Nacionalidad', validators=[DataRequired()])
     direccion_calle = StringField('Calle', validators=[DataRequired()])
     direccion_numero = StringField('Número', validators=[DataRequired()])
@@ -27,7 +27,6 @@ class TrabajadorForm(FlaskForm):
     submit = SubmitField('Agregar Trabajador')
 
 class ContratoForm(FlaskForm):
-    detalles = StringField('Detalles', validators=[DataRequired()])
     trabajador_id = SelectField('Trabajador', coerce=int, validators=[DataRequired()])
     fecha_inicio = DateField('Fecha de Inicio', validators=[DataRequired()]) 
     fecha_termino = DateField('Fecha de Término', validators=[DataRequired()])
@@ -50,8 +49,20 @@ class BancoForm(FlaskForm):
 
 class ComunaForm(FlaskForm):
     name = StringField('Nombre de la Comuna', validators=[DataRequired()])
-    region = StringField('Región', validators=[DataRequired()])
+    region_id = SelectField('Región',coerce=int, validators=[DataRequired()])
     submit = SubmitField('Agregar Comuna')
+
+class RegionForm(FlaskForm):
+    name = StringField('Nombre de la Region', validators=[DataRequired()])
+    submit = SubmitField('Agregar Comuna')
+
+class Estado_CivilForm(FlaskForm):
+    name = StringField('Estado Civil', validators=[DataRequired()])
+    submit = SubmitField('Agregar Estado Civil')
+
+class GeneroForm(FlaskForm):
+    name = StringField('Genero', validators=[DataRequired()])
+    submit = SubmitField('Agregar Genero')            
 
 class CuentaForm(FlaskForm):
     name = StringField('Tipo de Cuenta', validators=[DataRequired()])

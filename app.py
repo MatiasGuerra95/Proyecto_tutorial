@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from forms import BancoForm, TrabajadorForm, ContratoForm, DiaContratoForm, AfpForm, ComunaForm, CuentaForm, PaisForm, PrevisionForm
-from models import Bancos, db, Trabajador, Contrato, DiaContrato, Afp, Comuna, Tipo_cuenta, Pais, Prev_salud
+from forms import BancoForm, TrabajadorForm, ContratoForm, DiaContratoForm, AfpForm, ComunaForm, CuentaForm, PaisForm, PrevisionForm, RegionForm, Estado_CivilForm, GeneroForm
+from models import Bancos, db, Trabajador, Contrato, DiaContrato, Afp, Comuna, Tipo_cuenta, Pais, Prev_salud, Region, Estado_Civil, Genero
 import time
 from sqlalchemy.exc import OperationalError
 
@@ -30,8 +30,8 @@ def wait_for_db():
 # Rutas de tu aplicación
 @app.route('/')
 def index():
-    trabajadores = Trabajador.query.all()
-    return render_template('index.html', trabajadores=trabajadores)
+    trabajador = Trabajador.query.all()
+    return render_template('index.html', trabajador=trabajador)
 
 @app.route('/add_trabajador', methods=['GET', 'POST'])
 def add_trabajador():
@@ -43,6 +43,8 @@ def add_trabajador():
     form.banco_tipo_cuenta_id.choices = [(banco_tipo_cuenta.id, banco_tipo_cuenta.nombre) for banco_tipo_cuenta in Tipo_cuenta.query.all()]
     form.pais_id.choices = [(pais.id, pais.nombre) for pais in Pais.query.all()]
     form.prev_salud_id.choices = [(prev_salud.id, prev_salud.nombre) for prev_salud in Prev_salud.query.all()]
+    form.estado_civil_id.choices = [(estado_civil.id, estado_civil.estado) for estado_civil in Estado_Civil.query.all()]
+    form.genero_id.choices = [(genero.id, genero.genero) for genero in Genero.query.all()]
 
     if form.validate_on_submit():
         new_trabajador = Trabajador(
@@ -61,8 +63,10 @@ def add_trabajador():
             banco_cuenta_numero=form.banco_cuenta_numero.data,
             afp_id=form.afp_id.data,
             pais_id=form.pais_id.data,
-            prev_salud_id=form.prev_salud_id.data
-        )
+            prev_salud_id=form.prev_salud_id.data,
+            estado_civil_id=form.estado_civil_id.data,
+            genero_id=form.genero_id.data
+         )
         pass
 
         db.session.add(new_trabajador)
@@ -76,36 +80,17 @@ def add_contrato():
     form = ContratoForm()
     form.trabajador_id.choices = [(trabajador.id, trabajador.nombre) for trabajador in Trabajador.query.all()]
     if form.validate_on_submit():
-        new_contrato = Contrato(detalles=form.detalles.data, trabajador_id=form.trabajador_id.data)
+        new_contrato = Contrato(trabajador_id=form.trabajador_id.data)
         db.session.add(new_contrato)
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('add_contrato.html', form=form)
 
-@app.route('/add_dia_contrato', methods=['GET', 'POST'])
-def add_dia_contrato():
-    form = DiaContratoForm()  # Asegúrate de que el formulario DiaContratoForm esté definido correctamente
-    form.contrato_id.choices = [(contrato.id, contrato.detalles) for contrato in Contrato.query.all()]
-    form.trabajador_id.choices = [(trabajador.id, trabajador.nombre) for trabajador in Trabajador.query.all()]
-
-    if form.validate_on_submit():
-        nuevo_dia_contrato = DiaContrato(
-            contrato_id=form.contrato_id.data,
-            trabajador_id=form.trabajador_id.data,
-            fecha=form.fecha.data,
-            estado=form.estado.data
-        )
-        db.session.add(nuevo_dia_contrato)
-        db.session.commit()
-        return redirect(url_for('index'))
-
-    return render_template('add_dia_contrato.html', form=form)
-
 @app.route('/add_afp', methods=['GET', 'POST'])
 def add_afp():
     form = AfpForm()
     if form.validate_on_submit():
-        new_afp = Afp(nombre=form.nombre.data)
+        new_afp = Afp(nombre=form.name.data)
         db.session.add(new_afp)
         db.session.commit()
         return redirect(url_for('index'))
@@ -116,7 +101,7 @@ def add_banco():
     form = BancoForm()
 
     if form.validate_on_submit():
-        new_banco = Bancos(nombre=form.nombre.data)
+        new_banco = Bancos(nombre=form.name.data)
         db.session.add(new_banco)
         db.session.commit()
         return redirect(url_for('index'))
@@ -126,21 +111,34 @@ def add_banco():
 @app.route('/add_comuna', methods=['GET', 'POST'])
 def add_comuna():
     form = ComunaForm()
+    form.region_id.choices = [(region.id, region.region) for region in Region.query.all()]
 
     if form.validate_on_submit():
-        new_comuna = Comuna(nombre=form.nombre.data)
+        new_comuna = Comuna(nombre=form.name.data, region_id=form.region_id.data)
         db.session.add(new_comuna)
         db.session.commit()
         return redirect(url_for('index'))
 
     return render_template('add_comuna.html', form=form)
 
+@app.route('/add_region', methods=['GET', 'POST'])
+def add_region():
+    form = RegionForm()
+
+    if form.validate_on_submit():
+        new_region = Region(region=form.name.data)
+        db.session.add(new_region)
+        db.session.commit()
+        return redirect(url_for('index'))
+
+    return render_template('add_region.html', form=form)
+
 @app.route('/add_cuenta', methods=['GET', 'POST'])
 def add_cuenta():
     form = CuentaForm()
 
     if form.validate_on_submit():
-        new_cuenta = Tipo_cuenta(nombre=form.nombre.data)
+        new_cuenta = Tipo_cuenta(nombre=form.name.data)
         db.session.add(new_cuenta)
         db.session.commit()
         return redirect(url_for('index'))
@@ -152,7 +150,7 @@ def add_pais():
     form = PaisForm()
 
     if form.validate_on_submit():
-        new_pais = Pais(nombre=form.nombre.data)
+        new_pais = Pais(nombre=form.name.data)
         db.session.add(new_pais)
         db.session.commit()
         return redirect(url_for('index'))
@@ -164,12 +162,36 @@ def add_prevision():
     form = PrevisionForm()
 
     if form.validate_on_submit():
-        new_prevision = Prev_salud(nombre=form.nombre.data)
+        new_prevision = Prev_salud(nombre=form.name.data)
         db.session.add(new_prevision)
         db.session.commit()
         return redirect(url_for('index'))
 
     return render_template('add_prev.html', form=form)
+
+@app.route('/add_estado_civil', methods=['GET', 'POST'])
+def add_estado_civil():
+    form = Estado_CivilForm()
+
+    if form.validate_on_submit():
+        new_estado = Estado_Civil(estado=form.name.data)
+        db.session.add(new_estado)
+        db.session.commit()
+        return redirect(url_for('index'))
+
+    return render_template('add_estado_civil.html', form=form)
+
+@app.route('/add_genero', methods=['GET', 'POST'])
+def add_genero():
+    form = GeneroForm()
+
+    if form.validate_on_submit():
+        new_genero = Genero(genero=form.name.data)
+        db.session.add(new_genero)
+        db.session.commit()
+        return redirect(url_for('index'))
+
+    return render_template('add_genero.html', form=form)
 
 if __name__ == '__main__':
     wait_for_db()

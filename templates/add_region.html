@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Agregar Región{% endblock %}
+{% block content %}
+<h1>Agregar Región</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+
+    <!-- Nombre de la Region -->
+    <p>
+        {{ form.name.label }}<br>
+        {{ form.name(size=32) }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+{% endblock %}
