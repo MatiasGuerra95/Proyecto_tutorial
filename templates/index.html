@@ -2,6 +2,42 @@
 {% block title %}Lista de Trabajadores{% endblock %}
 {% block content %}
 <h1>Trabajadores</h1>
+
+<a href="{{ url_for('add_trabajador') }}" class="btn btn-primary">Crear Trabajador</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>RUT</th>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for trabajador in trabajador %}
+        <tr>
+            <td>{{ trabajador.rut }}</td>
+            <td>{{ trabajador.nombre }}</td>
+            <td>{{ trabajador.apellidop }}</td>
+            <td>{{ trabajador.apellidom }}</td>
+            <td>
+                <a href="{{ url_for('view_trabajador', id=trabajador.id) }}" class="btn btn-info">Ver</a>
+                <a href="{{ url_for('update_trabajador', id=trabajador.id) }}" class="btn btn-warning">Actualizar</a>
+                
+                <!-- Formulario para eliminar trabajador -->
+                <form action="{{ url_for('delete_trabajador', id=trabajador.id) }}" method="POST" style="display:inline;">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este trabajador?');">Borrar Trabajador</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Mostrar contratos de cada trabajador -->
+<h2>Contratos de Trabajadores</h2>
 <ul>
     {% for trabajador in trabajador %}
     <li>{{ trabajador.nombre }}
@@ -15,4 +51,5 @@
     </li>
     {% endfor %}
 </ul>
+
 {% endblock %}

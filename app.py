@@ -33,6 +33,24 @@ def index():
     trabajador = Trabajador.query.all()
     return render_template('index.html', trabajador=trabajador)
 
+@app.route('/trabajador/<int:id>', methods=['GET', 'POST'])
+def view_trabajador(id):
+    trabajador = Trabajador.query.get_or_404(id)
+    form = TrabajadorForm(obj=trabajador)
+
+    if form.validate_on_submit():
+        # Actualiza los datos del trabajador
+        trabajador.rut = form.rut.data
+        trabajador.nombre = form.nombre.data
+        trabajador.apellidop = form.apellidop.data
+        trabajador.apellidom = form.apellidom.data
+        # (actualiza los demás campos según sea necesario)
+
+        db.session.commit()
+        return redirect(url_for('index'))
+
+    return render_template('view_trabajador.html', form=form, trabajador=trabajador)
+
 @app.route('/add_trabajador', methods=['GET', 'POST'])
 def add_trabajador():
     form = TrabajadorForm()
@@ -192,6 +210,56 @@ def add_genero():
         return redirect(url_for('index'))
 
     return render_template('add_genero.html', form=form)
+
+@app.route('/update_trabajador/<int:id>', methods=['GET', 'POST'])
+def update_trabajador(id):
+    trabajador = Trabajador.query.get_or_404(id)  # Obtiene el trabajador o retorna un 404
+    form = TrabajadorForm(obj=trabajador)  # Carga el formulario con los datos actuales
+
+    # Rellenamos las opciones del formulario
+    form.afp_id.choices = [(afp.id, afp.nombre) for afp in Afp.query.all()]
+    form.banco_id.choices = [(banco.id, banco.nombre) for banco in Bancos.query.all()]
+    form.comuna_id.choices = [(comuna.id, comuna.nombre) for comuna in Comuna.query.all()]
+    form.banco_tipo_cuenta_id.choices = [(banco_tipo_cuenta.id, banco_tipo_cuenta.nombre) for banco_tipo_cuenta in Tipo_cuenta.query.all()]
+    form.pais_id.choices = [(pais.id, pais.nombre) for pais in Pais.query.all()]
+    form.prev_salud_id.choices = [(prev_salud.id, prev_salud.nombre) for prev_salud in Prev_salud.query.all()]
+    form.estado_civil_id.choices = [(estado_civil.id, estado_civil.estado) for estado_civil in Estado_Civil.query.all()]
+    form.genero_id.choices = [(genero.id, genero.genero) for genero in Genero.query.all()]
+
+    if form.validate_on_submit():
+        # Actualiza los datos del trabajador
+        trabajador.rut = form.rut.data
+        trabajador.nombre = form.nombre.data
+        trabajador.apellidop = form.apellidop.data
+        trabajador.apellidom = form.apellidom.data
+        trabajador.email = form.email.data
+        trabajador.fecha_nacimiento = form.fecha_nacimiento.data
+        trabajador.telefono = form.telefono.data
+        trabajador.genero_id = form.genero_id.data
+        trabajador.estado_civil_id = form.estado_civil_id.data
+        trabajador.nacionalidad = form.nacionalidad.data
+        trabajador.comuna_id = form.comuna_id.data
+        trabajador.direccion_calle = form.direccion_calle.data
+        trabajador.direccion_numero = form.direccion_numero.data
+        trabajador.direccion_dpto = form.direccion_dpto.data
+        trabajador.banco_id = form.banco_id.data
+        trabajador.banco_tipo_cuenta_id = form.banco_tipo_cuenta_id.data
+        trabajador.banco_cuenta_numero = form.banco_cuenta_numero.data
+        trabajador.afp_id = form.afp_id.data
+        trabajador.pais_id = form.pais_id.data
+        trabajador.prev_salud_id = form.prev_salud_id.data
+
+        db.session.commit()
+        return redirect(url_for('index'))
+
+    return render_template('update_trabajador.html', form=form)
+
+@app.route('/delete_trabajador/<int:id>', methods=['POST'])
+def delete_trabajador(id):
+    trabajador = Trabajador.query.get_or_404(id)
+    db.session.delete(trabajador)
+    db.session.commit()
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     wait_for_db()
