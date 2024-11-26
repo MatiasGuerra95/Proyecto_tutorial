@@ -134,6 +134,8 @@ def crear_trabajador():
     form.prev_salud_id.choices = [(prev_salud.id, prev_salud.nombre) for prev_salud in Prev_salud.query.all()]
     form.estado_civil_id.choices = [(estado_civil.id, estado_civil.estado) for estado_civil in Estado_Civil.query.all()]
     form.genero_id.choices = [(genero.id, genero.genero) for genero in Genero.query.all()]
+    form.region_id.choices = [(region.id, region.region) for region in Region.query.all()]
+    form.forma_pago_id.choices = [(forma.id, forma.nombre) for forma in FormaPago.query.all()]    
 
     if form.validate_on_submit():
         form.sanitize_data()
@@ -143,20 +145,23 @@ def crear_trabajador():
             nombre=sanitize_input(form.nombre.data),
             apellidop=sanitize_input(form.apellidop.data),
             apellidom=sanitize_input(form.apellidom.data),
-            email=sanitize_input(form.email.data),
             fecha_nacimiento=sanitize_input(form.fecha_nacimiento.data),
-            comuna_id=sanitize_input(form.comuna_id.data),
+            pais_id=sanitize_input(form.pais_id.data),
+            genero_id=sanitize_input(form.genero_id.data),
+            estado_civil_id=sanitize_input(form.estado_civil_id.data),
             direccion_calle=sanitize_input(form.direccion_calle.data),
             direccion_numero=sanitize_input(form.direccion_numero.data),
             direccion_dpto=sanitize_input(form.direccion_dpto.data),
+            region_id=sanitize_input(form.region_id.data),
+            comuna_id=sanitize_input(form.comuna_id.data),
+            email=sanitize_input(form.email.data),
+            telefono=sanitize_input(form.telefono.data),
+            forma_pago_id=sanitize_input(form.forma_pago_id.data),
             banco_id=sanitize_input(form.banco_id.data),
             banco_tipo_cuenta_id=sanitize_input(form.banco_tipo_cuenta_id.data),
             banco_cuenta_numero=sanitize_input(form.banco_cuenta_numero.data),
             afp_id=sanitize_input(form.afp_id.data),
-            pais_id=sanitize_input(form.pais_id.data),
-            prev_salud_id=sanitize_input(form.prev_salud_id.data),
-            estado_civil_id=sanitize_input(form.estado_civil_id.data),
-            genero_id=sanitize_input(form.genero_id.data)
+            prev_salud_id=sanitize_input(form.prev_salud_id.data)
         )
         try:
             db.session.add(nuevo_trabajador)
@@ -183,21 +188,23 @@ def trabajador_detalle(id):
         "nombre": trabajador.nombre,
         "apellidop": trabajador.apellidop,
         "apellidom": trabajador.apellidom,
-        "email": trabajador.email,
         "fecha_nacimiento": trabajador.fecha_nacimiento.strftime('%Y-%m-%d') if trabajador.fecha_nacimiento else "",
-        "telefono": trabajador.telefono,
+        "pais_id": trabajador.pais_id,
         "genero_id": trabajador.genero_id,
         "estado_civil_id": trabajador.estado_civil_id,
-        "comuna_id": trabajador.comuna_id,
         "direccion_calle": trabajador.direccion_calle,
         "direccion_numero": trabajador.direccion_numero,
         "direccion_dpto": trabajador.direccion_dpto,
+        "region_id": trabajador.region_id,
+        "comuna_id": trabajador.comuna_id,
+        "email": trabajador.email,
+        "telefono": trabajador.telefono,
+        "forma_pago_id": trabajador.forma_pago_id,
         "banco_id": trabajador.banco_id,
         "banco_tipo_cuenta_id": trabajador.banco_tipo_cuenta_id,
         "banco_cuenta_numero": trabajador.banco_cuenta_numero,
         "afp_id": trabajador.afp_id,
-        "pais_id": trabajador.pais_id,
-        "prev_salud_id": trabajador.prev_salud_id,
+        "prev_salud_id": trabajador.prev_salud_id
     }
     return jsonify(data)
 
@@ -234,7 +241,7 @@ def opciones_selectores():
     paises = [{"id": pais.id, "nombre": pais.nombre} for pais in Pais.query.all()]
     regiones = [{"id": region.id, "region": region.region} for region in Region.query.all()]
     comunas = [{"id": comuna.id, "nombre": comuna.nombre} for comuna in Comuna.query.all()]
-    formas_pago = [{"id": forma.id, "nombre": forma.nombre} for forma in FormaPago.query.all()]
+    forma_pago = [{"id": forma.id, "nombre": forma.nombre} for forma in FormaPago.query.all()]
 
     return jsonify({
         "bancos": bancos,
@@ -246,7 +253,7 @@ def opciones_selectores():
         "paises": paises,
         "regiones": regiones,
         "comunas": comunas,
-        "formas_pago": formas_pago        
+        "forma_pago": forma_pago        
     })
 
 @app.route('/contrato', methods=['GET'])
