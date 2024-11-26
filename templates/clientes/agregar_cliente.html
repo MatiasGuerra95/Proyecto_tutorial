@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Agregar Cliente</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.rut.label }}: {{ form.rut }}
+    </div>
+    <div>
+        {{ form.razon_social.label }}: {{ form.razon_social }}
+    </div>
+    <div>
+        {{ form.direccion.label }}: {{ form.direccion }}
+    </div>
+    <div>
+        {{ form.region_id.label }}: {{ form.region_id }}
+    </div>
+    <div>
+        {{ form.comuna_id.label }}: {{ form.comuna_id }}
+    </div>
+    <button type="submit">{{ form.submit }}</button>
+</form>
+{% endblock %}

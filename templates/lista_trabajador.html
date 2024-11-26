@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Trabajadores{% endblock %}
+
+{% block content %}
+<h1>Lista de Trabajadores</h1>
+<a href="{{ url_for('crear_trabajador') }}" class="btn btn-primary">Agregar Trabajador</a>
+
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>RUT</th>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Región</th>
+            <th>Comuna</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for trabajador in trabajadores %}
+        <tr data-bs-toggle="modal" data-bs-target="#editarModal{{ trabajador.id }}">
+            <td>{{ trabajador.rut }}</td>
+            <td>{{ trabajador.nombre }}</td>
+            <td>{{ trabajador.apellidop }}</td>
+            <td>{{ trabajador.apellidom }}</td>
+            <td>{{ trabajador.region.nombre or 'No asignada' }}</td>
+            <td>{{ trabajador.comuna.nombre or 'No asignada' }}</td>
+            <td>
+                <form action="{{ url_for('delete_trabajador', trabajador_id=trabajador.id) }}" method="POST" style="display:inline;">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este trabajador?');">Borrar</button>
+                </form>
+            </td>
+        </tr>
+
+        <!-- Modal para editar trabajador -->
+        <div class="modal fade" id="editarModal{{ trabajador.id }}" tabindex="-1" aria-labelledby="editarModalLabel{{ trabajador.id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Editar Trabajador</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST" action="{{ url_for('editar_trabajador', id=trabajador.id) }}">
+                            {{ form.hidden_tag() }}
+                            <div class="mb-3">
+                                <label for="rut{{ trabajador.id }}">RUT</label>
+                                <input type="text" class="form-control" id="rut{{ trabajador.id }}" name="rut" value="{{ trabajador.rut }}" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre{{ trabajador.id }}">Nombre</label>
+                                <input type="text" class="form-control" id="nombre{{ trabajador.id }}" name="nombre" value="{{ trabajador.nombre }}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellidop{{ trabajador.id }}">Apellido Paterno</label>
+                                <input type="text" class="form-control" id="apellidop{{ trabajador.id }}" name="apellidop" value="{{ trabajador.apellidop }}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellidom{{ trabajador.id }}">Apellido Materno</label>
+                                <input type="text" class="form-control" id="apellidom{{ trabajador.id }}" name="apellidom" value="{{ trabajador.apellidom }}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="region{{ trabajador.id }}">Región</label>
+                                <select class="form-control" id="region{{ trabajador.id }}" name="region_id">
+                                    {% for region in form.region_id.choices %}
+                                    <option value="{{ region[0] }}" {% if trabajador.region_id == region[0] %}selected{% endif %}>
+                                        {{ region[1] }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="comuna{{ trabajador.id }}">Comuna</label>
+                                <select class="form-control" id="comuna{{ trabajador.id }}" name="comuna_id">
+                                    {% for comuna in form.comuna_id.choices %}
+                                    <option value="{{ comuna[0] }}" {% if trabajador.comuna_id == comuna[0] %}selected{% endif %}>
+                                        {{ comuna[1] }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -14,3 +14,7 @@ SQLAlchemy==2.0.35
 typing_extensions==4.12.2
 Werkzeug==3.0.4
 WTForms==3.1.2
+reportlab==4.2.5
+bleach
+pytest
+flask-migrate

@@ -69,7 +69,6 @@ CREATE TABLE trabajador (
     telefono VARCHAR(15),  -- Nueva columna
     genero_id INTEGER REFERENCES genero(id),  -- Nueva columna
     estado_civil_id INTEGER REFERENCES estado_civil(id),  -- Nueva columna
-    nacionalidad VARCHAR(50),  -- Nueva columna
     comuna_id INTEGER REFERENCES comuna(id),  -- Cambiado de direccion_comuna a comuna
     direccion_calle VARCHAR(100),
     direccion_numero VARCHAR(100),
@@ -79,7 +78,9 @@ CREATE TABLE trabajador (
     banco_cuenta_numero VARCHAR(100),
     afp_id INTEGER REFERENCES afp(id),
     pais_id INTEGER REFERENCES pais(id),
-    prev_salud_id INTEGER REFERENCES prev_salud(id)
+    prev_salud_id INTEGER REFERENCES prev_salud(id),
+    region_id INTEGER REFERENCES region(id),
+    forma_pago_id INTEGER REFERENCES forma_pago(id) -- Nueva columna para forma de pago
 );
 
 -- Tabla contrato (antes contracts)
@@ -98,4 +99,73 @@ CREATE TABLE dia_contrato (
     trabajador_id INTEGER REFERENCES trabajador(id),
     fecha DATE NOT NULL,
     estado VARCHAR(50) NOT NULL
+);
+
+-- Crear la tabla forma_pago
+CREATE TABLE forma_pago (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL
+);
+
+-- Insertar las opciones de forma de pago
+INSERT INTO forma_pago (nombre) VALUES 
+('Cheque'),
+('Efectivo'),
+('Servipag'),
+('Transferencia'),
+('Vale Vista'),
+('Vale Vista Valija');
+
+CREATE TABLE cliente (
+    id SERIAL PRIMARY KEY,
+    rut VARCHAR(12) NOT NULL, -- RUT del cliente
+    razon_social VARCHAR(100) NOT NULL, -- Nombre del cliente
+    region_id INT REFERENCES region(id), -- Relación con la tabla Región
+    comuna_id INT REFERENCES comuna(id), -- Relación con la tabla Comuna
+    direccion VARCHAR(200), -- Dirección del cliente
+    CONSTRAINT fk_region_cliente FOREIGN KEY (region_id) REFERENCES region (id) ON DELETE CASCADE,
+    CONSTRAINT fk_comuna_cliente FOREIGN KEY (comuna_id) REFERENCES comuna (id) ON DELETE CASCADE
+
+);
+
+CREATE TABLE sucursal (
+    id SERIAL PRIMARY KEY, -- ID autoincremental para la sucursal
+    cliente_id INTEGER NOT NULL, -- Relación con la tabla Cliente
+    numero_sucursal VARCHAR(10) NOT NULL, -- Número de la sucursal
+    nombre_sucursal VARCHAR(100) NOT NULL, -- Nombre de la sucursal
+    direccion VARCHAR(200) NOT NULL, -- Dirección de la sucursal
+    region_id INTEGER NOT NULL, -- Relación con la tabla Región
+    comuna_id INTEGER NOT NULL, -- Relación con la tabla Comuna
+    telefono VARCHAR(15), -- Teléfono de la sucursal
+    representante_id INTEGER NULL, -- Relación con el representante (Trabajador)
+    CONSTRAINT fk_cliente FOREIGN KEY (cliente_id) REFERENCES cliente (id) ON DELETE CASCADE,
+    CONSTRAINT fk_region FOREIGN KEY (region_id) REFERENCES region (id) ON DELETE CASCADE,
+    CONSTRAINT fk_comuna FOREIGN KEY (comuna_id) REFERENCES comuna (id) ON DELETE CASCADE,
+    CONSTRAINT fk_representante FOREIGN KEY (representante_id) REFERENCES trabajador (id) ON DELETE SET NULL
+);
+
+CREATE TABLE jornada (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion VARCHAR(200)
+);
+
+CREATE TABLE dia_jornada (
+    id SERIAL PRIMARY KEY,
+    jornada_id INT NOT NULL,
+    numero_dia INT NOT NULL,
+    hora_ingreso TIME NOT NULL,
+    hora_salida TIME NOT NULL,
+    CONSTRAINT fk_jornada FOREIGN KEY (jornada_id) REFERENCES jornada (id) ON DELETE CASCADE
+);
+
+CREATE TABLE turno_gv (
+    id SERIAL PRIMARY KEY,
+    jornada_id INTEGER NOT NULL REFERENCES jornada(id),
+    turno_gv VARCHAR(255) NOT NULL,
+    hora_ingreso TIME NOT NULL,
+    hora_salida TIME NOT NULL,
+    hora_ingreso_colacion TIME NOT NULL,
+    hora_salida_colacion TIME NOT NULL,
+    horas_trabajadas FLOAT NOT NULL
 );

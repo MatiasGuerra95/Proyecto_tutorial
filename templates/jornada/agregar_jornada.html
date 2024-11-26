@@ -1,0 +1,101 @@
+<h1>Agregar Jornada</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.nombre.label }}: {{ form.nombre }}
+    </div>
+    <div>
+        {{ form.descripcion.label }}: {{ form.descripcion }}
+    </div>
+    <h3>Días de la jornada</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Nro. Día</th>
+                <th>Hora Ingreso</th>
+                <th>Hora Salida Colación</th>
+                <th>Hora Ingreso Post-Colación</th>
+                <th>Hora Salida</th>
+                <th>Turno GV</th>
+                <th>Horas</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-dias">
+            {% for dia_form in form.dias %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td><input type="time" name="dias-{{ loop.index }}-hora_ingreso" required onchange="calcularHoras(this)"></td>
+                <td><input type="time" name="dias-{{ loop.index }}-hora_salida_colacion" required onchange="calcularHoras(this)"></td>
+                <td><input type="time" name="dias-{{ loop.index }}-hora_ingreso_post_colacion" required onchange="calcularHoras(this)"></td>
+                <td><input type="time" name="dias-{{ loop.index }}-hora_salida" required onchange="calcularHoras(this)"></td>
+                <td><input type="text" name="dias-{{ loop.index }}-turno_gv"></td>
+                <td><input type="text" name="dias-{{ loop.index }}-horas" readonly></td>
+                <td>
+                    <button type="button" onclick="eliminarFila(this)">Eliminar</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="button" onclick="agregarFila()">Agregar día</button>
+    <button type="submit">Guardar</button>
+    <a href="{{ url_for('lista_jornadas') }}" class="btn btn-secondary" style="margin-left: 10px;">Volver</a>
+</form>
+
+<script>
+    // Función para calcular la diferencia de horas
+    function calcularHoras(input) {
+        const row = input.closest('tr');
+
+        // Obtener los valores de las horas
+        const horaIngreso = row.querySelector('input[name$="hora_ingreso"]').value;
+        const horaSalidaColacion = row.querySelector('input[name$="hora_salida_colacion"]').value;
+        const horaIngresoPostColacion = row.querySelector('input[name$="hora_ingreso_post_colacion"]').value;
+        const horaSalida = row.querySelector('input[name$="hora_salida"]').value;
+
+        if (horaIngreso && horaSalida && horaSalidaColacion && horaIngresoPostColacion) {
+            const horaInicio = new Date(`1970-01-01T${horaIngreso}:00`);
+            const horaSalidaCol = new Date(`1970-01-01T${horaSalidaColacion}:00`);
+            const horaIngresoPostCol = new Date(`1970-01-01T${horaIngresoPostColacion}:00`);
+            const horaFin = new Date(`1970-01-01T${horaSalida}:00`);
+
+            // Calcular las horas
+            const totalHoras = (horaFin - horaInicio - (horaIngresoPostCol - horaSalidaCol)) / 3600000;
+
+            // Actualizar el campo "Horas"
+            row.querySelector('input[name$="horas"]').value = totalHoras.toFixed(2);
+        }
+    }
+
+    // Agregar nueva fila con funcionalidad de cálculo
+    function agregarFila() {
+        const tablaDias = document.getElementById('tabla-dias');
+        const fila = document.createElement('tr');
+
+        fila.innerHTML = `
+            <td>${tablaDias.rows.length + 1}</td>
+            <td><input type="time" name="dias-${tablaDias.rows.length}-hora_ingreso" required onchange="calcularHoras(this)"></td>
+            <td><input type="time" name="dias-${tablaDias.rows.length}-hora_salida_colacion" required onchange="calcularHoras(this)"></td>
+            <td><input type="time" name="dias-${tablaDias.rows.length}-hora_ingreso_post_colacion" required onchange="calcularHoras(this)"></td>
+            <td><input type="time" name="dias-${tablaDias.rows.length}-hora_salida" required onchange="calcularHoras(this)"></td>
+            <td><input type="text" name="dias-${tablaDias.rows.length}-turno_gv"></td>
+            <td><input type="text" name="dias-${tablaDias.rows.length}-horas" readonly></td>
+            <td><button type="button" onclick="eliminarFila(this)">Eliminar</button></td>
+        `;
+
+        tablaDias.appendChild(fila);
+    }
+
+    // Eliminar fila
+    function eliminarFila(btn) {
+        const row = btn.closest('tr');
+        row.remove();
+        const tablaDias = document.getElementById('tabla-dias');
+        Array.from(tablaDias.rows).forEach((fila, index) => {
+            fila.cells[0].innerText = index + 1;
+        });
+    }
+</script>
+
+

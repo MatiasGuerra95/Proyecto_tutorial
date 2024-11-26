@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Agregar Sucursal{% endblock %}
+
+{% block content %}
+<h1>Agregar Sucursal</h1>
+
+<form method="POST" action="{{ url_for('crear_sucursal') }}">
+    {{ form.hidden_tag() }}
+
+    <div class="form-group">
+        <label for="cliente_id">Cliente</label>
+        {{ form.cliente_id(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+        <label for="numero_sucursal">Número Sucursal</label>
+        {{ form.numero_sucursal(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+        <label for="nombre_sucursal">Nombre Sucursal</label>
+        {{ form.nombre_sucursal(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+        <label for="direccion">Dirección</label>
+        {{ form.direccion(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+        <label for="region_id">Región</label>
+        {{ form.region_id(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+        <label for="comuna_id">Comuna</label>
+        {{ form.comuna_id(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        {{ form.telefono(class="form-control") }}
+    </div>
+
+  <!--   <div class="form-group">
+        <label for="representante_id">Representante</label>
+        {{ form.representante_id(class="form-control") }}
+    </div> -->
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="{{ url_for('lista_sucursal') }}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

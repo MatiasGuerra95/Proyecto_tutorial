@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar Cliente{% endblock %}
+
+{% block content %}
+<h1>Editar Cliente</h1>
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div>
+        <label for="rut">{{ form.rut.label }}</label>
+        {{ form.rut(readonly=true) }}
+    </div>
+    <div>
+        <label for="razon_social">{{ form.razon_social.label }}</label>
+        {{ form.razon_social }}
+    </div>
+    <div>
+        <label for="direccion">{{ form.direccion.label }}</label>
+        {{ form.direccion }}
+    </div>
+    <div>
+        <label for="region_id">{{ form.region_id.label }}</label>
+        {{ form.region_id }}
+    </div>
+    <div>
+        <label for="comuna_id">{{ form.comuna_id.label }}</label>
+        {{ form.comuna_id }}
+    </div>
+    <button type="submit" class="btn btn-success">Guardar Cambios</button>
+    <a href="{{ url_for('lista_clientes') }}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

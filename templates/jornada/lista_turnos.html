@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Turnos GV - {{ jornada.nombre }}{% endblock %}
+
+{% block content %}
+<h1>Turnos GV - {{ jornada.nombre }}</h1>
+<a href="{{ url_for('agregar_turno_gv', jornada_id=jornada.id) }}" class="btn btn-primary">Agregar Turno GV</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Descripción</th>
+            <th>Hora de Ingreso</th>
+            <th>Hora de Salida</th>
+            <th>Inicio Colación</th>
+            <th>Fin Colación</th>
+            <th>Total Horas</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for turno in turnos %}
+        <tr>
+            <td>{{ turno.descripcion }}</td>
+            <td>{{ turno.hora_ingreso }}</td>
+            <td>{{ turno.hora_salida }}</td>
+            <td>{{ turno.hora_ingreso_colacion }}</td>
+            <td>{{ turno.hora_salida_colacion }}</td>
+            <td>
+                {{ ((turno.hora_salida - turno.hora_ingreso).seconds - 
+                    (turno.hora_salida_colacion - turno.hora_ingreso_colacion).seconds) // 3600 }}
+                horas
+            </td>
+            <td>
+                <form action="{{ url_for('eliminar_turno_gv', jornada_id=jornada.id, turno_id=turno.id) }}" method="POST">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('¿Seguro que deseas eliminar este turno?');">
+                        Eliminar
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

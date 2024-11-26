@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Lista de Contratos{% endblock %}
+{% block content %}
+<h1>Lista de Contratos</h1>
+
+<a href="{{ url_for('crear_contrato') }}" class="btn btn-primary">Crear Contrato</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre Trabajador</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Término</th>
+            <th>PDF</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contrato in contratos %}
+            <tr>
+                <td>{{ contrato.trabajador.nombre }} {{ contrato.trabajador.apellidop }}</td>
+                <td>{{ contrato.fecha_inicio }}</td>
+                <td>{{ contrato.fecha_termino or 'Indefinido' }}</td>
+                <td>
+                    {% if contrato.pdf_path %}
+                        <a href="{{ url_for('static', filename='pdfs/' + contrato.pdf_path) }}" target="_blank">Ver PDF</a>
+                    {% else %}
+                        No disponible
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ url_for('editar_contrato', id=contrato.id) }}">Editar</a> |
+                    <a href="{{ url_for('eliminar_contrato', id=contrato.id) }}" onclick="return confirm('¿Seguro que deseas eliminar este contrato?');">Eliminar</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+

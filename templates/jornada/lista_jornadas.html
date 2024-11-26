@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Jornadas</h1>
+<a href="{{ url_for('agregar_jornada') }}">Agregar Jornada</a>
+<table border="1" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Días</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if jornadas %}
+            {% for jornada in jornadas %}
+            <tr>
+                <td>{{ jornada.nombre }}</td>
+                <td>{{ jornada.descripcion }}</td>
+                <td>
+                    <ul>
+                        {% for dia in jornada.dias %}
+                        <li>
+                            Día {{ dia.numero_dia }}: 
+                            {{ dia.hora_ingreso }} - {{ dia.hora_salida }} 
+                            (Colación: {{ dia.hora_salida_colacion }} - {{ dia.hora_ingreso_post_colacion }}, 
+                            Horas: {{ dia.horas }}, Turno: {{ dia.turno_gv }})
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td>
+                    <a href="{{ url_for('editar_jornada', id=jornada.id) }}">Editar</a>
+                    <form method="POST" action="{{ url_for('eliminar_jornada', id=jornada.id) }}" style="display:inline;">
+                        <button type="submit" onclick="return confirm('¿Estás seguro de que deseas eliminar esta jornada?')">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="4" style="text-align: center;">No hay jornadas registradas.</td>
+        </tr>
+        {% endif %}
+    </tbody>
+</table>
+{% endblock %}
+

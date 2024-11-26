@@ -3,7 +3,7 @@
 {% block content %}
 <h1>Trabajadores</h1>
 
-<a href="{{ url_for('add_trabajador') }}" class="btn btn-primary">Crear Trabajador</a>
+<a href="{{ url_for('crear_trabajador') }}" class="btn btn-primary">Agregar Trabajador</a>
 
 <table>
     <thead>
@@ -12,23 +12,25 @@
             <th>Nombre</th>
             <th>Apellido Paterno</th>
             <th>Apellido Materno</th>
-            <th>Acciones</th>
+            <th>Región</th>
+            <th>Comuna</th>
         </tr>
     </thead>
     <tbody>
         {% for trabajador in trabajador %}
-        <tr>
+        <tr onclick="openEditModal('{{ trabajador.id }}')" style="cursor: pointer;">
             <td>{{ trabajador.rut }}</td>
             <td>{{ trabajador.nombre }}</td>
             <td>{{ trabajador.apellidop }}</td>
             <td>{{ trabajador.apellidom }}</td>
+            <td>{{ trabajador.comuna.region.region if trabajador.comuna and trabajador.comuna.region else 'N/A' }}</td>
+            <td>{{ trabajador.comuna.nombre if trabajador.comuna else 'N/A' }}</td>
             <td>
-                <a href="{{ url_for('view_trabajador', id=trabajador.id) }}" class="btn btn-info">Ver</a>
-                <a href="{{ url_for('update_trabajador', id=trabajador.id) }}" class="btn btn-warning">Actualizar</a>
-                
-                <!-- Formulario para eliminar trabajador -->
-                <form action="{{ url_for('delete_trabajador', id=trabajador.id) }}" method="POST" style="display:inline;">
-                    <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este trabajador?');">Borrar Trabajador</button>
+                <!-- Botón Eliminar -->
+                <form action="{{ url_for('delete_trabajador', trabajador_id=trabajador.id) }}" method="POST" style="display:inline;">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este trabajador?');">
+                        Eliminar
+                    </button>
                 </form>
             </td>
         </tr>
@@ -36,20 +38,173 @@
     </tbody>
 </table>
 
-<!-- Mostrar contratos de cada trabajador -->
-<h2>Contratos de Trabajadores</h2>
-<ul>
-    {% for trabajador in trabajador %}
-    <li>{{ trabajador.nombre }}
-        <ul>
-            {% for contrato in trabajador.contratos %}
-            <li>Contrato ID: {{ contrato.id }} (Inicio: {{ contrato.fecha_inicio }}, Término: {{ contrato.fecha_termino }})</li>
-            {% else %}
-            <li>Sin contratos</li>
-            {% endfor %}
-        </ul>
-    </li>
-    {% endfor %}
-</ul>
+<!-- Modal para editar trabajador -->
+<div id="editModal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeEditModal()">&times;</span>
+        <h2>Editar Trabajador</h2>
+        <form id="editForm" method="POST" action="{{ url_for('lista_trabajador') }}">
+            <input type="hidden" id="editTrabajadorId" name="trabajador_id">
+            
+            <!-- Información General -->
+            <label for="rut">RUT:</label>
+            <input type="text" id="rut" name="rut" readonly><br>
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br>
+
+            <label for="apellidop">Apellido Paterno:</label>
+            <input type="text" id="apellidop" name="apellidop"><br>
+
+            <label for="apellidom">Apellido Materno:</label>
+            <input type="text" id="apellidom" name="apellidom"><br>
+
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br>
+
+            <label for="pais_id">País:</label>
+            <select id="pais_id" name="pais_id"></select><br>
+
+            <label for="genero_id">Género:</label>
+            <select id="genero_id" name="genero_id"></select><br>
+            
+            <label for="estado_civil_id">Estado Civil:</label>
+            <select id="estado_civil_id" name="estado_civil_id"></select><br>
+
+            <!-- Dirección -->
+            <h3>Dirección</h3>
+            <label for="direccion_calle">Calle:</label>
+            <input type="text" id="direccion_calle" name="direccion_calle"><br>
+
+            <label for="direccion_numero">Número:</label>
+            <input type="text" id="direccion_numero" name="direccion_numero"><br>
+
+            <label for="direccion_dpto">Departamento:</label>
+            <input type="text" id="direccion_dpto" name="direccion_dpto"><br>
+
+            <label for="region_id">Región:</label>
+            <select id="region_id" name="region_id"></select><br>
+            
+            <label for="comuna_id">Comuna:</label>
+            <select id="comuna_id" name="comuna_id"></select><br>            
+
+            <!-- Contacto -->
+            <h3>Contacto</h3>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono"><br>
+
+            <!-- Datos de Remuneraciones -->
+            <h3>Datos de Remuneraciones</h3>
+            <label for="forma_pago_id">Forma de Pago:</label>
+            <select id="forma_pago_id" name="forma_pago_id"></select><br>   
+
+            <label for="banco_id">Banco:</label>
+            <select id="banco_id" name="banco_id"></select><br>
+
+            <label for="banco_tipo_cuenta_id">Tipo de Cuenta:</label>
+            <select id="banco_tipo_cuenta_id" name="banco_tipo_cuenta_id"></select><br>
+
+            <label for="banco_cuenta_numero">Número de Cuenta:</label>
+            <input type="text" id="banco_cuenta_numero" name="banco_cuenta_numero"><br>
+
+            <label for="afp_id">AFP:</label>
+            <select id="afp_id" name="afp_id"></select><br>
+
+            <label for="prev_salud_id">Previsión de Salud:</label>
+            <select id="prev_salud_id" name="prev_salud_id"></select><br>
+       
+            <button type="submit">Guardar cambios</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function openEditModal(trabajadorId) {
+    fetch(`/trabajador/detalle/${trabajadorId}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            // Rellenar los campos del modal con los datos del trabajador
+            document.getElementById('editTrabajadorId').value = trabajadorId;
+            document.getElementById('rut').value = data.rut;
+            document.getElementById('nombre').value = data.nombre;
+            document.getElementById('apellidop').value = data.apellidop;
+            document.getElementById('apellidom').value = data.apellidom;
+            document.getElementById('fecha_nacimiento').value = data.fecha_nacimiento;
+            document.getElementById('pais_id').value = data.pais_id;
+            document.getElementById('direccion_calle').value = data.direccion_calle;
+            document.getElementById('direccion_numero').value = data.direccion_numero;
+            document.getElementById('direccion_dpto').value = data.direccion_dpto;
+            document.getElementById('email').value = data.email;
+            document.getElementById('telefono').value = data.telefono;
+            document.getElementById('banco_id').value = data.banco_id;
+            document.getElementById('banco_tipo_cuenta_id').value = data.banco_tipo_cuenta_id;
+            document.getElementById('banco_cuenta_numero').value = data.banco_cuenta_numero;
+            document.getElementById('afp_id').value = data.afp_id;
+            document.getElementById('prev_salud_id').value = data.prev_salud_id;
+            document.getElementById('forma_pago_id').value = data.forma_pago_id || '';
+            document.getElementById('region_id').value = data.region_id || '';
+            
+
+           // Fetch para llenar opciones dinámicas
+           fetch('/opciones_selectores')
+                .then(response => response.json())
+                .then(opciones => {
+                    fillSelect('pais_id', opciones.paises, 'nombre', data.pais_id);
+                    fillSelect('genero_id', opciones.generos, 'genero', data.genero_id);
+                    fillSelect('estado_civil_id', opciones.estados_civiles, 'estado', data.estado_civil_id);
+                    fillSelect('region_id', opciones.regiones, 'region', data.region_id);
+                    fillSelect('comuna_id', opciones.comunas, 'nombre', data.comuna_id);
+                    fillSelect('banco_id', opciones.bancos, 'nombre', data.banco_id);
+                    fillSelect('banco_tipo_cuenta_id', opciones.tipos_cuenta, 'nombre', data.banco_tipo_cuenta_id);
+                    fillSelect('afp_id', opciones.afps, 'nombre', data.afp_id);
+                    fillSelect('prev_salud_id', opciones.previsiones_salud, 'nombre', data.prev_salud_id);
+                    fillSelect('forma_pago_id', opciones.formas_pago, 'nombre', data.forma_pago_id);
+                });
+            document.getElementById('editModal').style.display = 'block';
+        });
+}
+
+// Helper function para llenar selectores
+function fillSelect(elementId, options, textKey, selectedValue) {
+    const select = document.getElementById(elementId);
+    select.innerHTML = ''; // Limpiar opciones existentes
+    options.forEach(option => {
+        const opt = document.createElement('option');
+        opt.value = option.id;
+        opt.textContent = option[textKey];
+        if (option.id === selectedValue) opt.selected = true;
+        select.appendChild(opt);
+    });
+}
+
+// Cerrar el modal
+function closeEditModal() {
+    document.getElementById("editModal").style.display = "none";
+}
+</script>
+
+<style>
+.modal-content {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    overflow: auto;
+}
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+</style>
 
 {% endblock %}
+
+

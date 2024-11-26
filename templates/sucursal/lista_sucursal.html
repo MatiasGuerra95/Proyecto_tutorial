@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Sucursales{% endblock %}
+
+{% block content %}
+<h1>Sucursales</h1>
+
+<a href="{{ url_for('crear_sucursal') }}" class="btn btn-primary">Agregar Sucursal</a>
+
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Cliente</th>
+            <th>Nombre</th>
+            <th>Región</th>
+            <th>Comuna</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for sucursal in sucursales %}
+        <tr>
+            <td>{{ sucursal.cliente.nombre }}</td>
+            <td>{{ sucursal.nombre_sucursal }}</td>
+            <td>{{ sucursal.region.region }}</td>
+            <td>{{ sucursal.comuna.nombre }}</td>
+            <td>
+                {% if sucursal.representante %}
+                {{ sucursal.representante.nombre }} {{ sucursal.representante.apellidop }}
+                {% else %}
+                N/A
+                {% endif %}
+            </td>
+            <td>
+                <a href="{{ url_for('editar_sucursal', id=sucursal.id) }}" class="btn btn-warning">Editar</a>
+                <form action="{{ url_for('eliminar_sucursal', id=sucursal.id) }}" method="POST" style="display:inline;">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar esta sucursal?');">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Crear Trabajador{% endblock %}
+
+{% block content %}
+<h1>Agregar Trabajador</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <fieldset>
+    <legend>Información Personal</legend>    
+    <p>{{ form.rut.label }}<br>{{ form.rut(size=32) }}</p>
+    <p>{{ form.nombre.label }}<br>{{ form.nombre(size=32) }}</p>
+    <p>{{ form.apellidop.label }}<br>{{ form.apellidop(size=32) }}</p>
+    <p>{{ form.apellidom.label }}<br>{{ form.apellidom(size=32) }}</p>
+    <p>{{ form.email.label }}<br>{{ form.email(size=32) }}</p>
+    <p>{{ form.fecha_nacimiento.label }}<br>{{ form.fecha_nacimiento() }}</p>
+    <p>{{ form.comuna_id.label }}<br>{{ form.comuna_id() }}</p>
+    <p>{{ form.direccion_calle.label }}<br>{{ form.direccion_calle(size=32) }}</p>
+    <p>{{ form.direccion_numero.label }}<br>{{ form.direccion_numero(size=32) }}</p>
+    <p>{{ form.direccion_dpto.label }}<br>{{ form.direccion_dpto(size=32) }}</p>
+    <p>{{ form.banco_id.label }}<br>{{ form.banco_id() }}</p>
+    <p>{{ form.banco_tipo_cuenta_id.label }}<br>{{ form.banco_tipo_cuenta_id() }}</p>
+    <p>{{ form.banco_cuenta_numero.label }}<br>{{ form.banco_cuenta_numero(size=32) }}</p>
+    <p>{{ form.afp_id.label }}<br>{{ form.afp_id() }}</p>
+    <p>{{ form.pais_id.label }}<br>{{ form.pais_id() }}</p>
+    <p>{{ form.prev_salud_id.label }}<br>{{ form.prev_salud_id() }}</p>
+    <p>{{ form.estado_civil_id.label }}<br>{{ form.estado_civil_id() }}</p>
+    <p>{{ form.genero_id.label }}<br>{{ form.genero_id() }}</p>
+
+    <p><input type="submit" value="Crear Trabajador" class="btn btn-primary"></p>
+</form>
+{% endblock %}

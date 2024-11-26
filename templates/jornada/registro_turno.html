@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Registrar Turno GV{% endblock %}
+
+{% block content %}
+<h1>Registrar Turno GV</h1>
+<form method="POST" action="{{ url_for('agregar_turno_gv', jornada_id=jornada.id) }}">
+    {{ form.hidden_tag() }}
+    <!-- Campos del formulario -->
+    <div class="mb-3">
+        {{ form.descripcion.label }} {{ form.descripcion(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.hora_ingreso.label }} {{ form.hora_ingreso(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.hora_salida.label }} {{ form.hora_salida(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.hora_ingreso_colacion.label }} {{ form.hora_ingreso_colacion(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.hora_salida_colacion.label }} {{ form.hora_salida_colacion(class="form-control") }}
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+{% endblock %}

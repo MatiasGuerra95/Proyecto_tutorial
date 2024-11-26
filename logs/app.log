@@ -1,0 +1,1689 @@
+2024-11-14 15:28:06,315 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-14 15:28:06,316 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 15:28:09,563 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:09] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-14 15:28:09,695 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:09] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:28:09,751 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:09] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:13,693 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:13] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:28:13,734 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:13] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:14,878 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:14] "GET /contrato HTTP/1.1" 200 -
+2024-11-14 15:28:14,917 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:14] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:15,961 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:15] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-14 15:28:19,358 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:19] "GET /add_afp HTTP/1.1" 200 -
+2024-11-14 15:28:19,401 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:19] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:20,650 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:20] "GET /contrato HTTP/1.1" 200 -
+2024-11-14 15:28:20,689 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:20] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:23,832 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:23] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:28:23,870 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:23] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:24,772 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:24] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-14 15:28:24,784 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:24] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:28:24,824 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:24] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:28,621 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:28] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-14 15:28:28,652 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:28] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:29,891 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:29] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:28:29,927 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:29] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:31,158 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:31] "GET /contrato HTTP/1.1" 200 -
+2024-11-14 15:28:31,200 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:31] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:32,020 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:32] "GET /contrato/crear_contrato HTTP/1.1" 200 -
+2024-11-14 15:28:32,053 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:32] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:33,547 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:33] "GET /contrato HTTP/1.1" 200 -
+2024-11-14 15:28:33,585 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:33] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:35,702 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:35] "GET /contrato/editar_contrato/2 HTTP/1.1" 200 -
+2024-11-14 15:28:35,740 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:35] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:28:37,136 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:37] "GET /contrato HTTP/1.1" 200 -
+2024-11-14 15:28:37,172 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:28:37] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:29:07,134 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:29:07] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-14 15:29:07,150 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:29:07] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:29:07,192 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:29:07] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:29:08,448 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:29:08] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:29:08,471 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:29:08] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:29:09,960 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:29:09] "GET /add_genero HTTP/1.1" 200 -
+2024-11-14 15:29:09,994 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:29:09] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:29:11,602 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:29:11] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:29:11,637 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:29:11] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:30:35,637 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:30:35] "GET /contrato HTTP/1.1" 200 -
+2024-11-14 15:30:35,696 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:30:35] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:30:37,898 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:30:37] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-14 15:38:15,163 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-14 15:38:15,163 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 15:38:18,474 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:38:18] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-14 15:38:18,587 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:38:18] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:38:18,637 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:38:18] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:38:22,536 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:38:22] "GET /contrato HTTP/1.1" 200 -
+2024-11-14 15:38:22,583 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:38:22] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2024-11-14 15:38:23,682 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:38:23] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-14 15:43:07,153 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:43:07] "GET /contrato HTTP/1.1" 200 -
+2024-11-14 15:43:07,204 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:43:07] "GET /static/styles.css HTTP/1.1" 200 -
+2024-11-14 15:43:09,514 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:43:09] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-14 15:43:11,948 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:43:11] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-14 15:43:47,791 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-14 15:43:47,792 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 15:43:50,086 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:43:50] "GET /contrato HTTP/1.1" 200 -
+2024-11-14 15:43:50,137 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:43:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-14 15:43:51,078 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:43:51] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-14 15:46:54,938 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-14 15:46:54,939 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 15:46:55,955 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 162, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename='pdfs/' + pdf_filename) }}">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdf_filename' is undefined
+2024-11-14 15:46:55,958 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:46:55] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-14 15:46:58,264 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 162, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename='pdfs/' + pdf_filename) }}">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdf_filename' is undefined
+2024-11-14 15:46:58,266 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:46:58] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-14 15:46:59,874 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:46:59] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-14 15:46:59,918 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:46:59] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:46:59,962 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:46:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-14 15:47:06,171 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:47:06] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:47:06,201 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:47:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-14 15:47:07,054 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 162, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename='pdfs/' + pdf_filename) }}">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdf_filename' is undefined
+2024-11-14 15:47:07,057 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:47:07] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-14 15:47:13,696 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:47:13] "GET /add_afp HTTP/1.1" 200 -
+2024-11-14 15:47:13,727 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:47:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-14 15:47:15,324 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 162, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename='pdfs/' + pdf_filename) }}">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdf_filename' is undefined
+2024-11-14 15:47:15,326 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:47:15] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-14 15:54:53,923 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-14 15:54:53,923 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 15:54:57,190 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:54:57] "GET /contrato HTTP/1.1" 200 -
+2024-11-14 15:54:57,227 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:54:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-14 15:54:58,264 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:54:58] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-14 15:56:31,891 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-14 15:56:31,891 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-14 15:56:36,364 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:56:36] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-14 15:56:40,487 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:56:40] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-14 15:56:40,601 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:56:40] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:56:40,628 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:56:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-14 15:56:41,290 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:56:41] "GET /trabajador HTTP/1.1" 200 -
+2024-11-14 15:56:41,307 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:56:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-14 15:56:42,070 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:56:42] "GET /contrato HTTP/1.1" 200 -
+2024-11-14 15:56:42,101 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:56:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-14 15:56:43,505 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:56:43] "GET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1" 200 -
+2024-11-14 15:56:43,868 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 15:56:43] "GET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1" 200 -
+2024-11-14 17:32:34,943 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 17:32:34] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
+2024-11-14 17:32:35,255 - werkzeug - INFO - 172.19.0.1 - - [14/Nov/2024 17:32:35] "GET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1" 200 -
+2024-11-15 11:29:41,218 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 11:29:41,219 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 11:29:43,244 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:29:43] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-15 11:29:43,559 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:29:43] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 11:29:43,579 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:29:43] "GET /static/styles.css HTTP/1.1" 200 -
+2024-11-15 11:29:43,748 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:29:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-15 11:29:46,393 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:29:46] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 11:29:46,412 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:29:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 11:30:09,817 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:30:09] "GET /contrato/crear_contrato HTTP/1.1" 200 -
+2024-11-15 11:30:09,836 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:30:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 11:30:14,956 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:30:14] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 11:30:14,979 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:30:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 11:30:20,688 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:30:20] "GET /contrato/editar_contrato/1 HTTP/1.1" 200 -
+2024-11-15 11:30:20,711 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:30:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 11:30:23,592 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:30:23] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 11:30:23,614 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 11:30:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:38:50,796 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:38:50] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 13:38:50,825 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:38:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:38:51,901 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:38:51] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-15 13:38:51,911 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:38:51] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 13:38:51,932 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:38:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:39:01,093 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:01] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 13:39:01,117 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:39:02,913 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:02] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 13:39:02,937 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:39:04,549 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:04] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 13:39:04,572 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:39:24,695 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:24] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-15 13:39:24,707 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:24] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 13:39:24,726 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:39:39,398 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:39] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 13:39:39,419 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:39:46,810 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:46] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-15 13:39:46,831 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:39:51,372 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:51] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 13:39:51,398 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:39:53,054 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:53] "GET /trabajador/editar_trabajador/1 HTTP/1.1" 200 -
+2024-11-15 13:39:53,072 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:39:58,447 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:58] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 13:39:58,469 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:39:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:40:08,934 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:08] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 13:40:08,957 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:40:10,653 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:10] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 13:40:10,678 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:40:13,828 - app - WARNING - Intento de eliminación de trabajador con contratos: ID 1
+2024-11-15 13:40:13,830 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:13] "[32mPOST /delete_trabajador/1 HTTP/1.1[0m" 302 -
+2024-11-15 13:40:13,835 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:13] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-15 13:40:13,848 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:13] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 13:40:13,868 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:40:20,280 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:20] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 13:40:20,302 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:40:42,749 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:42] "GET /contrato/crear_contrato HTTP/1.1" 200 -
+2024-11-15 13:40:42,774 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:40:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:41:00,681 - utils - INFO - PDF generado exitosamente para el trabajador con RUT 19000000-1 en: static/pdfs/contrato_19000000-1_2024-11-15.pdf
+2024-11-15 13:41:00,709 - app - INFO - Contrato creado y PDF generado exitosamente.
+2024-11-15 13:41:00,710 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:41:00] "[32mPOST /contrato/crear_contrato HTTP/1.1[0m" 302 -
+2024-11-15 13:41:00,719 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:41:00] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 13:41:00,746 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:41:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:41:06,691 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:41:06] "GET /contrato/editar_contrato/3 HTTP/1.1" 200 -
+2024-11-15 13:41:06,714 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:41:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:41:11,394 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:41:11] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 13:41:11,418 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:41:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:41:12,838 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:41:12] "[33mGET /static/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 404 -
+2024-11-15 13:41:17,724 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:41:17] "GET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1" 200 -
+2024-11-15 13:41:17,900 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:41:17] "GET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1" 200 -
+2024-11-15 13:41:34,874 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:41:34] "[33mGET /static/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 404 -
+2024-11-15 13:49:54,128 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 13:49:54,129 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 13:49:59,523 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:49:59] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 13:49:59,541 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:49:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:50:00,791 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:50:00] "GET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1" 200 -
+2024-11-15 13:50:01,007 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:50:01] "GET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1" 200 -
+2024-11-15 13:50:07,877 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:50:07] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-15 13:50:42,232 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 13:50:42,233 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 13:50:44,547 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:50:44] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 13:50:44,562 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:50:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 13:50:45,460 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:50:45] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
+2024-11-15 13:50:45,669 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:50:45] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
+2024-11-15 13:50:48,383 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:50:48] "[33mGET /static/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 404 -
+2024-11-15 13:55:59,676 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:55:59] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-15 13:55:59,699 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:55:59] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 13:55:59,724 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 13:55:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:12:35,617 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:12:35] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 14:12:35,635 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:12:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:12:37,276 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:12:37] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-15 14:12:37,297 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:12:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:12:54,237 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:12:54] "GET /add_afp HTTP/1.1" 200 -
+2024-11-15 14:12:54,256 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:12:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:13:06,142 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:06] "GET /add_banco HTTP/1.1" 200 -
+2024-11-15 14:13:06,167 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:13:11,131 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:11] "GET /add_comuna HTTP/1.1" 200 -
+2024-11-15 14:13:11,149 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:13:19,607 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:19] "GET /add_region HTTP/1.1" 200 -
+2024-11-15 14:13:19,629 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:13:28,300 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:28] "GET /add_comuna HTTP/1.1" 200 -
+2024-11-15 14:13:28,320 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:13:31,690 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:31] "GET /add_cuenta HTTP/1.1" 200 -
+2024-11-15 14:13:31,710 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:13:45,662 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:45] "GET /add_pais HTTP/1.1" 200 -
+2024-11-15 14:13:45,683 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:13:51,103 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:51] "GET /add_prevision HTTP/1.1" 200 -
+2024-11-15 14:13:51,125 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:13:56,546 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:56] "GET /add_estado_civil HTTP/1.1" 200 -
+2024-11-15 14:13:56,566 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:13:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:14:11,608 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:14:11] "GET /add_genero HTTP/1.1" 200 -
+2024-11-15 14:14:11,635 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:14:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:14:54,469 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:14:54] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 14:14:54,489 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:14:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:30:01,565 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:30:01] "GET /contrato/crear_contrato HTTP/1.1" 200 -
+2024-11-15 14:30:01,590 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:30:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:30:03,265 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:30:03] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 14:30:03,304 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:30:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 14:30:04,841 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:30:04] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-15 14:30:04,866 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 14:30:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:01:42,549 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:01:42] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:01:42,575 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:01:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:02:26,417 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:02:26] "GET /add_prevision HTTP/1.1" 200 -
+2024-11-15 15:02:26,443 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:02:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:02:28,564 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:02:28] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:02:28,583 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:02:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:04:49,275 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:04:49] "GET /add_estado_civil HTTP/1.1" 200 -
+2024-11-15 15:04:49,302 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:04:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:11:06,685 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:11:06] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:11:06,712 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:11:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:11:26,344 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:11:26] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-15 15:11:26,366 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:11:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:11:32,129 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:11:32] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:11:32,151 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:11:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:11:52,552 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:11:52] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-15 15:11:52,575 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:11:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:11:57,460 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:11:57] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:11:57,481 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:11:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:13:23,812 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:13:23] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-15 15:13:23,837 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:13:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:23:06,039 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:06] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:23:06,067 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:23:14,309 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:14] "GET /trabajador/editar_trabajador/1 HTTP/1.1" 200 -
+2024-11-15 15:23:14,331 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:23:19,453 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:19] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:23:19,473 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:23:26,940 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:26] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-15 15:23:26,952 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:26] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:23:26,972 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:23:27,797 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:27] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:23:27,815 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:23:33,060 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:33] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:23:33,079 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:23:39,369 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:39] "GET /trabajador/editar_trabajador/1 HTTP/1.1" 200 -
+2024-11-15 15:23:39,389 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:23:47,130 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:47] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:23:47,153 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:23:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:24:01,154 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:24:01] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-15 15:24:01,174 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:24:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:24:04,397 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:24:04] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:24:04,430 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:24:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:24:05,433 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:24:05] "GET /trabajador/editar_trabajador/1 HTTP/1.1" 200 -
+2024-11-15 15:24:05,454 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:24:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:24:07,431 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:24:07] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:24:07,455 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:24:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:26:10,543 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:26:10] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:26:10,564 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:26:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:26:11,630 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:26:11] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-15 15:26:11,639 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:26:11] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:26:11,658 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:26:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:54:58,882 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 15:54:58,883 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 15:55:03,704 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:55:03] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:55:03,725 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:55:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:55:06,971 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:55:06] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-15 15:55:06,984 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:55:06] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:55:07,011 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:55:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 15:55:07,719 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:55:07] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 15:55:07,740 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 15:55:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 17:21:18,727 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 17:21:18,727 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 17:21:19,101 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:21:19] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 17:21:19,126 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:21:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 17:21:35,472 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:21:35] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-15 17:21:35,491 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:21:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 17:55:54,677 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 17:55:54,678 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 17:56:01,532 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:01] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 17:56:01,549 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 17:56:04,884 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:04] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 17:56:04,901 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 17:56:05,278 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:05] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 17:56:05,293 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 17:56:05,459 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:05] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 17:56:05,474 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 17:56:06,085 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:06] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-15 17:56:06,096 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:06] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 17:56:06,119 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 17:56:06,818 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:06] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 17:56:06,838 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 17:56:07,923 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:07] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-15 17:56:07,943 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 17:56:15,132 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:15] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 17:56:15,159 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 17:56:17,548 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:17] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-15 17:56:17,568 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:17] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 17:56:17,589 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 17:56:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:00:27,880 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 18:00:27,881 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 18:00:31,558 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:00:31] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 18:00:31,578 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:00:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:00:41,752 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:00:41] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 18:00:41,776 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:00:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:00:43,002 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:00:43] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 18:00:43,024 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:00:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:18:10,947 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 18:18:10,947 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 18:18:15,988 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:18:15] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 18:18:16,016 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:18:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:18:16,847 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:18:16] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-15 18:21:51,483 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 18:21:51,484 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 18:21:52,995 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:21:52] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 18:21:53,019 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:21:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:21:53,907 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:21:53] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-15 18:22:04,498 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:22:04] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-15 18:22:04,524 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:22:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:22:09,063 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:22:09] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 18:22:09,086 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:22:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:22:10,233 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:22:10] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-15 18:22:29,304 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:22:29] "GET /contrato HTTP/1.1" 200 -
+2024-11-15 18:22:29,329 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:22:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:22:31,546 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:22:31] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 18:22:31,575 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:22:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:26:02,603 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:26:02] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-15 18:26:02,637 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:26:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:26:03,968 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:26:03] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 18:26:04,001 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:26:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:26:04,851 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:26:04] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-15 18:33:07,580 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 18:33:07,580 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 18:33:10,016 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:33:10] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 18:33:10,038 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:33:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 18:33:11,169 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:33:11] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-15 18:33:11,188 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:33:11] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-15 18:36:14,301 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:36:14] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-15 18:36:14,315 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 18:36:14] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-15 19:46:04,253 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 19:46:04,253 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 19:46:08,451 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 19:46:08] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 19:46:08,470 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 19:46:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 19:46:09,529 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 19:46:09] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-15 19:46:09,549 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 19:46:09] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-15 19:55:47,236 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-15 19:55:47,236 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-15 19:55:52,010 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 19:55:52] "GET /trabajador HTTP/1.1" 200 -
+2024-11-15 19:55:52,029 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 19:55:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-15 19:55:52,982 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 19:55:52] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-15 19:55:53,000 - werkzeug - INFO - 172.19.0.1 - - [15/Nov/2024 19:55:53] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-18 12:07:20,435 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 12:07:20,436 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 12:07:27,882 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:07:27] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-18 12:07:28,210 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:07:28] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 12:07:28,250 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:07:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 12:07:28,487 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:07:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-18 12:07:31,653 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:07:31] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 12:07:31,679 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:07:31] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-18 12:19:24,936 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 12:19:24,937 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 12:19:26,280 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:19:26] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 12:19:26,320 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:19:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 12:19:27,542 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:19:27] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 12:19:27,568 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:19:27] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-18 12:24:34,150 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 12:24:34,151 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 12:25:03,788 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:25:03] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 12:25:03,829 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:25:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 12:25:05,176 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:25:05] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 12:25:05,197 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:25:05] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-18 12:25:25,405 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:25:25] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 12:25:25,425 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 12:25:25] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-18 13:26:43,598 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 13:26:43,601 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 13:32:05,402 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 13:32:05,402 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 13:32:06,404 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column trabajador.nacionalidad does not exist
+LINE 1: ...or.estado_civil_id AS trabajador_estado_civil_id, trabajador...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column trabajador.nacionalidad does not exist
+LINE 1: ...or.estado_civil_id AS trabajador_estado_civil_id, trabajador...
+                                                             ^
+
+[SQL: SELECT trabajador.id AS trabajador_id, trabajador.rut AS trabajador_rut, trabajador.nombre AS trabajador_nombre, trabajador.apellidop AS trabajador_apellidop, trabajador.apellidom AS trabajador_apellidom, trabajador.email AS trabajador_email, trabajador.fecha_nacimiento AS trabajador_fecha_nacimiento, trabajador.telefono AS trabajador_telefono, trabajador.genero_id AS trabajador_genero_id, trabajador.estado_civil_id AS trabajador_estado_civil_id, trabajador.nacionalidad AS trabajador_nacionalidad, trabajador.comuna_id AS trabajador_comuna_id, trabajador.direccion_calle AS trabajador_direccion_calle, trabajador.direccion_numero AS trabajador_direccion_numero, trabajador.direccion_dpto AS trabajador_direccion_dpto, trabajador.banco_id AS trabajador_banco_id, trabajador.banco_tipo_cuenta_id AS trabajador_banco_tipo_cuenta_id, trabajador.banco_cuenta_numero AS trabajador_banco_cuenta_numero, trabajador.afp_id AS trabajador_afp_id, trabajador.pais_id AS trabajador_pais_id, trabajador.prev_salud_id AS trabajador_prev_salud_id, trabajador.forma_pago_id AS trabajador_forma_pago_id 
+FROM trabajador]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-11-18 13:32:06,425 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:32:06] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 13:32:07,772 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column trabajador.nacionalidad does not exist
+LINE 1: ...or.estado_civil_id AS trabajador_estado_civil_id, trabajador...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column trabajador.nacionalidad does not exist
+LINE 1: ...or.estado_civil_id AS trabajador_estado_civil_id, trabajador...
+                                                             ^
+
+[SQL: SELECT trabajador.id AS trabajador_id, trabajador.rut AS trabajador_rut, trabajador.nombre AS trabajador_nombre, trabajador.apellidop AS trabajador_apellidop, trabajador.apellidom AS trabajador_apellidom, trabajador.email AS trabajador_email, trabajador.fecha_nacimiento AS trabajador_fecha_nacimiento, trabajador.telefono AS trabajador_telefono, trabajador.genero_id AS trabajador_genero_id, trabajador.estado_civil_id AS trabajador_estado_civil_id, trabajador.nacionalidad AS trabajador_nacionalidad, trabajador.comuna_id AS trabajador_comuna_id, trabajador.direccion_calle AS trabajador_direccion_calle, trabajador.direccion_numero AS trabajador_direccion_numero, trabajador.direccion_dpto AS trabajador_direccion_dpto, trabajador.banco_id AS trabajador_banco_id, trabajador.banco_tipo_cuenta_id AS trabajador_banco_tipo_cuenta_id, trabajador.banco_cuenta_numero AS trabajador_banco_cuenta_numero, trabajador.afp_id AS trabajador_afp_id, trabajador.pais_id AS trabajador_pais_id, trabajador.prev_salud_id AS trabajador_prev_salud_id, trabajador.forma_pago_id AS trabajador_forma_pago_id 
+FROM trabajador]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-11-18 13:32:07,774 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:32:07] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 13:32:08,468 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column trabajador.nacionalidad does not exist
+LINE 1: ...or.estado_civil_id AS trabajador_estado_civil_id, trabajador...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column trabajador.nacionalidad does not exist
+LINE 1: ...or.estado_civil_id AS trabajador_estado_civil_id, trabajador...
+                                                             ^
+
+[SQL: SELECT trabajador.id AS trabajador_id, trabajador.rut AS trabajador_rut, trabajador.nombre AS trabajador_nombre, trabajador.apellidop AS trabajador_apellidop, trabajador.apellidom AS trabajador_apellidom, trabajador.email AS trabajador_email, trabajador.fecha_nacimiento AS trabajador_fecha_nacimiento, trabajador.telefono AS trabajador_telefono, trabajador.genero_id AS trabajador_genero_id, trabajador.estado_civil_id AS trabajador_estado_civil_id, trabajador.nacionalidad AS trabajador_nacionalidad, trabajador.comuna_id AS trabajador_comuna_id, trabajador.direccion_calle AS trabajador_direccion_calle, trabajador.direccion_numero AS trabajador_direccion_numero, trabajador.direccion_dpto AS trabajador_direccion_dpto, trabajador.banco_id AS trabajador_banco_id, trabajador.banco_tipo_cuenta_id AS trabajador_banco_tipo_cuenta_id, trabajador.banco_cuenta_numero AS trabajador_banco_cuenta_numero, trabajador.afp_id AS trabajador_afp_id, trabajador.pais_id AS trabajador_pais_id, trabajador.prev_salud_id AS trabajador_prev_salud_id, trabajador.forma_pago_id AS trabajador_forma_pago_id 
+FROM trabajador]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-11-18 13:32:08,471 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:32:08] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 13:32:08,670 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column trabajador.nacionalidad does not exist
+LINE 1: ...or.estado_civil_id AS trabajador_estado_civil_id, trabajador...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column trabajador.nacionalidad does not exist
+LINE 1: ...or.estado_civil_id AS trabajador_estado_civil_id, trabajador...
+                                                             ^
+
+[SQL: SELECT trabajador.id AS trabajador_id, trabajador.rut AS trabajador_rut, trabajador.nombre AS trabajador_nombre, trabajador.apellidop AS trabajador_apellidop, trabajador.apellidom AS trabajador_apellidom, trabajador.email AS trabajador_email, trabajador.fecha_nacimiento AS trabajador_fecha_nacimiento, trabajador.telefono AS trabajador_telefono, trabajador.genero_id AS trabajador_genero_id, trabajador.estado_civil_id AS trabajador_estado_civil_id, trabajador.nacionalidad AS trabajador_nacionalidad, trabajador.comuna_id AS trabajador_comuna_id, trabajador.direccion_calle AS trabajador_direccion_calle, trabajador.direccion_numero AS trabajador_direccion_numero, trabajador.direccion_dpto AS trabajador_direccion_dpto, trabajador.banco_id AS trabajador_banco_id, trabajador.banco_tipo_cuenta_id AS trabajador_banco_tipo_cuenta_id, trabajador.banco_cuenta_numero AS trabajador_banco_cuenta_numero, trabajador.afp_id AS trabajador_afp_id, trabajador.pais_id AS trabajador_pais_id, trabajador.prev_salud_id AS trabajador_prev_salud_id, trabajador.forma_pago_id AS trabajador_forma_pago_id 
+FROM trabajador]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-11-18 13:32:08,672 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:32:08] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 13:32:36,802 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:32:36] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-18 13:32:36,828 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column trabajador.nacionalidad does not exist
+LINE 1: ...or.estado_civil_id AS trabajador_estado_civil_id, trabajador...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column trabajador.nacionalidad does not exist
+LINE 1: ...or.estado_civil_id AS trabajador_estado_civil_id, trabajador...
+                                                             ^
+
+[SQL: SELECT trabajador.id AS trabajador_id, trabajador.rut AS trabajador_rut, trabajador.nombre AS trabajador_nombre, trabajador.apellidop AS trabajador_apellidop, trabajador.apellidom AS trabajador_apellidom, trabajador.email AS trabajador_email, trabajador.fecha_nacimiento AS trabajador_fecha_nacimiento, trabajador.telefono AS trabajador_telefono, trabajador.genero_id AS trabajador_genero_id, trabajador.estado_civil_id AS trabajador_estado_civil_id, trabajador.nacionalidad AS trabajador_nacionalidad, trabajador.comuna_id AS trabajador_comuna_id, trabajador.direccion_calle AS trabajador_direccion_calle, trabajador.direccion_numero AS trabajador_direccion_numero, trabajador.direccion_dpto AS trabajador_direccion_dpto, trabajador.banco_id AS trabajador_banco_id, trabajador.banco_tipo_cuenta_id AS trabajador_banco_tipo_cuenta_id, trabajador.banco_cuenta_numero AS trabajador_banco_cuenta_numero, trabajador.afp_id AS trabajador_afp_id, trabajador.pais_id AS trabajador_pais_id, trabajador.prev_salud_id AS trabajador_prev_salud_id, trabajador.forma_pago_id AS trabajador_forma_pago_id 
+FROM trabajador]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-11-18 13:32:36,831 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:32:36] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 13:35:31,056 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 13:35:31,056 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 13:35:33,507 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:35:33] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 13:35:33,555 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:35:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 13:35:34,498 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:35:34] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:35:34,527 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:35:34] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-18 13:51:29,916 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 13:51:29,916 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 13:51:30,403 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:30] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 13:51:30,439 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 13:51:31,773 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:31] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:32,871 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:32] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:34,075 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:34] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:34,352 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:34] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:34,580 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:34] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:35,686 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:35] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:37,315 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:37] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:38,079 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:38] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:38,837 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:38] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:39,283 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:39] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:39,475 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:39] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:39,673 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:39] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:39,860 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:39] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:40,038 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:40] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:40,229 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:40] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:51:43,052 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:51:43] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:14,359 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:14] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:14,812 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:14] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:14,997 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:14] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:15,165 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:15] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:15,315 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:15] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:16,128 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:16] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:16,315 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:16] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:16,468 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:16] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:16,654 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:16] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:16,796 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:16] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:16,930 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:16] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:17,027 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:17] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:17,253 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:17] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:52:17,366 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:52:17] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:54:03,096 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 13:54:03,096 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 13:54:06,272 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:06] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 13:54:06,309 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 13:54:07,282 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:07] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:54:12,087 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:12] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 13:54:13,249 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:13] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 13:54:13,276 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 13:54:14,049 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:14] "GET /contrato HTTP/1.1" 200 -
+2024-11-18 13:54:14,086 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 13:54:15,374 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:15] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 13:54:15,411 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 13:54:16,126 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:16] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
+2024-11-18 13:54:16,165 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 13:54:22,279 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:22] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 13:54:22,322 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 13:54:23,978 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 13:54:23] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 14:29:01,575 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:29:01] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 14:43:18,574 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 14:43:18,574 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 14:43:20,526 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2509, in get_property
+    return self._props[key]
+KeyError: 'trabajadores'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/flask_sqlalchemy/model.py", line 22, in __get__
+    return cls.query_class(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 287, in _set_entities
+    self._raw_columns = [
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 288, in <listcomp>
+    coercions.expect(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/coercions.py", line 389, in expect
+    insp._post_inspect
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2711, in _post_inspect
+    self._check_configure()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2388, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4204, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4245, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2405, in _post_configure_properties
+    prop.init()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/interfaces.py", line 584, in init
+    self.do_init()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1647, in do_init
+    self._generate_backref()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 2133, in _generate_backref
+    self._add_reverse_property(self.back_populates)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1578, in _add_reverse_property
+    other = self.mapper.get_property(key, _configure_mappers=False)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2511, in get_property
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Mapper 'Mapper[Region(region)]' has no property 'trabajadores'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-11-18 14:43:20,545 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:43:20] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 14:43:24,878 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/flask_sqlalchemy/model.py", line 22, in __get__
+    return cls.query_class(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 287, in _set_entities
+    self._raw_columns = [
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 288, in <listcomp>
+    coercions.expect(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/coercions.py", line 389, in expect
+    insp._post_inspect
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2711, in _post_inspect
+    self._check_configure()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2388, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4204, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4241, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Trabajador(trabajador)]'. Original exception was: Mapper 'Mapper[Region(region)]' has no property 'trabajadores'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-11-18 14:43:24,881 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:43:24] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 14:43:25,493 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/flask_sqlalchemy/model.py", line 22, in __get__
+    return cls.query_class(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 287, in _set_entities
+    self._raw_columns = [
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 288, in <listcomp>
+    coercions.expect(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/coercions.py", line 389, in expect
+    insp._post_inspect
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2711, in _post_inspect
+    self._check_configure()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2388, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4204, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4241, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Trabajador(trabajador)]'. Original exception was: Mapper 'Mapper[Region(region)]' has no property 'trabajadores'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-11-18 14:43:25,494 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:43:25] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 14:43:25,675 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/flask_sqlalchemy/model.py", line 22, in __get__
+    return cls.query_class(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 287, in _set_entities
+    self._raw_columns = [
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 288, in <listcomp>
+    coercions.expect(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/coercions.py", line 389, in expect
+    insp._post_inspect
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2711, in _post_inspect
+    self._check_configure()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2388, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4204, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4241, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Trabajador(trabajador)]'. Original exception was: Mapper 'Mapper[Region(region)]' has no property 'trabajadores'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-11-18 14:43:25,677 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:43:25] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 14:43:25,861 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/flask_sqlalchemy/model.py", line 22, in __get__
+    return cls.query_class(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 287, in _set_entities
+    self._raw_columns = [
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 288, in <listcomp>
+    coercions.expect(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/coercions.py", line 389, in expect
+    insp._post_inspect
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2711, in _post_inspect
+    self._check_configure()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2388, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4204, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4241, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Trabajador(trabajador)]'. Original exception was: Mapper 'Mapper[Region(region)]' has no property 'trabajadores'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-11-18 14:43:25,864 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:43:25] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 14:43:26,055 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/flask_sqlalchemy/model.py", line 22, in __get__
+    return cls.query_class(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 287, in _set_entities
+    self._raw_columns = [
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 288, in <listcomp>
+    coercions.expect(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/coercions.py", line 389, in expect
+    insp._post_inspect
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2711, in _post_inspect
+    self._check_configure()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2388, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4204, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4241, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Trabajador(trabajador)]'. Original exception was: Mapper 'Mapper[Region(region)]' has no property 'trabajadores'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-11-18 14:43:26,057 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:43:26] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 14:48:33,340 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 14:48:33,340 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 14:48:34,216 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2509, in get_property
+    return self._props[key]
+KeyError: 'trabajadores'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/flask_sqlalchemy/model.py", line 22, in __get__
+    return cls.query_class(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 287, in _set_entities
+    self._raw_columns = [
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 288, in <listcomp>
+    coercions.expect(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/coercions.py", line 389, in expect
+    insp._post_inspect
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2711, in _post_inspect
+    self._check_configure()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2388, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4204, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4245, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2405, in _post_configure_properties
+    prop.init()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/interfaces.py", line 584, in init
+    self.do_init()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1647, in do_init
+    self._generate_backref()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 2133, in _generate_backref
+    self._add_reverse_property(self.back_populates)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1578, in _add_reverse_property
+    other = self.mapper.get_property(key, _configure_mappers=False)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2511, in get_property
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Mapper 'Mapper[Region(region)]' has no property 'trabajadores'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-11-18 14:48:34,222 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:48:34] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 14:48:35,266 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/flask_sqlalchemy/model.py", line 22, in __get__
+    return cls.query_class(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 287, in _set_entities
+    self._raw_columns = [
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 288, in <listcomp>
+    coercions.expect(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/coercions.py", line 389, in expect
+    insp._post_inspect
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2711, in _post_inspect
+    self._check_configure()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2388, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4204, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4241, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Trabajador(trabajador)]'. Original exception was: Mapper 'Mapper[Region(region)]' has no property 'trabajadores'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-11-18 14:48:35,267 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:48:35] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 14:57:56,871 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 14:57:56,871 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 14:57:58,802 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:57:58] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-18 14:57:58,839 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2509, in get_property
+    return self._props[key]
+KeyError: 'trabajadores'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/flask_sqlalchemy/model.py", line 22, in __get__
+    return cls.query_class(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 287, in _set_entities
+    self._raw_columns = [
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 288, in <listcomp>
+    coercions.expect(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/coercions.py", line 389, in expect
+    insp._post_inspect
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2711, in _post_inspect
+    self._check_configure()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2388, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4204, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4245, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2405, in _post_configure_properties
+    prop.init()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/interfaces.py", line 584, in init
+    self.do_init()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1647, in do_init
+    self._generate_backref()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 2133, in _generate_backref
+    self._add_reverse_property(self.back_populates)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1578, in _add_reverse_property
+    other = self.mapper.get_property(key, _configure_mappers=False)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2511, in get_property
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Mapper 'Mapper[Region(region)]' has no property 'trabajadores'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-11-18 14:57:58,852 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:57:58] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 14:58:26,866 - app - ERROR - Exception on /trabajador [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 62, in lista_trabajador
+    trabajadores = Trabajador.query.all()  # Obtén todos los trabajadores de la base de datos
+  File "/usr/local/lib/python3.9/site-packages/flask_sqlalchemy/model.py", line 22, in __get__
+    return cls.query_class(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 275, in __init__
+    self._set_entities(entities)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 287, in _set_entities
+    self._raw_columns = [
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 288, in <listcomp>
+    coercions.expect(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/coercions.py", line 389, in expect
+    insp._post_inspect
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1253, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2711, in _post_inspect
+    self._check_configure()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 2388, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4204, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 4241, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Trabajador(trabajador)]'. Original exception was: Mapper 'Mapper[Region(region)]' has no property 'trabajadores'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+2024-11-18 14:58:26,867 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 14:58:26] "[35m[1mGET /trabajador HTTP/1.1[0m" 500 -
+2024-11-18 15:01:21,157 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 15:01:21,157 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 15:01:23,599 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:01:23] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 15:01:23,637 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:01:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:01:25,143 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:01:25] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-18 15:01:25,189 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:01:25] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-18 15:06:41,671 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:06:41] "GET /contrato HTTP/1.1" 200 -
+2024-11-18 15:06:41,725 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:06:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:06:43,903 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:06:43] "GET /contrato/crear_contrato HTTP/1.1" 200 -
+2024-11-18 15:06:43,937 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:06:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:06:52,938 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:06:52] "GET /contrato HTTP/1.1" 200 -
+2024-11-18 15:06:52,969 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:06:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:06:57,943 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:06:57] "GET /contrato/editar_contrato/1 HTTP/1.1" 200 -
+2024-11-18 15:06:57,974 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:06:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:07:02,434 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:07:02] "GET /contrato HTTP/1.1" 200 -
+2024-11-18 15:07:02,458 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:07:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:07:04,025 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:07:04] "GET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1" 200 -
+2024-11-18 15:07:04,268 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:07:04] "GET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1" 200 -
+2024-11-18 15:07:07,770 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:07:07] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-18 15:39:10,874 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 15:39:10,877 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 15:39:17,658 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:39:17] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-18 15:39:19,504 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:39:19] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-18 15:39:23,498 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:39:23] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-18 15:39:23,678 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:39:23] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 15:39:23,707 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:39:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:39:25,982 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:39:25] "GET /contrato HTTP/1.1" 200 -
+2024-11-18 15:39:26,024 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:39:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:39:27,020 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:39:27] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-18 15:39:28,998 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:39:28] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 304 -
+2024-11-18 15:39:29,214 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:39:29] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 304 -
+2024-11-18 15:44:54,229 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 15:44:54,230 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 15:44:55,851 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:44:55] "GET /contrato HTTP/1.1" 200 -
+2024-11-18 15:44:55,891 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:44:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:44:56,952 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:44:56] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-18 15:45:00,171 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:45:00] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 304 -
+2024-11-18 15:45:00,452 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:45:00] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 304 -
+2024-11-18 15:52:00,143 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 15:52:00,143 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 15:52:07,944 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:52:07] "GET /contrato HTTP/1.1" 200 -
+2024-11-18 15:52:07,987 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:52:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:52:11,307 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:52:11] "GET /contrato HTTP/1.1" 200 -
+2024-11-18 15:52:11,335 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:52:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:52:12,050 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:52:12] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
+2024-11-18 15:52:12,292 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:52:12] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
+2024-11-18 15:52:17,713 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:52:17] "[33mGET /static/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 404 -
+2024-11-18 15:58:38,665 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 15:58:38,665 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 15:58:44,947 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:58:44] "GET /contrato HTTP/1.1" 200 -
+2024-11-18 15:58:44,974 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:58:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 15:58:46,333 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 15:58:46] "[33mGET /static/pdfs/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 404 -
+2024-11-18 16:03:30,632 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 16:03:30,632 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 16:03:35,050 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:03:35] "GET /contrato HTTP/1.1" 200 -
+2024-11-18 16:03:35,082 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:03:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 16:03:36,160 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:03:36] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
+2024-11-18 16:03:36,462 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:03:36] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
+2024-11-18 16:03:39,303 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:03:39] "[33mGET /static/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 404 -
+2024-11-18 16:04:37,981 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 16:04:37,981 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 16:04:39,905 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:04:39] "[33mGET /static/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 404 -
+2024-11-18 16:04:43,078 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 232, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename=pdfs/contrato.pdf_path) }}" target="_blank">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdfs' is undefined
+2024-11-18 16:04:43,093 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:04:43] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-18 16:04:45,685 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 232, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename=pdfs/contrato.pdf_path) }}" target="_blank">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdfs' is undefined
+2024-11-18 16:04:45,686 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:04:45] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-18 16:04:46,318 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 232, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename=pdfs/contrato.pdf_path) }}" target="_blank">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdfs' is undefined
+2024-11-18 16:04:46,320 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:04:46] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-18 16:04:46,534 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 232, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename=pdfs/contrato.pdf_path) }}" target="_blank">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdfs' is undefined
+2024-11-18 16:04:46,535 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:04:46] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-18 16:04:46,758 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 232, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename=pdfs/contrato.pdf_path) }}" target="_blank">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdfs' is undefined
+2024-11-18 16:04:46,760 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:04:46] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-18 16:04:46,993 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 232, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename=pdfs/contrato.pdf_path) }}" target="_blank">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdfs' is undefined
+2024-11-18 16:04:46,995 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:04:46] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-18 16:04:47,271 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 232, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename=pdfs/contrato.pdf_path) }}" target="_blank">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdfs' is undefined
+2024-11-18 16:04:47,272 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:04:47] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-18 16:04:47,520 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 232, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 40, in top-level template code
+    {% block content %}{% endblock %}
+  File "/app/templates/lista_contrato.html", line 26, in block 'content'
+    <a href="{{ url_for('static', filename=pdfs/contrato.pdf_path) }}" target="_blank">Ver PDF Contrato</a>
+jinja2.exceptions.UndefinedError: 'pdfs' is undefined
+2024-11-18 16:04:47,521 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:04:47] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-18 16:05:11,699 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 16:05:11,699 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 16:05:12,160 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:05:12] "GET /contrato HTTP/1.1" 200 -
+2024-11-18 16:05:12,182 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:05:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 16:05:13,144 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:05:13] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
+2024-11-18 16:05:13,469 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:05:13] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
+2024-11-18 16:05:17,036 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 16:05:17] "[33mGET /static/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 404 -
+2024-11-18 17:20:28,447 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-18 17:20:28,450 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-18 17:20:29,019 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 233, in lista_contrato
+    if not contrato.pdf_path.startswith('pdfs/'):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2024-11-18 17:20:29,023 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 17:20:29] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-18 17:20:38,479 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 17:20:38] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-18 17:20:38,539 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 17:20:38] "GET /trabajador HTTP/1.1" 200 -
+2024-11-18 17:20:38,570 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 17:20:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-18 17:20:40,273 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 233, in lista_contrato
+    if not contrato.pdf_path.startswith('pdfs/'):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2024-11-18 17:20:40,275 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 17:20:40] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-18 19:06:58,806 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app.py", line 233, in lista_contrato
+    )
+AttributeError: 'NoneType' object has no attribute 'startswith'
+2024-11-18 19:06:58,816 - werkzeug - INFO - 172.19.0.1 - - [18/Nov/2024 19:06:58] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
