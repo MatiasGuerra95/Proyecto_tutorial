@@ -12801,3 +12801,209 @@ AttributeError: 'TrabajadorForm' object has no attribute 'forma_pago'. Did you m
 2024-11-26 19:38:13,122 - werkzeug - INFO - 172.19.0.1 - - [26/Nov/2024 19:38:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
 2024-11-26 19:38:14,501 - werkzeug - INFO - 172.19.0.1 - - [26/Nov/2024 19:38:14] "GET /trabajador/crear_trabajador HTTP/1.1" 200 -
 2024-11-26 19:38:14,539 - werkzeug - INFO - 172.19.0.1 - - [26/Nov/2024 19:38:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-26 20:06:34,934 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.2:5000
+2024-11-26 20:06:34,943 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 12:20:32,824 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-27 12:20:32,825 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 12:20:43,554 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 12:20:43] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-27 12:20:43,842 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 12:20:43] "GET /trabajador HTTP/1.1" 200 -
+2024-11-27 12:20:43,912 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 12:20:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 12:20:44,171 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 12:20:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-27 09:24:21,779 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): apis.digital.gob.cl:443
+2024-11-27 09:41:44,545 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): apis.digital.gob.cl:443
+2024-11-27 09:41:45,427 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=4, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:41:45,427 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:41:45,428 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): apis.digital.gob.cl:443
+2024-11-27 09:41:46,349 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:41:46,950 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:41:46,950 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (3): apis.digital.gob.cl:443
+2024-11-27 09:41:47,821 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:41:49,022 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:41:49,022 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (4): apis.digital.gob.cl:443
+2024-11-27 09:41:49,861 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:41:52,267 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:41:52,268 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (5): apis.digital.gob.cl:443
+2024-11-27 09:41:53,099 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:41:58,414 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:41:58,415 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (6): apis.digital.gob.cl:443
+2024-11-27 09:47:34,662 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): apis.digital.gob.cl:443
+2024-11-27 09:47:35,517 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=4, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:47:35,518 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:47:35,519 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): apis.digital.gob.cl:443
+2024-11-27 09:47:36,348 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:47:38,349 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:47:38,351 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (3): apis.digital.gob.cl:443
+2024-11-27 09:47:39,134 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:47:43,135 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:47:43,135 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (4): apis.digital.gob.cl:443
+2024-11-27 09:47:43,961 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:47:51,962 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:47:51,962 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (5): apis.digital.gob.cl:443
+2024-11-27 09:47:52,740 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:48:09,254 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:48:09,254 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (6): apis.digital.gob.cl:443
+2024-11-27 09:48:10,099 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (7): apis.digital.gob.cl:443
+2024-11-27 09:48:10,986 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=4, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:48:10,987 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:48:10,987 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (8): apis.digital.gob.cl:443
+2024-11-27 09:48:11,837 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:48:13,838 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:48:13,838 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (9): apis.digital.gob.cl:443
+2024-11-27 09:48:14,603 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:48:18,604 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:48:18,604 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (10): apis.digital.gob.cl:443
+2024-11-27 09:48:19,448 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:48:27,448 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:48:27,448 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (11): apis.digital.gob.cl:443
+2024-11-27 09:48:28,763 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:48:44,764 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:48:44,764 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (12): apis.digital.gob.cl:443
+2024-11-27 09:53:54,560 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): apis.digital.gob.cl:443
+2024-11-27 09:53:55,414 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=4, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:53:55,415 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:53:55,416 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): apis.digital.gob.cl:443
+2024-11-27 09:53:56,680 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:54:00,680 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:54:00,680 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (3): apis.digital.gob.cl:443
+2024-11-27 09:54:01,587 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:54:09,589 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:54:09,589 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (4): apis.digital.gob.cl:443
+2024-11-27 09:54:10,370 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:54:26,371 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:54:26,372 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (5): apis.digital.gob.cl:443
+2024-11-27 09:54:27,201 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:54:59,705 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:54:59,705 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (6): apis.digital.gob.cl:443
+2024-11-27 09:55:00,525 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (7): apis.digital.gob.cl:443
+2024-11-27 09:55:01,940 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=4, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:55:01,941 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:55:01,941 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (8): apis.digital.gob.cl:443
+2024-11-27 09:55:02,716 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:55:06,717 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:55:06,718 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (9): apis.digital.gob.cl:443
+2024-11-27 09:55:07,494 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:55:15,495 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:55:15,496 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (10): apis.digital.gob.cl:443
+2024-11-27 09:55:16,249 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:55:32,249 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:55:32,249 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (11): apis.digital.gob.cl:443
+2024-11-27 09:55:33,158 - urllib3.util.retry - DEBUG - Incremented Retry for (url='/dpa/regiones'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2024-11-27 09:56:05,666 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /dpa/regiones
+2024-11-27 09:56:05,667 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (12): apis.digital.gob.cl:443
+2024-11-27 13:32:36,257 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:32:36] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-27 13:32:36,279 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:32:36] "GET /trabajador HTTP/1.1" 200 -
+2024-11-27 13:32:36,336 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:32:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:32:52,545 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:32:52] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 13:32:52,582 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:32:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:33:37,271 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:33:37] "GET /contrato/crear HTTP/1.1" 200 -
+2024-11-27 13:33:37,309 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:33:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:33:51,701 - utils - INFO - PDF generado exitosamente para el trabajador con RUT 19000000-1 en: static/pdfs/contrato_19000000-1_2024-11-27.pdf
+2024-11-27 13:33:51,723 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:33:51] "[32mPOST /contrato/crear HTTP/1.1[0m" 302 -
+2024-11-27 13:33:51,732 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:33:51] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 13:33:51,770 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:33:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:33:53,412 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:33:53] "GET /static/pdfs/contrato_19000000-1_2024-11-27.pdf HTTP/1.1" 200 -
+2024-11-27 13:33:53,753 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:33:53] "GET /static/pdfs/contrato_19000000-1_2024-11-27.pdf HTTP/1.1" 200 -
+2024-11-27 13:34:06,212 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:34:06] "GET /contrato/crear HTTP/1.1" 200 -
+2024-11-27 13:34:06,258 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:34:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:34:14,695 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:34:14] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 13:34:14,728 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:34:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:34:16,899 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:34:16] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-20.pdf HTTP/1.1[0m" 304 -
+2024-11-27 13:34:17,147 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:34:17] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-20.pdf HTTP/1.1[0m" 304 -
+2024-11-27 13:34:22,280 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:34:22] "GET /contrato/editar/5 HTTP/1.1" 200 -
+2024-11-27 13:34:22,315 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:34:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:35:29,516 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:35:29] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 13:35:29,576 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:35:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:35:44,410 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:35:44] "GET /trabajador HTTP/1.1" 200 -
+2024-11-27 13:35:44,450 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:35:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:36:35,777 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:36:35] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-27 13:36:35,811 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:36:35] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-27 13:37:19,887 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:19] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 13:37:19,938 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:37:22,961 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:22] "GET /contrato/editar/5 HTTP/1.1" 200 -
+2024-11-27 13:37:23,006 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:37:32,257 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:32] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 13:37:32,299 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:37:39,537 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:39] "GET /trabajador HTTP/1.1" 200 -
+2024-11-27 13:37:39,568 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:37:41,018 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:41] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-27 13:37:41,035 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:41] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-27 13:37:48,951 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:48] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 13:37:48,985 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:37:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:38:09,153 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:09] "GET /trabajador HTTP/1.1" 200 -
+2024-11-27 13:38:09,198 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:38:10,683 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:10] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-11-27 13:38:10,698 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:10] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-11-27 13:38:32,698 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:32] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 13:38:32,734 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:38:34,325 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:34] "GET /sucursal HTTP/1.1" 200 -
+2024-11-27 13:38:34,359 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:38:39,662 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:39] "GET /sucursal/agregar HTTP/1.1" 200 -
+2024-11-27 13:38:39,691 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:38:52,312 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:52] "GET /sucursal HTTP/1.1" 200 -
+2024-11-27 13:38:52,344 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:38:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:39:53,132 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:39:53] "GET /sucursal HTTP/1.1" 200 -
+2024-11-27 13:39:53,177 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:39:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:39:58,545 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:39:58] "GET /sucursal/agregar HTTP/1.1" 200 -
+2024-11-27 13:39:58,587 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:39:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:41:18,026 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:41:18] "GET /sucursal HTTP/1.1" 200 -
+2024-11-27 13:41:18,087 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:41:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:41:32,615 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:41:32] "GET /jornadas HTTP/1.1" 200 -
+2024-11-27 13:41:32,647 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:41:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:42:51,905 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:42:51] "GET /jornada/agregar HTTP/1.1" 200 -
+2024-11-27 13:54:27,406 - flask_wtf.csrf - INFO - The CSRF token is missing.
+2024-11-27 13:54:27,407 - flask_wtf.csrf - INFO - The CSRF token is missing.
+2024-11-27 13:54:27,407 - flask_wtf.csrf - INFO - The CSRF token is missing.
+2024-11-27 13:54:27,408 - flask_wtf.csrf - INFO - The CSRF token is missing.
+2024-11-27 13:54:27,408 - flask_wtf.csrf - INFO - The CSRF token is missing.
+2024-11-27 13:54:27,408 - flask_wtf.csrf - INFO - The CSRF token is missing.
+2024-11-27 13:54:27,410 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:54:27] "POST /jornada/agregar HTTP/1.1" 200 -
+2024-11-27 13:54:31,059 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:54:31] "GET /jornadas HTTP/1.1" 200 -
+2024-11-27 13:54:31,092 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:54:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:54:38,463 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:54:38] "GET /jornadas HTTP/1.1" 200 -
+2024-11-27 13:54:38,491 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:54:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:55:40,245 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:55:40] "GET /cliente HTTP/1.1" 200 -
+2024-11-27 13:55:40,299 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:55:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:55:50,774 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:55:50] "GET /cliente/agregar HTTP/1.1" 200 -
+2024-11-27 13:55:50,807 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:55:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:55:58,202 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:55:58] "GET /cliente HTTP/1.1" 200 -
+2024-11-27 13:55:58,234 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:55:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:56:14,519 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:56:14] "GET /cliente/agregar HTTP/1.1" 200 -
+2024-11-27 13:56:14,558 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:56:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:56:35,944 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:56:35] "GET /jornadas HTTP/1.1" 200 -
+2024-11-27 13:56:35,977 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:56:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:56:37,724 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:56:37] "GET /cliente HTTP/1.1" 200 -
+2024-11-27 13:56:37,759 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:56:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 13:56:38,927 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:56:38] "GET /jornadas HTTP/1.1" 200 -
+2024-11-27 13:56:38,963 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 13:56:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:20:57,272 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:20:57] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 15:20:57,333 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:20:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:20:59,663 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:20:59] "GET /contrato/editar/3 HTTP/1.1" 200 -
+2024-11-27 15:20:59,710 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:20:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:21:55,042 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:21:55] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 15:21:55,102 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:21:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:25:24,176 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:24] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 304 -
+2024-11-27 15:25:24,634 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:24] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 304 -
+2024-11-27 15:25:29,448 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:29] "GET /contrato/crear HTTP/1.1" 200 -
+2024-11-27 15:25:29,515 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:25:32,254 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:32] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 15:25:32,292 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:25:33,662 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:33] "GET /contrato/editar/3 HTTP/1.1" 200 -
+2024-11-27 15:25:33,710 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:25:35,831 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:35] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 15:25:35,870 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:25:37,175 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:37] "GET /contrato/crear HTTP/1.1" 200 -
+2024-11-27 15:25:37,214 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:25:41,251 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:41] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 15:25:41,285 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:25:43,009 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:43] "GET /contrato/editar/3 HTTP/1.1" 200 -
+2024-11-27 15:25:43,053 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:25:47,219 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:47] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 15:25:47,256 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:25:48,588 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:48] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
+2024-11-27 15:25:48,808 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:48] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -

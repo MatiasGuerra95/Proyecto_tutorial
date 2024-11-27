@@ -273,7 +273,6 @@ def crear_contrato():
             for trabajador in Trabajador.query.all()
         ]
     
-
     if form.validate_on_submit():
         trabajador_id = form.trabajador_id.data
         fecha_inicio = form.fecha_inicio.data
@@ -309,46 +308,46 @@ def crear_contrato():
 
     return render_template("crear_contrato.html", form=form)
 
-
-@app.route('/contrato/editar/<int:id>', methods=['GET', 'POST'])
-def editar_contrato(id):
+@app.route('/contrato/detalle/<int:id>', methods=['GET'])
+def contrato_detalle(id):
     contrato = Contrato.query.get_or_404(id)
-    form = ContratoForm(obj=contrato)
+    data = {
+        "id": contrato.id,
+        "trabajador_id": contrato.trabajador_id,
+        "fecha_inicio": contrato.fecha_inicio.strftime('%Y-%m-%d'),
+        "fecha_termino": contrato.fecha_termino.strftime('%Y-%m-%d') if contrato.fecha_termino else None
+    }
+    return jsonify(data)
 
-    # Poblar opciones del campo trabajador
-    form.trabajador_id.choices = [
-        (trabajador.id, f"{trabajador.nombre} {trabajador.apellidop}")
-        for trabajador in Trabajador.query.all()
-    ]
 
-    if form.validate_on_submit():
-        # Actualizar los datos del contrato
-        contrato.trabajador_id = form.trabajador_id.data
-        contrato.fecha_inicio = form.fecha_inicio.data
-        contrato.fecha_termino = form.fecha_termino.data
 
-        # Buscar el trabajador actualizado
-        trabajador = Trabajador.query.get(contrato.trabajador_id)
 
-        try:
-            # Regenerar el PDF
-            pdf_filename = generar_pdf(
-                trabajador, 
-                contrato.fecha_inicio, 
-                contrato.fecha_termino
-            )
+@app.route('/editar_contrato', methods=['POST'])
+def editar_contrato():
+    contrato_id = request.form.get('id')
+    contrato = Contrato.query.get_or_404(contrato_id)
 
-            if pdf_filename:
-                contrato.pdf_path = pdf_filename  # Actualizar la ruta del PDF
+    contrato.trabajador_id = request.form.get('trabajador_id')
+    contrato.fecha_inicio = request.form.get('fecha_inicio')
+    contrato.fecha_termino = request.form.get('fecha_termino') or None
 
-            db.session.commit()
-            flash("Contrato y PDF actualizados correctamente.", "success")
-            return redirect(url_for('lista_contrato'))
-        except Exception as e:
-            db.session.rollback()
-            flash(f"Error al guardar los cambios: {e}", "danger")
+    # Manejo del PDF
+    if 'pdf_path' in request.files:
+        pdf = request.files['pdf_path']
+        if pdf.filename:
+            pdf.save(os.path.join('static/pdfs', pdf.filename))
+            contrato.pdf_path = pdf.filename
 
-    return render_template('editar_contrato.html', form=form, contrato=contrato)
+    try:
+        db.session.commit()
+        flash("Contrato actualizado exitosamente.", "success")
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        flash(f"Error al actualizar el contrato: {e}", "danger")
+
+    return redirect(url_for('lista_contrato'))
+
+
 
 
 @app.route('/contrato/eliminar/<int:id>', methods=['POST'])
@@ -399,7 +398,6 @@ def editar_sucursal(id):
     form.comuna_id.choices = [(c.id, c.nombre) for c in Comuna.query.all()]
     form.representante_id.choices = []  # Lista vacía
 
-
     if form.validate_on_submit():
         sucursal.cliente_id = form.cliente_id.data
         sucursal.numero_sucursal = form.numero_sucursal.data
@@ -428,7 +426,6 @@ def lista_jornadas():
     """Mostrar todas las jornadas."""
     jornadas = Jornada.query.options(db.joinedload(Jornada.dias)).all()  # Cargar días asociados
     return render_template('jornada/lista_jornadas.html', jornadas=jornadas)
-
 
 @app.route('/jornada/agregar', methods=['GET', 'POST'])
 def agregar_jornada():
@@ -464,7 +461,6 @@ def agregar_jornada():
             flash(f"Error al guardar la jornada: {e}", "danger")
 
     return render_template('jornada/agregar_jornada.html', form=form)
-
 
 @app.route('/jornada/editar/<int:id>', methods=['GET', 'POST'])
 def editar_jornada(id):
@@ -620,8 +616,6 @@ def eliminar_cliente(id):
     db.session.commit()
     flash('Cliente eliminado exitosamente.', 'success')
     return redirect(url_for('lista_clientes'))
-
-
 
 
 @app.route('/add_afp', methods=['GET', 'POST'])
