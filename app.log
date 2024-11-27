@@ -13007,3 +13007,185 @@ AttributeError: 'TrabajadorForm' object has no attribute 'forma_pago'. Did you m
 2024-11-27 15:25:47,256 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
 2024-11-27 15:25:48,588 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:48] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
 2024-11-27 15:25:48,808 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:25:48] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-11.pdf HTTP/1.1[0m" 304 -
+2024-11-27 15:38:42,262 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-27 15:38:42,263 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 15:38:43,104 - app - ERROR - Error al cargar contratos: Could not build url for endpoint 'ver_pdf' with values ['id']. Did you mean 'editar_jornada' instead?
+2024-11-27 15:38:43,107 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:38:43] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-27 15:38:44,572 - app - ERROR - Error al cargar contratos: Could not build url for endpoint 'ver_pdf' with values ['id']. Did you mean 'editar_jornada' instead?
+2024-11-27 15:38:44,573 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:38:44] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-27 15:38:45,995 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:38:45] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-27 15:38:46,051 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:38:46] "GET /trabajador HTTP/1.1" 200 -
+2024-11-27 15:38:46,080 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:38:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 15:38:48,967 - app - ERROR - Error al cargar contratos: Could not build url for endpoint 'ver_pdf' with values ['id']. Did you mean 'editar_jornada' instead?
+2024-11-27 15:38:48,968 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 15:38:48] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-27 17:34:12,533 - app - ERROR - Error al cargar contratos: Could not build url for endpoint 'ver_pdf' with values ['id']. Did you mean 'editar_jornada' instead?
+2024-11-27 17:34:12,534 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:34:12] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-27 17:36:18,177 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-27 17:36:18,178 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 17:36:19,856 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 263, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos, trabajadores=trabajadores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 50, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/templates/lista_contrato.html", line 24, in block 'content'
+    <td><a href="{{ url_for('ver_pdf', id=contrato.id) }}">Ver PDF</a></td>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'ver_pdf' with values ['id']. Did you mean 'editar_jornada' instead?
+2024-11-27 17:36:19,872 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:36:19] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-27 17:36:21,411 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:36:21] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-27 17:36:21,455 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:36:21] "GET /trabajador HTTP/1.1" 200 -
+2024-11-27 17:36:21,491 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:36:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 17:36:22,762 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 263, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos, trabajadores=trabajadores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 50, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/templates/lista_contrato.html", line 24, in block 'content'
+    <td><a href="{{ url_for('ver_pdf', id=contrato.id) }}">Ver PDF</a></td>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'ver_pdf' with values ['id']. Did you mean 'editar_jornada' instead?
+2024-11-27 17:36:22,768 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:36:22] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-27 17:37:54,875 - app - ERROR - Exception on /contrato [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 263, in lista_contrato
+    return render_template('lista_contrato.html', contratos=contratos, trabajadores=trabajadores)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/lista_contrato.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 50, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/templates/lista_contrato.html", line 24, in block 'content'
+    <td><a href="{{ url_for('ver_pdf', id=contrato.id) }}">Ver PDF</a></td>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'ver_pdf' with values ['id']. Did you mean 'editar_jornada' instead?
+2024-11-27 17:37:54,880 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:37:54] "[35m[1mGET /contrato HTTP/1.1[0m" 500 -
+2024-11-27 17:42:14,563 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-27 17:42:14,564 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 17:42:16,138 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:42:16] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 17:42:16,187 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:42:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 17:42:19,769 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:42:19] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 304 -
+2024-11-27 17:42:20,088 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:42:20] "[36mGET /static/pdfs/contrato_19000000-1_2024-11-15.pdf HTTP/1.1[0m" 304 -
+2024-11-27 17:42:24,201 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:42:24] "GET /contrato/detalle/3 HTTP/1.1" 200 -
+2024-11-27 17:47:43,001 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-11-27 17:47:43,001 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-27 17:47:44,452 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:47:44] "GET /contrato HTTP/1.1" 200 -
+2024-11-27 17:47:44,502 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:47:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 17:48:10,440 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:48:10] "GET /sucursal HTTP/1.1" 200 -
+2024-11-27 17:48:10,476 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:48:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 17:48:16,225 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:48:16] "GET /jornadas HTTP/1.1" 200 -
+2024-11-27 17:48:16,254 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:48:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-11-27 17:57:08,974 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:57:08] "GET /sucursal HTTP/1.1" 200 -
+2024-11-27 17:57:09,019 - werkzeug - INFO - 172.19.0.1 - - [27/Nov/2024 17:57:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -

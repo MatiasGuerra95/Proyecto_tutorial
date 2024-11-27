@@ -258,12 +258,10 @@ def opciones_selectores():
 
 @app.route('/contrato', methods=['GET'])
 def lista_contrato():
-    try:
-        contratos = Contrato.query.all()  # Asegúrate de que `Contrato` está definido
-        return render_template("lista_contrato.html", contratos=contratos)
-    except Exception as e:
-        app.logger.error(f"Error al cargar contratos: {e}")
-        return render_template("500.html"), 500
+    contratos = Contrato.query.all()
+    trabajadores = Trabajador.query.all()  # Necesario para el selector en el modal
+    return render_template('lista_contrato.html', contratos=contratos, trabajadores=trabajadores)
+
 
 @app.route("/contrato/crear", methods=["GET", "POST"])
 def crear_contrato():
@@ -314,29 +312,29 @@ def contrato_detalle(id):
     data = {
         "id": contrato.id,
         "trabajador_id": contrato.trabajador_id,
-        "fecha_inicio": contrato.fecha_inicio.strftime('%Y-%m-%d'),
-        "fecha_termino": contrato.fecha_termino.strftime('%Y-%m-%d') if contrato.fecha_termino else None
+        "fecha_inicio": contrato.fecha_inicio.strftime('%Y-%m-%d') if contrato.fecha_inicio else "",
+        "fecha_termino": contrato.fecha_termino.strftime('%Y-%m-%d') if contrato.fecha_termino else "",
+        "pdf_path": contrato.pdf_path,
     }
     return jsonify(data)
 
 
-
-
-@app.route('/editar_contrato', methods=['POST'])
+@app.route('/contrato/editar', methods=['POST'])
 def editar_contrato():
     contrato_id = request.form.get('id')
     contrato = Contrato.query.get_or_404(contrato_id)
 
+    # Actualiza los campos del contrato
     contrato.trabajador_id = request.form.get('trabajador_id')
     contrato.fecha_inicio = request.form.get('fecha_inicio')
-    contrato.fecha_termino = request.form.get('fecha_termino') or None
+    contrato.fecha_termino = request.form.get('fecha_termino')
 
-    # Manejo del PDF
-    if 'pdf_path' in request.files:
-        pdf = request.files['pdf_path']
-        if pdf.filename:
-            pdf.save(os.path.join('static/pdfs', pdf.filename))
-            contrato.pdf_path = pdf.filename
+    # Manejo de subida de PDF
+    pdf = request.files.get('pdf_path')
+    if pdf:
+        filename = secure_filename(pdf.filename)
+        pdf.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        contrato.pdf_path = filename
 
     try:
         db.session.commit()
@@ -346,8 +344,6 @@ def editar_contrato():
         flash(f"Error al actualizar el contrato: {e}", "danger")
 
     return redirect(url_for('lista_contrato'))
-
-
 
 
 @app.route('/contrato/eliminar/<int:id>', methods=['POST'])

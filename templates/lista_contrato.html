@@ -18,23 +18,24 @@
     <tbody>
         {% for contrato in contratos %}
         <tr onclick="openEditModal('{{ contrato.id }}')" style="cursor: pointer;">
-                <td>{{ contrato.trabajador.nombre }} {{ contrato.trabajador.apellidop }}</td>
-                <td>{{ contrato.fecha_inicio }}</td>
-                <td>{{ contrato.fecha_termino or 'Indefinido' }}</td>
-                <td><a href="{{ url_for('ver_pdf', id=contrato.id) }}">Ver PDF</a></td>
-                    {% if contrato.pdf_path %}
-                        <a href="{{ url_for('static', filename='pdfs/' + contrato.pdf_path) }}" target="_blank">Ver PDF</a>
-                    {% else %}
-                        No disponible
-                    {% endif %}
-                </td>
-                <td>
-                    <a href="{{ url_for('eliminar_contrato', id=contrato.id) }}" onclick="return confirm('¿Seguro que deseas eliminar este contrato?');">Eliminar</a>
-                </td>
-            </tr>
+            <td>{{ contrato.trabajador.nombre }} {{ contrato.trabajador.apellidop }}</td>
+            <td>{{ contrato.fecha_inicio }}</td>
+            <td>{{ contrato.fecha_termino or 'Indefinido' }}</td>
+            <td>
+                {% if contrato.pdf_path %}
+                <a href="{{ url_for('static', filename='pdfs/' + contrato.pdf_path) }}" target="_blank">Ver PDF</a>
+                {% else %}
+                No disponible
+                {% endif %}
+            </td>
+            <td>
+                <a href="{{ url_for('eliminar_contrato', id=contrato.id) }}" onclick="return confirm('¿Seguro que deseas eliminar este contrato?');">Eliminar</a>
+            </td>
+        </tr>
         {% endfor %}
     </tbody>
 </table>
+
 <!-- Modal para editar contrato -->
 <div id="editModal" style="display:none;">
     <div class="modal-content">
