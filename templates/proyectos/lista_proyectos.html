@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Gestión de Proyectos</h1>
+
+<!-- Botón para agregar un nuevo proyecto -->
+<button class="btn btn-primary mb-3" onclick="openAddModal()">Agregar Proyecto</button>
+
+<!-- Tabla de Proyectos -->
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha de Término</th>
+            <th>Cliente</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for proyecto in proyectos %}
+        <tr>
+            <td>{{ proyecto.nombre }}</td>
+            <td>{{ proyecto.descripcion or 'Sin descripción' }}</td>
+            <td>{{ proyecto.fecha_inicio }}</td>
+            <td>{{ proyecto.fecha_termino or 'Indefinida' }}</td>
+            <td>{{ proyecto.cliente.razon_social }}</td>
+            <td>
+                <button class="btn btn-warning btn-sm" onclick="openEditModal('{{ proyecto.id }}')">Editar</button>
+                <form method="POST" action="{{ url_for('eliminar_proyecto', id=proyecto.id) }}" style="display:inline;" onsubmit="return confirm('¿Deseas eliminar este proyecto?');">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Modal para Agregar/Editar Proyecto -->
+<div id="proyectoModal" class="modal" style="display:none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Agregar Proyecto</h5>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="proyectoForm" method="POST" action="{{ url_for('agregar_proyecto') }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <input type="hidden" id="proyecto_id" name="proyecto_id">
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_inicio">Fecha de Inicio</label>
+                        <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_termino">Fecha de Término</label>
+                        <input type="date" class="form-control" id="fecha_termino" name="fecha_termino">
+                    </div>
+                    <div class="form-group">
+                        <label for="cliente_id">Cliente</label>
+                        <select class="form-control" id="cliente_id" name="cliente_id" required>
+                            <option value="">Seleccione un cliente</option>
+                            {% for cliente in clientes %}
+                            <option value="{{ cliente.id }}">{{ cliente.razon_social }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success">Guardar Proyecto</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openAddModal() {
+        const modal = document.getElementById('proyectoModal');
+        document.getElementById('modalTitle').innerText = 'Agregar Proyecto';
+        document.getElementById('proyectoForm').action = '{{ url_for("agregar_proyecto") }}';
+        document.getElementById('nombre').value = '';
+        document.getElementById('descripcion').value = '';
+        document.getElementById('fecha_inicio').value = '';
+        document.getElementById('fecha_termino').value = '';
+        document.getElementById('cliente_id').value = '';
+        modal.style.display = 'block';
+    }
+
+    function openEditModal(proyectoId) {
+        fetch(`/proyectos/detalle/${proyectoId}`)
+            .then(response => response.json())
+            .then(data => {
+                const modal = document.getElementById('proyectoModal');
+                document.getElementById('modalTitle').innerText = 'Editar Proyecto';
+                document.getElementById('proyectoForm').action = `/proyectos/editar/${data.id}`;
+                document.getElementById('nombre').value = data.nombre;
+                document.getElementById('descripcion').value = data.descripcion;
+                document.getElementById('fecha_inicio').value = data.fecha_inicio;
+                document.getElementById('fecha_termino').value = data.fecha_termino;
+                document.getElementById('cliente_id').value = data.cliente_id;
+                modal.style.display = 'block';
+            });
+    }
+
+    function closeModal() {
+        document.getElementById('proyectoModal').style.display = 'none';
+    }
+</script>
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-dialog {
+        position: relative;
+        margin: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+</style>
+
+{% endblock %}

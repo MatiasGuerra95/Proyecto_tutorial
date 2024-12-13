@@ -19,3 +19,4 @@ bleach
 pytest
 flask-migrate
 requests
+email_validator

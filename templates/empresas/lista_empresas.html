@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Lista de Empresas{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h4>Empresas</h4>
+    <button type="button" class="btn btn-primary mb-3" onclick="openModal()">Agregar Empresa</button>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>RUT</th>
+                <th>Razón Social</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="empresas-container">
+            {% for empresa in empresas %}
+            <tr>
+                <td>{{ empresa.rut }}</td>
+                <td>{{ empresa.razon_social }}</td>
+                <td>
+                    <button class="btn btn-sm btn-warning" onclick="editEmpresa('{{ empresa.id }}')">Editar</button>
+                    <form method="POST" action="{{ url_for('eliminar_empresa', id=empresa.id) }}" style="display:inline;">
+                        <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div id="empresaModal" class="modal" style="display:none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Agregar Empresa</h5>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="empresaForm" method="POST" action="{{ url_for('agregar_empresa') }}">
+                    <input type="hidden" id="empresa_id" name="empresa_id">
+                    <div class="form-group">
+                        <label for="rut">RUT</label>
+                        <input type="text" class="form-control" id="rut" name="rut" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="razon_social">Razón Social</label>
+                        <input type="text" class="form-control" id="razon_social" name="razon_social" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Guardar Empresa</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        document.getElementById('empresaForm').reset();
+        document.getElementById('empresa_id').value = '';
+        document.getElementById('modalTitle').textContent = 'Agregar Empresa';
+        document.getElementById('empresaModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('empresaModal').style.display = 'none';
+    }
+
+    function editEmpresa(id) {
+        fetch(`/empresas/${id}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('empresa_id').value = data.id;
+                document.getElementById('rut').value = data.rut;
+                document.getElementById('razon_social').value = data.razon_social;
+                document.getElementById('modalTitle').textContent = 'Editar Empresa';
+                document.getElementById('empresaModal').style.display = 'block';
+            })
+            .catch(error => console.error('Error:', error));
+    }
+</script>
+{% endblock %}

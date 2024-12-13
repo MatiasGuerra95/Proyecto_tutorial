@@ -1,35 +1,393 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content %}
-<h1>Clientes</h1>
-<a href="{{ url_for('agregar_cliente') }}" class="btn btn-primary">Agregar Cliente</a>
-<table>
+<h1>Gestión de Clientes</h1>
+
+<!-- Botón para agregar un nuevo cliente -->
+<button class="btn btn-primary mb-3" onclick="openAddModal()">Agregar Cliente</button>
+
+<!-- Campo de búsqueda -->
+<input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Buscar clientes..." class="form-control mb-3">
+
+<!-- Tabla de Clientes -->
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>RUT</th>
             <th>Razón Social</th>
-            <th>Dirección</th>
-            <th>Comuna</th>
             <th>Región</th>
+            <th>Comuna</th>
+            <th>Dirección</th>
             <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
         {% for cliente in clientes %}
-        <tr>
+        <tr onclick="openEditModal('{{ cliente.id }}')" style="cursor: pointer;">
             <td>{{ cliente.rut }}</td>
             <td>{{ cliente.razon_social }}</td>
-            <td>{{ cliente.direccion or 'N/A' }}</td>
-            <td>{{ cliente.comuna.nombre if cliente.comuna else 'N/A' }}</td>
-            <td>{{ cliente.region.region if cliente.region else 'N/A' }}</td>
+            <td>{{ cliente.region.region }}</td>
+            <td>{{ cliente.comuna.nombre }}</td>
+            <td>{{ cliente.direccion or 'Sin dirección' }}</td>
             <td>
-                <a href="{{ url_for('editar_cliente', id=cliente.id) }}">Editar</a>
-                <form method="POST" action="{{ url_for('eliminar_cliente', id=cliente.id) }}" style="display:inline;">
-                    <button type="submit">Eliminar</button>
+                <form method="POST" action="{{ url_for('eliminar_cliente', id=cliente.id) }}" style="display: inline;" onsubmit="return confirm('¿Deseas eliminar este cliente?');">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                 </form>
             </td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
+
+<!-- Modal para Agregar/Editar Cliente -->
+<div id="clienteModal" class="modal" style="display:none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Agregar Cliente</h5>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="clienteForm" method="POST" action="{{ url_for('agregar_cliente') }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <input type="hidden" id="cliente_id" name="cliente_id">
+
+                    <!-- Información general -->
+                    <div class="form-group">
+                        <label for="rut">RUT</label>
+                        <input type="text" class="form-control" id="rut" name="rut" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="razon_social">Razón Social</label>
+                        <input type="text" class="form-control" id="razon_social" name="razon_social" required>
+                    </div>
+
+                    <!-- Dirección -->
+                    <h4>Dirección</h4>
+                    <div class="form-group">
+                        <label for="region_id">Región</label>
+                        <select class="form-control" id="region_id" name="region_id" required>
+                            <option value="">Seleccione una región</option>
+                            {% for region in regiones %}
+                            <option value="{{ region.id }}">{{ region.region }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comuna_id">Comuna</label>
+                        <select class="form-control" id="comuna_id" name="comuna_id" required>
+                            <option value="">Seleccione una comuna</option>
+                            {% for comuna in comunas %}
+                            <option value="{{ comuna.id }}">{{ comuna.nombre }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion">
+                    </div>
+
+                    <!-- Jornadas existentes -->
+                    <h4>Jornadas</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Total Días</th>
+                            </tr>
+                        </thead>
+                        <tbody id="jornadas-container">
+                            {% for jornada in jornadas %}
+                            <tr>
+                                <td>{{ jornada.id }}</td>
+                                <td>{{ jornada.nombre }}</td>
+                                <td>{{ jornada.descripcion or "Sin descripción" }}</td>
+                                <td>{{ jornada.dias|length }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <!-- Sucursales -->
+                    <h4>Sucursales</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Dirección</th>
+                                <th>Región</th>
+                                <th>Comuna</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sucursales-container">
+                            {% for sucursal in sucursales %}
+                            <tr>
+                                <td>{{ sucursal.id }}</td>
+                                <td>{{ sucursal.nombre }}</td>
+                                <td>{{ sucursal.direccion }}</td>
+                                <td>{{ sucursal.region.region if sucursal.region else 'Sin región' }}</td>
+                                <td>{{ sucursal.comuna.nombre if sucursal.comuna else 'Sin comuna' }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <!-- Representantes -->
+                    <h4>Representantes</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                                <th>Rol Firma</th>
+                            </tr>
+                        </thead>
+                        <tbody id="representantes-container">
+                            {% for representante in representantes %}
+                            <tr>
+                                <td>{{ representante.id }}</td>
+                                <td>{{ representante.nombre }}</td>
+                                <td>{{ representante.apellido_p }}</td>
+                                <td>{{ representante.apellido_m }}</td>
+                                <td>{{ representante.email }}</td>
+                                <td>{{ representante.telefono }}</td>
+                                <td>{{ representante.rol_firma_contratos.nombre if representante.rol_firma_contratos else 'Sin rol' }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <h4>Proyectos</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Fecha Inicio</th>
+                                <th>Fecha Término</th>
+                            </tr>
+                        </thead>
+                        <tbody id="proyectos-container">
+                            {% for proyecto in proyectos %}
+                            <tr>
+                                <td>{{ proyecto.id }}</td>
+                                <td>{{ proyecto.nombre }}</td>
+                                <td>{{ proyecto.descripcion or 'Sin descripción' }}</td>
+                                <td>{{ proyecto.fecha_inicio }}</td>
+                                <td>{{ proyecto.fecha_termino or 'No definida' }}</td>
+                            </tr>
+                            {% endfor %}                            
+                        </tbody>
+                    </table>
+
+
+                    <button type="submit" class="btn btn-success">Guardar Cliente</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openAddModal() {
+        const modal = document.getElementById('clienteModal');
+        if (!modal) {
+            console.error("Modal 'clienteModal' no encontrado.");
+            return;
+        }
+    
+        document.getElementById('modalTitle').innerText = 'Agregar Cliente';
+        document.getElementById('clienteForm').action = '{{ url_for("agregar_cliente") }}';
+        document.getElementById('cliente_id').value = '';
+        document.getElementById('rut').value = '';
+        document.getElementById('razon_social').value = '';
+        document.getElementById('region_id').value = '';
+        document.getElementById('comuna_id').value = '';
+        document.getElementById('direccion').value = '';
+        modal.style.display = 'block';
+    }
+    
+    function openEditModal(clienteId) {
+    fetch(`/clientes/detalle/${clienteId}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Error al obtener los datos del cliente: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            document.getElementById('modalTitle').innerText = 'Editar Cliente';
+            document.getElementById('clienteForm').action = `/clientes/editar/${clienteId}`;
+            document.getElementById('cliente_id').value = data.id;
+            document.getElementById('rut').value = data.rut;
+            document.getElementById('razon_social').value = data.razon_social;
+            document.getElementById('region_id').value = data.region_id;
+            document.getElementById('comuna_id').value = data.comuna_id;
+            document.getElementById('direccion').value = data.direccion;
+
+            // Actualizar la tabla de jornadas
+            const jornadasContainer = document.getElementById('jornadas-container');
+            jornadasContainer.innerHTML = '';
+            data.jornadas.forEach(jornada => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${jornada.id}</td>
+                    <td>${jornada.nombre}</td>
+                    <td>${jornada.descripcion || 'Sin descripción'}</td>
+                    <td>${jornada.total_dias}</td>
+                `;
+                jornadasContainer.appendChild(row);
+            });
+
+            // Actualizar la tabla de sucursales
+            const sucursalesContainer = document.getElementById('sucursales-container');
+            sucursalesContainer.innerHTML = '';
+            data.sucursales.forEach(sucursal => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${sucursal.id}</td>
+                    <td>${sucursal.nombre}</td>
+                    <td>${sucursal.direccion}</td>
+                    <td>${sucursal.region}</td>
+                    <td>${sucursal.comuna}</td>
+                `;
+                sucursalesContainer.appendChild(row);
+            });
+
+            // Actualizar la tabla de representantes
+            const representantesContainer = document.getElementById('representantes-container');
+            representantesContainer.innerHTML = '';
+            data.representantes.forEach(representante => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${representante.id}</td>
+                    <td>${representante.nombre}</td>
+                    <td>${representante.apellido_paterno}</td>
+                    <td>${representante.apellido_materno}</td>
+                    <td>${representante.email}</td>
+                    <td>${representante.telefono}</td>
+                    <td>${representante.rol_firma}</td>
+                `;
+                representantesContainer.appendChild(row);
+            });
+
+            // Actualizar la tabla de proyectos
+            const proyectosContainer = document.getElementById('proyectos-container');
+            proyectosContainer.innerHTML = '';
+            data.proyectos.forEach(proyecto => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${proyecto.id}</td>
+                    <td>${proyecto.nombre}</td>
+                    <td>${proyecto.descripcion}</td>
+                    <td>${proyecto.fecha_inicio}</td>
+                    <td>${proyecto.fecha_termino}</td>
+                `;
+                proyectosContainer.appendChild(row);
+            });
+
+            document.getElementById('clienteModal').style.display = 'block';
+        })
+        .catch(error => {
+            console.error('Error al cargar los datos del cliente:', error);
+            alert('No se pudo cargar la información del cliente.');
+        });
+}
+
+
+
+    function closeModal() {
+        const modal = document.getElementById('clienteModal');
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    
+    function openJornadaModal() {
+        const modal = document.getElementById('jornadaModal');
+        if (!modal) {
+            console.error("Modal 'jornadaModal' no encontrado.");
+            return;
+        }
+    
+        document.getElementById('jornadaModalTitle').innerText = 'Agregar Jornada';
+        document.getElementById('jornada_nombre').value = '';
+        document.getElementById('jornada_descripcion').value = '';
+        modal.style.display = 'block';
+    }
+    
+    function closeJornadaModal() {
+        const modal = document.getElementById('jornadaModal');
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+    </script>
+    
+    
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .modal-dialog {
+        position: relative;
+        margin: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        max-width: 50%; /* Ajustar el tamaño */
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        padding: 20px;
+        border: 1px solid #888;
+        border-radius: 10px;
+        box-sizing: border-box;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    h6 {
+        margin-top: 20px;
+        color: #333;
+        font-weight: bold;
+    }
+    
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+    }
+    </style>
 {% endblock %}

@@ -1,11 +1,11 @@
 import logging
+from extensions import db
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import relationship
-from sqlalchemy import Column, Integer, String, Time
+from sqlalchemy import Column, Integer, String, Time, ForeignKey
 from datetime import datetime
 
-db = SQLAlchemy()
 
 logger = logging.getLogger(__name__)
 
@@ -192,12 +192,15 @@ class Cliente(db.Model):
     direccion = db.Column(db.String(200))
 
     # Relaciones
-    region = relationship('Region', backref='clientes')  # Relación con la tabla `region`
-    comuna = relationship('Comuna', backref='clientes')  # Relación con la tabla `comuna`
-    sucursales = relationship('Sucursal', backref='cliente', cascade='all, delete-orphan')  # Relación con `sucursal`
+    region = db.relationship('Region', backref='cliente')  # Relación con la tabla `region`
+    comuna = db.relationship('Comuna', backref='cliente')  # Relación con la tabla `comuna`
+    sucursales = db.relationship('Sucursal', backref='cliente', cascade='all, delete-orphan')  # Relación con `Sucursal`
+    servicios = db.relationship('Servicio', back_populates='cliente', cascade='all, delete-orphan')  # Relación con `Servicio`
+    proyectos = db.relationship('Proyecto', back_populates='cliente', cascade='all, delete-orphan')  # Relación con `Proyecto`
 
     def __repr__(self):
         return f"<Cliente(id={self.id}, rut={self.rut}, razon_social={self.razon_social})>"
+
 
 
 class Sucursal(db.Model):
@@ -222,41 +225,118 @@ class Sucursal(db.Model):
     
 class Jornada(db.Model):
     __tablename__ = 'jornada'
+    
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(100), nullable=False)
     descripcion = db.Column(db.Text, nullable=True)
-    dias = db.relationship('DiaJornada', backref='jornada_rel', cascade='all, delete-orphan', lazy=True)
+    
+    # Relación con DiaJornada
+    dias = db.relationship(
+        'DiaJornada',
+        back_populates='jornada',  # Usar back_populates en lugar de backref
+        cascade='all, delete-orphan',
+        lazy='joined'  # Considerar 'joined' para evitar consultas adicionales
+    )
 
+    def __repr__(self):
+        return f'<Jornada {self.id}: {self.nombre}>'
 
 class DiaJornada(db.Model):
     __tablename__ = 'dia_jornada'
 
     id = db.Column(db.Integer, primary_key=True)
-    jornada_id = db.Column(db.Integer, db.ForeignKey('jornada.id'), nullable=False)
     numero_dia = db.Column(db.Integer, nullable=False)
-    hora_ingreso = db.Column(db.Time, nullable=True)
-    hora_salida = db.Column(db.Time, nullable=True)
-    hora_ingreso_colacion = db.Column(db.Time, nullable=True)  # Nueva columna
-    hora_salida_colacion = db.Column(db.Time, nullable=True)  # Nueva columna
-    turno_gv = db.Column(db.Text, nullable=True)  # Nueva columna
-    total_horas = db.Column(db.Interval, nullable=True)  # Nueva columna
-
+    habilitado = db.Column(db.Boolean, default=True)
+    hora_ingreso = db.Column(db.Time, nullable=False)
+    hora_salida_colacion = db.Column(db.Time, nullable=True)
+    hora_ingreso_colacion = db.Column(db.Time, nullable=True)
+    hora_salida = db.Column(db.Time, nullable=False)
+    turno_gv = db.Column(db.String(50), nullable=True)
+    total_horas = db.Column(db.Float, nullable=False, default=0.0)
+    jornada_id = db.Column(db.Integer, db.ForeignKey('jornada.id'), nullable=False)
+    
+    # Relación inversa con Jornada
     jornada = db.relationship('Jornada', back_populates='dias')
 
+    def __repr__(self):
+        return f'<DiaJornada {self.id}: Día {self.numero_dia} de {self.jornada.nombre}>'
 
-class TurnoGV(db.Model):
-    __tablename__ = 'turno_gv'
+#class TurnoGV(db.Model):
+#|    __tablename__ = 'turno_gv'
+
+class RolFirmaContratos(db.Model):
+    __tablename__ = 'rol_firma_contratos'
 
     id = db.Column(db.Integer, primary_key=True)
-    jornada_id = db.Column(db.Integer, db.ForeignKey('jornada.id'), nullable=False)
-    turno_gv = db.Column(db.String(255), nullable=False)
-    hora_ingreso = db.Column(db.Time, nullable=False)
-    hora_salida = db.Column(db.Time, nullable=False)
-    hora_ingreso_colacion = db.Column(db.Time, nullable=False)
-    hora_salida_colacion = db.Column(db.Time, nullable=False)
-    horas_trabajadas = db.Column(db.Float, nullable=False)
+    nombre = db.Column(db.String(100), nullable=False)
 
-    jornada = db.relationship('Jornada', backref=db.backref('turnos_gv', lazy=True))
+    def __repr__(self):
+        return f'<RolFirmaContratos {self.nombre}>'
+
+class Representante(db.Model):
+    __tablename__ = 'representantes'
+
+    id = db.Column(db.Integer, primary_key=True)
+    cliente_id = db.Column(db.Integer, db.ForeignKey('cliente.id'), nullable=False)  # Clave foránea
+    rol_firma_contratos_id = db.Column(db.Integer, db.ForeignKey('rol_firma_contratos.id'), nullable=False)
+    nombre = db.Column(db.String(100), nullable=False)
+    apellido_p = db.Column(db.String(100), nullable=False)
+    apellido_m = db.Column(db.String(100), nullable=True)
+    email = db.Column(db.String(100), nullable=True)
+    telefono = db.Column(db.String(20), nullable=True)
+
+    # Relaciones
+    cliente = db.relationship('Cliente', backref='representantes', lazy=True)
+    rol_firma_contratos = db.relationship('RolFirmaContratos', backref='representantes', lazy=True)
+
+    def __repr__(self):
+        return f'<Representante {self.nombre} {self.apellido_p}>'
+    
+class Proyecto(db.Model):
+    __tablename__ = 'proyectos'
+
+    id = Column(Integer, primary_key=True)
+    nombre = Column(String(255), nullable=False)
+    descripcion = Column(String(500))
+    fecha_inicio = Column(db.Date, nullable=False)
+    fecha_termino = Column(db.Date, nullable=True)
+
+    # Foreign key para referenciar a Cliente
+    cliente_id = Column(Integer, ForeignKey('cliente.id'), nullable=False)
+
+    # Relación con Cliente
+    cliente = relationship('Cliente', back_populates='proyectos')
+
+    def __repr__(self):
+        return f'<Proyecto {self.nombre}'
+
+class Servicio(db.Model):
+    __tablename__ = 'servicio'
+    id = db.Column(db.Integer, primary_key=True)
+    cliente_id = db.Column(db.Integer, db.ForeignKey('cliente.id'), nullable=False)
+    nombre = db.Column(db.String(100), nullable=False)
+    descripcion = db.Column(db.String(500), nullable=True)
+    fecha_inicio = db.Column(db.Date, nullable=False)
+    fecha_termino = db.Column(db.Date, nullable=True)
+    activo = db.Column(db.Boolean, default=True)
+
+    cliente = db.relationship('Cliente', back_populates='servicios')
+
+    def __repr__(self):
+        return f'<Servicio {self.nombre}>'
+
+class Empresa(db.Model):
+    __tablename__ = 'empresa'
+
+    id = db.Column(db.Integer, primary_key=True)
+    rut = db.Column(db.String(12), nullable=False, unique=True)
+    razon_social = db.Column(db.String(100), nullable=False)
+
+    def __repr__(self):
+        return f'<Empresa {self.razon_social}>'
+
+
+
     
 class Afp(db.Model):
     __tablename__ = 'afp'
@@ -407,7 +487,7 @@ class Genero(db.Model):
     genero = db.Column(db.String(200), nullable=False)
     
     def __repr__(self):
-        return f'<Comuna {self.genero}>'    
+        return f'<Genero {self.genero}>' 
 
     @staticmethod
     def obtener_genero_por_id(id):

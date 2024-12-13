@@ -4,8 +4,11 @@
 
 {% block content %}
 <h1>Lista de Trabajadores</h1>
-<a href="{{ url_for('crear_trabajador') }}" class="btn btn-primary">Agregar Trabajador</a>
 
+<!-- Botón para agregar trabajador -->
+<a href="#" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#agregarTrabajadorModal" onclick="openAddModal()">Agregar Trabajador</a>
+
+<!-- Tabla de trabajadores -->
 <table class="table table-hover">
     <thead class="thead-dark">
         <tr>
@@ -20,74 +23,144 @@
     </thead>
     <tbody>
         {% for trabajador in trabajadores %}
-        <tr data-bs-toggle="modal" data-bs-target="#editarModal{{ trabajador.id }}">
+        <tr onclick="openEditModal('{{ trabajador.id }}')" style="cursor: pointer;">
             <td>{{ trabajador.rut }}</td>
             <td>{{ trabajador.nombre }}</td>
             <td>{{ trabajador.apellidop }}</td>
             <td>{{ trabajador.apellidom }}</td>
-            <td>{{ trabajador.region.nombre or 'No asignada' }}</td>
-            <td>{{ trabajador.comuna.nombre or 'No asignada' }}</td>
-            <td>
+            <td>{{ trabajador.region.region if trabajador.region else 'No asignada' }}</td>
+            <td>{{ trabajador.comuna.nombre if trabajador.comuna else 'No asignada' }}</td>
+            <td onclick="event.stopPropagation()">
+                <!-- Botón Eliminar -->
+                <!-- Asegúrate de que esta vista también tenga acceso a `form` o genera otro form con CSRF -->
                 <form action="{{ url_for('delete_trabajador', trabajador_id=trabajador.id) }}" method="POST" style="display:inline;">
-                    <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar este trabajador?');">Borrar</button>
+                    {{ form.csrf_token }}
+                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar este trabajador?');">Borrar</button>
                 </form>
             </td>
         </tr>
-
-        <!-- Modal para editar trabajador -->
-        <div class="modal fade" id="editarModal{{ trabajador.id }}" tabindex="-1" aria-labelledby="editarModalLabel{{ trabajador.id }}" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Editar Trabajador</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="POST" action="{{ url_for('editar_trabajador', id=trabajador.id) }}">
-                            {{ form.hidden_tag() }}
-                            <div class="mb-3">
-                                <label for="rut{{ trabajador.id }}">RUT</label>
-                                <input type="text" class="form-control" id="rut{{ trabajador.id }}" name="rut" value="{{ trabajador.rut }}" readonly>
-                            </div>
-                            <div class="mb-3">
-                                <label for="nombre{{ trabajador.id }}">Nombre</label>
-                                <input type="text" class="form-control" id="nombre{{ trabajador.id }}" name="nombre" value="{{ trabajador.nombre }}">
-                            </div>
-                            <div class="mb-3">
-                                <label for="apellidop{{ trabajador.id }}">Apellido Paterno</label>
-                                <input type="text" class="form-control" id="apellidop{{ trabajador.id }}" name="apellidop" value="{{ trabajador.apellidop }}">
-                            </div>
-                            <div class="mb-3">
-                                <label for="apellidom{{ trabajador.id }}">Apellido Materno</label>
-                                <input type="text" class="form-control" id="apellidom{{ trabajador.id }}" name="apellidom" value="{{ trabajador.apellidom }}">
-                            </div>
-                            <div class="mb-3">
-                                <label for="region{{ trabajador.id }}">Región</label>
-                                <select class="form-control" id="region{{ trabajador.id }}" name="region_id">
-                                    {% for region in form.region_id.choices %}
-                                    <option value="{{ region[0] }}" {% if trabajador.region_id == region[0] %}selected{% endif %}>
-                                        {{ region[1] }}
-                                    </option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="comuna{{ trabajador.id }}">Comuna</label>
-                                <select class="form-control" id="comuna{{ trabajador.id }}" name="comuna_id">
-                                    {% for comuna in form.comuna_id.choices %}
-                                    <option value="{{ comuna[0] }}" {% if trabajador.comuna_id == comuna[0] %}selected{% endif %}>
-                                        {{ comuna[1] }}
-                                    </option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-success">Guardar Cambios</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
         {% endfor %}
     </tbody>
 </table>
+
+<!-- Modal para Agregar Trabajador -->
+<div class="modal fade" id="agregarTrabajadorModal" tabindex="-1" aria-labelledby="agregarTrabajadorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Trabajador</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="agregarTrabajadorForm" method="POST" action="{{ url_for('lista_trabajador') }}">
+                    {{ form.csrf_token }}
+                    {% include 'partials/trabajador_form.html' %}
+                    <button type="submit" class="btn btn-success mt-3">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Editar Trabajador -->
+<div class="modal fade" id="editarTrabajadorModal" tabindex="-1" aria-labelledby="editarTrabajadorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Trabajador</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editarTrabajadorForm" method="POST" action="{{ url_for('lista_trabajador') }}">
+                    {{ form.csrf_token }}
+                    <input type="hidden" id="trabajador_id" name="trabajador_id" value="">
+                    {% include 'partials/trabajador_form.html' %}
+                    <button type="submit" class="btn btn-success mt-3">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function openAddModal() {
+        document.getElementById('agregarTrabajadorForm').reset();
+    }
+
+    function openEditModal(trabajadorId) {
+        fetch(`/trabajador/detalle/${trabajadorId}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log("Datos del trabajador:", data);
+
+                document.querySelector('#editarTrabajadorModal #trabajador_id').value = trabajadorId;
+                document.querySelector('#editarTrabajadorModal #rut').value = data.rut || '';
+                document.querySelector('#editarTrabajadorModal #nombre').value = data.nombre || '';
+                document.querySelector('#editarTrabajadorModal #apellidop').value = data.apellidop || '';
+                document.querySelector('#editarTrabajadorModal #apellidom').value = data.apellidom || '';
+                document.querySelector('#editarTrabajadorModal #email').value = data.email || '';
+                document.querySelector('#editarTrabajadorModal #telefono').value = data.telefono || '';
+                document.querySelector('#editarTrabajadorModal #direccion_calle').value = data.direccion_calle || '';
+                document.querySelector('#editarTrabajadorModal #direccion_numero').value = data.direccion_numero || '';
+                document.querySelector('#editarTrabajadorModal #direccion_dpto').value = data.direccion_dpto || '';
+                document.querySelector('#editarTrabajadorModal #fecha_nacimiento').value = data.fecha_nacimiento || '';
+
+                return fetch('/opciones_selectores')
+                    .then(response => response.json())
+                    .then(opciones => {
+                        console.log("Region ID del trabajador:", data.region_id);
+                        console.log("Comunas desde opciones_selectores:", opciones.comunas);
+
+                        let regionId = parseInt(data.region_id, 10);
+                        let comunasFiltradas = opciones.comunas.filter(c => c.region_id === regionId);
+
+                        fillSelect('pais_id', opciones.paises, 'nombre', data.pais_id, 'editarTrabajadorModal');
+                        fillSelect('genero_id', opciones.generos, 'genero', data.genero_id, 'editarTrabajadorModal');
+                        fillSelect('estado_civil_id', opciones.estados_civiles, 'estado', data.estado_civil_id, 'editarTrabajadorModal');
+                        fillSelect('region_id', opciones.regiones, 'region', data.region_id, 'editarTrabajadorModal');
+                        fillSelect('comuna_id', comunasFiltradas, 'nombre', data.comuna_id, 'editarTrabajadorModal');
+                        fillSelect('forma_pago_id', opciones.forma_pago, 'nombre', data.forma_pago_id, 'editarTrabajadorModal');
+                        fillSelect('banco_id', opciones.bancos, 'nombre', data.banco_id, 'editarTrabajadorModal');
+                        fillSelect('banco_tipo_cuenta_id', opciones.tipos_cuenta, 'nombre', data.banco_tipo_cuenta_id, 'editarTrabajadorModal');
+                        fillSelect('afp_id', opciones.afps, 'nombre', data.afp_id, 'editarTrabajadorModal');
+                        fillSelect('prev_salud_id', opciones.previsiones_salud, 'nombre', data.prev_salud_id, 'editarTrabajadorModal');
+
+                        const editarTrabajadorModal = new bootstrap.Modal(document.getElementById('editarTrabajadorModal'));
+                        editarTrabajadorModal.show();
+                    });
+
+            })
+            .catch(error => {
+                console.error('Error al obtener los datos del trabajador:', error);
+                alert('Hubo un error al obtener los datos del trabajador.');
+            });
+    }
+
+    function fillSelect(elementId, options, textKey, selectedValue, modalId=null) {
+        let select;
+        if (modalId) {
+            select = document.querySelector(`#${modalId} #${elementId}`);
+        } else {
+            select = document.getElementById(elementId);
+        }
+
+        select.innerHTML = '';
+
+        const placeholderOption = document.createElement('option');
+        placeholderOption.value = '';
+        placeholderOption.textContent = `Seleccionar ${elementId.replace('_id','').replace(/_/g, ' ')}`;
+        select.appendChild(placeholderOption);
+
+        options.forEach(option => {
+            const opt = document.createElement('option');
+            opt.value = option.id;
+            opt.textContent = option[textKey];
+            if (option.id == selectedValue) opt.selected = true;
+            select.appendChild(opt);
+        });
+    }
+</script>
 {% endblock %}

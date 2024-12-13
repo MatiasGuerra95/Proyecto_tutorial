@@ -1,44 +1,127 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block title %}Sucursales{% endblock %}
+{% block title %}Lista de Sucursales{% endblock %}
 
 {% block content %}
-<h1>Sucursales</h1>
+<div class="container">
+    <h4>Sucursales</h4>
+    <button type="button" class="btn btn-primary mb-3" onclick="openModal()">Agregar Sucursal</button>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Número</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Región</th>
+                <th>Comuna</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="sucursal-container">
+            {% for sucursal in sucursales %}
+            <tr>
+                <td>{{ sucursal.cliente.razon_social }}</td>
+                <td>{{ sucursal.numero_sucursal }}</td>
+                <td>{{ sucursal.nombre_sucursal }}</td>
+                <td>{{ sucursal.direccion }}</td>
+                <td>{{ sucursal.region.region }}</td>
+                <td>{{ sucursal.comuna.nombre }}</td>
+                <td>{{ sucursal.telefono }}</td>
+                <td>
+                    <button class="btn btn-sm btn-warning" onclick="editSucursal('{{ sucursal.id }}')">Editar</button>
+                    <form method="POST" action="{{ url_for('eliminar_sucursal', id=sucursal.id) }}" style="display:inline;">
+                        <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
-<a href="{{ url_for('crear_sucursal') }}" class="btn btn-primary">Agregar Sucursal</a>
+<!-- Modal para Agregar/Editar Sucursal -->
+<div id="sucursalModal" class="modal" style="display:none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Agregar Sucursal</h5>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="sucursalForm" method="POST" action="{{ url_for('lista_sucursal') }}">
+                    {{ form.hidden_tag() }}
+                    <input type="hidden" id="sucursal_id" name="sucursal_id">
 
-<table class="table table-hover">
-    <thead class="thead-dark">
-        <tr>
-            <th>Cliente</th>
-            <th>Nombre</th>
-            <th>Región</th>
-            <th>Comuna</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for sucursal in sucursales %}
-        <tr>
-            <td>{{ sucursal.cliente.nombre }}</td>
-            <td>{{ sucursal.nombre_sucursal }}</td>
-            <td>{{ sucursal.region.region }}</td>
-            <td>{{ sucursal.comuna.nombre }}</td>
-            <td>
-                {% if sucursal.representante %}
-                {{ sucursal.representante.nombre }} {{ sucursal.representante.apellidop }}
-                {% else %}
-                N/A
-                {% endif %}
-            </td>
-            <td>
-                <a href="{{ url_for('editar_sucursal', id=sucursal.id) }}" class="btn btn-warning">Editar</a>
-                <form action="{{ url_for('eliminar_sucursal', id=sucursal.id) }}" method="POST" style="display:inline;">
-                    <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar esta sucursal?');">Eliminar</button>
+                    <div class="form-group">
+                        <label for="cliente_id">Cliente</label>
+                        {{ form.cliente_id(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="numero_sucursal">Número de Sucursal</label>
+                        {{ form.numero_sucursal(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre_sucursal">Nombre de Sucursal</label>
+                        {{ form.nombre_sucursal(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección</label>
+                        {{ form.direccion(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="region_id">Región</label>
+                        {{ form.region_id(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="comuna_id">Comuna</label>
+                        {{ form.comuna_id(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        {{ form.telefono(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="representante_id">Representante</label>
+                        {{ form.representante_id(class="form-control") }}
+                    </div>
+                    <button type="submit" class="btn btn-success">Guardar</button>
                 </form>
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openModal() {
+    document.getElementById('sucursalForm').reset();
+    document.getElementById('sucursal_id').value = '';
+    document.getElementById('modalTitle').textContent = 'Agregar Sucursal';
+    document.getElementById('sucursalModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('sucursalModal').style.display = 'none';
+}
+
+function editSucursal(id) {
+    fetch(`/sucursal/${id}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('sucursal_id').value = data.id;
+            document.getElementById('cliente_id').value = data.cliente_id;
+            document.getElementById('numero_sucursal').value = data.numero_sucursal;
+            document.getElementById('nombre_sucursal').value = data.nombre_sucursal;
+            document.getElementById('direccion').value = data.direccion;
+            document.getElementById('region_id').value = data.region_id;
+            document.getElementById('comuna_id').value = data.comuna_id;
+            document.getElementById('telefono').value = data.telefono;
+            document.getElementById('representante_id').value = data.representante_id;
+            document.getElementById('modalTitle').textContent = 'Editar Sucursal';
+            document.getElementById('sucursalModal').style.display = 'block';
+        })
+        .catch(error => console.error('Error:', error));
+}
+</script>
 {% endblock %}

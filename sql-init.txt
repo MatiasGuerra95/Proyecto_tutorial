@@ -152,6 +152,7 @@ CREATE TABLE jornada (
 
 CREATE TABLE dia_jornada (
     id SERIAL PRIMARY KEY,
+    habilitado BOOLEAN DEFAULT TRUE,
     jornada_id INT NOT NULL,
     numero_dia INT NOT NULL,
     hora_ingreso TIME NOT NULL,
@@ -168,4 +169,51 @@ CREATE TABLE turno_gv (
     hora_ingreso_colacion TIME NOT NULL,
     hora_salida_colacion TIME NOT NULL,
     horas_trabajadas FLOAT NOT NULL
+);
+
+CREATE TABLE rol_firma_contratos (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+INSERT INTO rol_firma_contratos (nombre) VALUES ('Firmante'), ('Representante'), ('Validador');
+
+CREATE TABLE representantes (
+    id SERIAL PRIMARY KEY,
+    cliente_id INT NOT NULL,
+    rol_firma_contratos_id INT NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    apellido_p VARCHAR(100) NOT NULL,
+    apellido_m VARCHAR(100),
+    email VARCHAR(100),
+    telefono VARCHAR(20),
+    CONSTRAINT fk_cliente FOREIGN KEY (cliente_id) REFERENCES cliente (id) ON DELETE CASCADE,
+    CONSTRAINT fk_rol_firma FOREIGN KEY (rol_firma_contratos_id) REFERENCES rol_firma_contratos (id) ON DELETE CASCADE
+);
+
+CREATE TABLE proyectos (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    descripcion VARCHAR(500),
+    fecha_inicio DATE NOT NULL,
+    fecha_termino DATE,
+    cliente_id INTEGER NOT NULL,
+    CONSTRAINT fk_cliente FOREIGN KEY (cliente_id) REFERENCES cliente (id) ON DELETE CASCADE
+);
+
+CREATE TABLE servicio (
+    id SERIAL PRIMARY KEY,
+    cliente_id INTEGER NOT NULL,
+    nombre VARCHAR(255) NOT NULL,
+    descripcion VARCHAR(500),
+    fecha_inicio DATE NOT NULL,
+    fecha_termino DATE,
+    activo BOOLEAN DEFAULT TRUE,
+    CONSTRAINT fk_cliente FOREIGN KEY (cliente_id) REFERENCES cliente (id) ON DELETE CASCADE
+);
+
+CREATE TABLE empresa (
+    id SERIAL PRIMARY KEY,              -- Identificador único de la empresa
+    rut VARCHAR(12) NOT NULL,           -- RUT de la empresa (máximo 12 caracteres)
+    razon_social VARCHAR(255) NOT NULL  -- Razón social de la empresa
 );

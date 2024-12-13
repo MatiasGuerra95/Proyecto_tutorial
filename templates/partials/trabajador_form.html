@@ -1,0 +1,147 @@
+<!-- Información General -->
+<h5 class="fw-bold">Información General</h5>
+<div class="mb-3">
+    <label for="rut">RUT</label>
+    <input type="text" class="form-control" id="rut" name="rut" required>
+</div>
+<div class="mb-3">
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" required>
+</div>
+<div class="mb-3">
+    <label for="apellidop">Apellido Paterno</label>
+    <input type="text" class="form-control" id="apellidop" name="apellidop" required>
+</div>
+<div class="mb-3">
+    <label for="apellidom">Apellido Materno</label>
+    <input type="text" class="form-control" id="apellidom" name="apellidom">
+</div>
+<div class="mb-3">
+    <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+    <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento">
+</div>
+<div class="mb-3">
+    <label for="pais_id">País</label>
+    <select class="form-control" id="pais_id" name="pais_id" required>
+        <option value="">Seleccionar País</option>
+        {% for id, nombre in form.pais_id.choices %}
+        <option value="{{ id }}">{{ nombre }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="mb-3">
+    <label for="genero_id">Género</label>
+    <select class="form-control" id="genero_id" name="genero_id" required>
+        <option value="">Seleccionar Género</option>
+        {% for id, genero in form.genero_id.choices %}
+        <option value="{{ id }}">{{ genero }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="mb-3">
+    <label for="estado_civil_id">Estado Civil</label>
+    <select class="form-control" id="estado_civil_id" name="estado_civil_id" required>
+        <option value="">Seleccionar Estado Civil</option>
+        {% for id, estado in form.estado_civil_id.choices %}
+        <option value="{{ id }}">{{ estado }}</option>
+        {% endfor %}
+    </select>
+</div>
+
+<!-- Contacto -->
+<h5 class="fw-bold mt-4">Contacto</h5>
+<div class="mb-3">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" name="email">
+</div>
+<div class="mb-3">
+    <label for="telefono">Teléfono</label>
+    <input type="text" class="form-control" id="telefono" name="telefono">
+</div>
+
+<!-- Dirección -->
+<h5 class="fw-bold mt-4">Dirección</h5>
+<div class="mb-3">
+    <label for="region_id">Región</label>
+    <select class="form-control" id="region_id" name="region_id" required>
+        <option value="">Seleccionar Región</option>
+        {% for id, region in form.region_id.choices %}
+        <option value="{{ id }}">{{ region }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="mb-3">
+    <label for="comuna_id">Comuna</label>
+    <select class="form-control" id="comuna_id" name="comuna_id" required>
+        <option value="">Seleccionar Comuna</option>
+        {% for id, comuna in form.comuna_id.choices %}
+        <option value="{{ id }}">{{ comuna }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="mb-3">
+    <label for="direccion_calle">Calle</label>
+    <input type="text" class="form-control" id="direccion_calle" name="direccion_calle">
+</div>
+<div class="mb-3">
+    <label for="direccion_numero">Número</label>
+    <input type="text" class="form-control" id="direccion_numero" name="direccion_numero">
+</div>
+<div class="mb-3">
+    <label for="direccion_dpto">Departamento</label>
+    <input type="text" class="form-control" id="direccion_dpto" name="direccion_dpto">
+</div>
+
+<!-- Datos de Remuneraciones -->
+<h5 class="fw-bold mt-4">Datos de Remuneraciones</h5>
+<div class="mb-3">
+    <label for="forma_pago_id">Forma de Pago</label>
+    <select class="form-control" id="forma_pago_id" name="forma_pago_id" required>
+        <option value="">Seleccionar Forma de Pago</option>
+        {% for id, forma in form.forma_pago_id.choices %}
+        <option value="{{ id }}">{{ forma }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="mb-3">
+    <label for="banco_id">Banco</label>
+    <select class="form-control" id="banco_id" name="banco_id" required>
+        <option value="">Seleccionar Banco</option>
+        {% for id, banco in form.banco_id.choices %}
+        <option value="{{ id }}">{{ banco }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="mb-3">
+    <label for="banco_tipo_cuenta_id">Tipo de Cuenta</label>
+    <select class="form-control" id="banco_tipo_cuenta_id" name="banco_tipo_cuenta_id" required>
+        <option value="">Seleccionar Tipo de Cuenta</option>
+        {% for id, tipo in form.banco_tipo_cuenta_id.choices %}
+        <option value="{{ id }}">{{ tipo }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="mb-3">
+    <label for="banco_cuenta_numero">Número de Cuenta</label>
+    <input type="text" class="form-control" id="banco_cuenta_numero" name="banco_cuenta_numero" required>
+</div>
+<div class="mb-3">
+    <label for="afp_id">AFP</label>
+    <select class="form-control" id="afp_id" name="afp_id" required>
+        <option value="">Seleccionar AFP</option>
+        {% for id, afp in form.afp_id.choices %}
+        <option value="{{ id }}">{{ afp }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="mb-3">
+    <label for="prev_salud_id">Previsión de Salud</label>
+    <select class="form-control" id="prev_salud_id" name="prev_salud_id" required>
+        <option value="">Seleccionar Previsión de Salud</option>
+        {% for id, prev in form.prev_salud_id.choices %}
+        <option value="{{ id }}">{{ prev }}</option>
+        {% endfor %}
+    </select>
+</div>
+
+

@@ -43,3 +43,30 @@ footer {
     font-size: 0.9em;
     color: #666;
 }
+
+/* Estilos para los modales */
+.modal-backdrop {
+    z-index: 1040 !important;
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.modal-content {
+    max-height: 90vh;
+    max-width: 80vw;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+}
+
+body.modal-open {
+    overflow: hidden;
+}

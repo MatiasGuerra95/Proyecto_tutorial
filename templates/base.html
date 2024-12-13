@@ -4,54 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Gestión de Trabajadores y Contratos{% endblock %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktp4tvkQWPI8W5tXkiboJHSmMzV+PsBj2t9HXlbhQ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">    
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('index') }}">Inicio</a></li>
-                <li><a href="{{ url_for('lista_trabajador') }}">Lista de Trabajadores</a></li>
- <!--           <li><a href="{{ url_for('crear_trabajador') }}">Crear Trabajador</a> | -->
- <!--           <li><a href="{{ url_for('crear_contrato') }}">Agregar Contrato</a> -->
-                <li><a href="{{ url_for('lista_contrato') }}">Lista de Contratos</a></li>
-                <li><a href="{{ url_for('lista_sucursal') }}">Lista de Sucursales</a></li>
-                <li><a href="{{ url_for('lista_jornadas') }}">Lista de Jornadas</a></li>
-                <li><a href="{{ url_for('agregar_turno_gv', jornada_id=1) }}">Registrar Turno GV</a></li>
-                <li><a href="{{ url_for('lista_clientes') }}">Clientes</a></li>
- <!--           <a href="{{ url_for('add_afp') }}">Agregar AFP</a> -->
- <!--           <a href="{{ url_for('add_banco') }}">Agregar Banco</a> -->
- <!--           <a href="{{ url_for('add_comuna') }}">Agregar Comuna</a> -->
- <!--           <a href="{{ url_for('add_region') }}">Agregar Region</a> -->
- <!--           <a href="{{ url_for('add_cuenta') }}">Agregar Cuenta</a> -->
- <!--           <a href="{{ url_for('add_pais') }}">Agregar Pais</a> -->
- <!--           <a href="{{ url_for('add_prevision') }}">Agregar Prevision</a> -->
- <!--           <a href="{{ url_for('add_estado_civil') }}">Agregar Estado Civil</a> -->
- <!--           <a href="{{ url_for('add_genero') }}">Agregar Genero</a> -->
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('index') }}">Gestión</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('lista_trabajador') }}">Trabajadores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('lista_contrato') }}">Contratos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('lista_sucursal') }}">Sucursales</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('lista_jornadas') }}">Jornadas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('lista_clientes') }}">Clientes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('lista_representantes') }}">Representantes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('lista_proyectos') }}">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('lista_servicios') }}">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('lista_empresas') }}">Empresas</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- Sección de mensajes flash -->
-    <div class="flash-messages">
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ category }}">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </div>
-    
-    <div class="content">
-        {% block content %}{% endblock %}
+    <div class="container">
+        <div class="flash-messages">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+        
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
     </div>
 
-    <footer>
+    <footer class="bg-dark text-white text-center py-3 mt-4">
         <p>&copy; {{ current_year }} Mi Aplicación de Gestión</p>
     </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {% block scripts %}{% endblock %}
 </body>
 </html>
+

@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Gestión de Servicios</h1>
+
+<!-- Tabla de Servicios -->
+<div class="container">
+    <button type="button" class="btn btn-primary mb-3" onclick="openModal()">Agregar Servicio</button>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Cliente</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Término</th>
+                <th>Activo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="servicios-container">
+            {% for servicio in servicios %}
+            <tr>
+                <td>{{ servicio.nombre }}</td>
+                <td>{{ servicio.cliente.razon_social }}</td>
+                <td>{{ servicio.fecha_inicio.strftime('%d-%m-%Y') }}</td>
+                <td>{{ servicio.fecha_termino.strftime('%d-%m-%Y') if servicio.fecha_termino else 'N/A' }}</td>
+                <td>{{ 'Sí' if servicio.activo else 'No' }}</td>
+                <td>
+                    <button class="btn btn-sm btn-warning" onclick="editServicio('{{ servicio.id }}')">Editar</button>
+                    <form method="POST" action="{{ url_for('eliminar_servicio', id=servicio.id) }}" style="display:inline;">
+                        <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal para Agregar/Editar Servicio -->
+<div id="servicioModal" class="modal" style="display:none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Agregar Servicio</h5>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="servicioForm" method="POST" action="{{ url_for('agregar_servicio') }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <input type="hidden" id="servicio_id" name="servicio_id">
+
+                    <!-- Información General -->
+                    <div class="form-group">
+                        <label for="cliente_id">Seleccionar Cliente</label>
+                        <select class="form-control" id="cliente_id" name="cliente_id" required>
+                            <option value="">Seleccione un cliente</option>
+                            {% for cliente in clientes %}
+                            <option value="{{ cliente.id }}">{{ cliente.razon_social }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre del Servicio</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha_inicio">Fecha de Inicio</label>
+                        <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha_termino">Fecha de Término</label>
+                        <input type="date" class="form-control" id="fecha_termino" name="fecha_termino">
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Guardar Servicio</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+            function openModal() {
+                document.getElementById('servicioForm').reset();
+                document.getElementById('servicio_id').value = '';
+                document.getElementById('modalTitle').textContent = 'Agregar Servicio';
+                document.getElementById('servicioModal').style.display = 'block';
+            }
+
+            function closeModal() {
+                document.getElementById('servicioModal').style.display = 'none';
+            }
+
+            function editServicio(id) {
+                fetch(`/servicios/${id}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('servicio_id').value = data.id;
+                        document.getElementById('cliente_id').value = data.cliente_id;
+                        document.getElementById('nombre').value = data.nombre;
+                        document.getElementById('fecha_inicio').value = data.fecha_inicio;
+                        document.getElementById('fecha_termino').value = data.fecha_termino;
+                        document.getElementById('modalTitle').textContent = 'Editar Servicio';
+                        document.getElementById('servicioModal').style.display = 'block';
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            function deleteServicio(id) {
+                if (confirm('¿Estás seguro de eliminar este servicio?')) {
+                    fetch(`/servicios/eliminar/${id}`, {
+                        method: 'POST'
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            location.reload();
+                        } else {
+                            alert('Error al eliminar el servicio.');
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+                }
+            }
+    </script>
+
+{% endblock %}

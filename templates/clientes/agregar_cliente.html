@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Agregar Cliente</h1>
-<form method="POST">
+<form method="POST" action="{{ url_for('agregar_cliente') }}">
     {{ form.hidden_tag() }}
     <div>
         {{ form.rut.label }}: {{ form.rut }}
@@ -14,11 +14,30 @@
         {{ form.direccion.label }}: {{ form.direccion }}
     </div>
     <div>
-        {{ form.region_id.label }}: {{ form.region_id }}
+        {{ form.region_id.label }}:
+        {{ form.region_id(onchange="filterComunas(this.value)") }}
     </div>
     <div>
-        {{ form.comuna_id.label }}: {{ form.comuna_id }}
+        {{ form.comuna_id.label }}:
+        {{ form.comuna_id() }}
     </div>
-    <button type="submit">{{ form.submit }}</button>
+    <button type="submit" class="btn btn-primary">Guardar</button>
 </form>
+
+<script>
+
+    function filterComunas(regionId) {
+        const comunaSelect = document.getElementById('comuna_id');
+        comunaSelect.innerHTML = '<option value="">Selecciona una comuna</option>'; // Reiniciar opciones
+
+        // Filtrar comunas basándose en la región seleccionada
+        const filteredComunas = comunas.filter(comuna => comuna.region_id == regionId);
+        filteredComunas.forEach(comuna => {
+            const option = document.createElement('option');
+            option.value = comuna.id;
+            option.textContent = comuna.nombre;
+            comunaSelect.appendChild(option);
+        });
+    }
+</script>
 {% endblock %}

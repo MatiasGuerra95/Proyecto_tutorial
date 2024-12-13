@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
+
 {% block title %}Lista de Contratos{% endblock %}
+
 {% block content %}
 <h1>Lista de Contratos</h1>
 
-<a href="{{ url_for('crear_contrato') }}" class="btn btn-primary">Crear Contrato</a>
+<!-- Botón para agregar contrato -->
+<button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#crearContratoModal">
+    Crear Contrato
+</button>
 
-<table>
-    <thead>
+<!-- Tabla de contratos -->
+<table class="table table-hover">
+    <thead class="thead-dark">
         <tr>
             <th>Nombre Trabajador</th>
             <th>Fecha Inicio</th>
@@ -17,10 +23,10 @@
     </thead>
     <tbody>
         {% for contrato in contratos %}
-        <tr onclick="openEditModal('{{ contrato.id }}')" style="cursor: pointer;">
+        <tr class="contrato-row" onclick="openEditarModal('{{ contrato.id }}')" style="cursor: pointer;" tabindex="0">
             <td>{{ contrato.trabajador.nombre }} {{ contrato.trabajador.apellidop }}</td>
-            <td>{{ contrato.fecha_inicio }}</td>
-            <td>{{ contrato.fecha_termino or 'Indefinido' }}</td>
+            <td>{{ contrato.fecha_inicio.strftime('%Y-%m-%d') }}</td>
+            <td>{{ contrato.fecha_termino.strftime('%Y-%m-%d') if contrato.fecha_termino else 'Indefinido' }}</td>
             <td>
                 {% if contrato.pdf_path %}
                 <a href="{{ url_for('static', filename='pdfs/' + contrato.pdf_path) }}" target="_blank">Ver PDF</a>
@@ -29,75 +35,166 @@
                 {% endif %}
             </td>
             <td>
-                <a href="{{ url_for('eliminar_contrato', id=contrato.id) }}" onclick="return confirm('¿Seguro que deseas eliminar este contrato?');">Eliminar</a>
+                <!-- Botón Eliminar -->
+                <form action="{{ url_for('eliminar_contrato', id=contrato.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('¿Seguro que deseas eliminar este contrato?');">
+                    {{ form.csrf_token }}
+                    <button type="submit" class="btn btn-danger btn-sm">
+                        Eliminar
+                    </button>
+                </form>
             </td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
 
-<!-- Modal para editar contrato -->
-<div id="editModal" style="display:none;">
-    <div class="modal-content">
-        <span class="close" onclick="closeEditModal()">&times;</span>
-        <h2>Editar Contrato</h2>
-        <form id="editForm" method="POST" action="{{ url_for('editar_contrato') }}">
-            <input type="hidden" id="contratoId" name="id">
-            
-            <label for="trabajador_id">Trabajador:</label>
-            <select id="trabajador_id" name="trabajador_id">
-                {% for trabajador in trabajadores %}
-                <option value="{{ trabajador.id }}">{{ trabajador.nombre }} {{ trabajador.apellidop }}</option>
-                {% endfor %}
-            </select><br>
-
-            <label for="fecha_inicio">Fecha Inicio:</label>
-            <input type="date" id="fecha_inicio" name="fecha_inicio"><br>
-
-            <label for="fecha_termino">Fecha Término:</label>
-            <input type="date" id="fecha_termino" name="fecha_termino"><br>
-
-            <label for="pdf_path">Subir PDF:</label>
-            <input type="file" id="pdf_path" name="pdf_path"><br>
-
-            <button type="submit">Guardar cambios</button>
-        </form>
+<!-- Modal para Crear Contrato -->
+<div class="modal fade" id="crearContratoModal" tabindex="-1" aria-labelledby="crearContratoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Crear Contrato</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="crearContratoForm" method="POST" action="{{ url_for('lista_contrato') }}" enctype="multipart/form-data">
+                    {{ form.csrf_token }}
+                    <div class="mb-3">
+                        <label for="trabajador_id" class="form-label">Trabajador</label>
+                        <select class="form-select" id="trabajador_id" name="trabajador_id" required>
+                            <option value="">Seleccionar Trabajador</option>
+                            {% for trabajador in trabajadores %}
+                            <option value="{{ trabajador.id }}">{{ trabajador.nombre }} {{ trabajador.apellidop }}</option>
+                            {% endfor %}
+                        </select>
+                        {% if form.trabajador_id.errors %}
+                            <div class="text-danger">
+                                {{ form.trabajador_id.errors[0] }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        <label for="fecha_inicio" class="form-label">Fecha de Inicio</label>
+                        <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required>
+                        {% if form.fecha_inicio.errors %}
+                            <div class="text-danger">
+                                {{ form.fecha_inicio.errors[0] }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        <label for="fecha_termino" class="form-label">Fecha de Término</label>
+                        <input type="date" class="form-control" id="fecha_termino" name="fecha_termino">
+                        {% if form.fecha_termino.errors %}
+                            <div class="text-danger">
+                                {{ form.fecha_termino.errors[0] }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <button type="submit" class="btn btn-success">Guardar Contrato</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
-<script>
-function openEditModal(contratoId) {
-    fetch(`/contrato/detalle/${contratoId}`)
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('contratoId').value = contratoId;
-            document.getElementById('trabajador_id').value = data.trabajador_id;
-            document.getElementById('fecha_inicio').value = data.fecha_inicio;
-            document.getElementById('fecha_termino').value = data.fecha_termino || '';
-            document.getElementById('editModal').style.display = 'block';
-        });
-}
+<!-- Modal para Editar Contrato -->
+<div class="modal fade" id="editarContratoModal" tabindex="-1" aria-labelledby="editarContratoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Contrato</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editarContratoForm" method="POST" action="{{ url_for('lista_contrato') }}" enctype="multipart/form-data">
+                    {{ form.csrf_token }}
+                    <input type="hidden" id="contratoId" name="id">
+                    <div class="mb-3">
+                        <label for="editar_trabajador_id" class="form-label">Trabajador</label>
+                        <select class="form-select" id="editar_trabajador_id" name="trabajador_id" required>
+                            <option value="">Seleccionar Trabajador</option>
+                            {% for trabajador in trabajadores %}
+                            <option value="{{ trabajador.id }}">{{ trabajador.nombre }} {{ trabajador.apellidop }}</option>
+                            {% endfor %}
+                        </select>
+                        {% if form.trabajador_id.errors %}
+                            <div class="text-danger">
+                                {{ form.trabajador_id.errors[0] }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        <label for="editar_fecha_inicio" class="form-label">Fecha de Inicio</label>
+                        <input type="date" class="form-control" id="editar_fecha_inicio" name="fecha_inicio" required>
+                        {% if form.fecha_inicio.errors %}
+                            <div class="text-danger">
+                                {{ form.fecha_inicio.errors[0] }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        <label for="editar_fecha_termino" class="form-label">Fecha de Término</label>
+                        <input type="date" class="form-control" id="editar_fecha_termino" name="fecha_termino">
+                        {% if form.fecha_termino.errors %}
+                            <div class="text-danger">
+                                {{ form.fecha_termino.errors[0] }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <button type="submit" class="btn btn-success">Actualizar Contrato</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-function closeEditModal() {
-    document.getElementById('editModal').style.display = 'none';
-}
-</script>
+{% endblock %}
 
+{% block styles %}
 <style>
-.modal-content {
-    width: 80%;
-    max-width: 600px;
-    padding: 20px;
-    background-color: white;
-    margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    overflow: auto;
-}
-.close {
-    float: right;
-    font-size: 24px;
-    cursor: pointer;
-}
+    /* Cambiar el cursor y agregar efecto de hover para filas clicables */
+    .contrato-row:hover {
+        background-color: #f1f1f1;
+    }
 </style>
 {% endblock %}
+
+{% block scripts %}
+<script>
+    // Función para abrir el modal de editar contrato y cargar datos
+    function openEditarModal(contratoId) {
+        fetch(`/contrato/detalle/${contratoId}`)
+            .then(response => response.json())
+            .then(data => {
+                // Asignar los valores al formulario del modal
+                document.getElementById('contratoId').value = data.id;
+                document.getElementById('editar_trabajador_id').value = data.trabajador_id;
+                document.getElementById('editar_fecha_inicio').value = data.fecha_inicio;
+                document.getElementById('editar_fecha_termino').value = data.fecha_termino || '';
+                
+                // Mostrar el modal
+                const editarContratoModal = new bootstrap.Modal(document.getElementById('editarContratoModal'));
+                editarContratoModal.show();
+            })
+            .catch(error => {
+                console.error('Error al obtener los detalles del contrato:', error);
+                alert('Hubo un error al cargar los datos del contrato.');
+            });
+    }
+
+    // Mejorar accesibilidad permitiendo abrir el modal con Enter o Espacio
+    document.addEventListener('DOMContentLoaded', function() {
+        const rows = document.querySelectorAll('.contrato-row');
+        rows.forEach(row => {
+            row.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    const contratoId = this.getAttribute('onclick').match(/openEditarModal\('(\d+)'\)/)[1];
+                    openEditarModal(contratoId);
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}
+
