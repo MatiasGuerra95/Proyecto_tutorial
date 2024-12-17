@@ -23294,3 +23294,499 @@ FROM empresas]
 2024-12-13 13:57:16,816 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
 2024-12-13 13:57:20,620 - werkzeug - INFO - 172.19.0.1 - - [13/Dec/2024 13:57:20] "GET /empresas HTTP/1.1" 200 -
 2024-12-13 13:57:20,635 - werkzeug - INFO - 172.19.0.1 - - [13/Dec/2024 13:57:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-13 18:57:12,290 - werkzeug - INFO - 172.19.0.1 - - [13/Dec/2024 18:57:12] "GET /empresas HTTP/1.1" 200 -
+2024-12-13 18:57:12,323 - werkzeug - INFO - 172.19.0.1 - - [13/Dec/2024 18:57:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-13 18:57:23,779 - werkzeug - INFO - 172.19.0.1 - - [13/Dec/2024 18:57:23] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-13 18:57:23,895 - werkzeug - INFO - 172.19.0.1 - - [13/Dec/2024 18:57:23] "GET /trabajador HTTP/1.1" 200 -
+2024-12-13 18:57:23,918 - werkzeug - INFO - 172.19.0.1 - - [13/Dec/2024 18:57:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 12:26:08,770 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-16 12:26:08,771 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 12:55:05,647 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 12:55:05] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 12:55:06,052 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 12:55:06] "GET /trabajador HTTP/1.1" 200 -
+2024-12-16 12:55:06,112 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 12:55:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 12:55:06,173 - venv - WARNING - Error 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-12-16 12:55:06,177 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 12:55:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-16 13:56:24,006 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 13:56:24] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-12-16 13:56:24,026 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 13:56:24] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-12-16 13:56:25,848 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 13:56:25] "GET /contrato HTTP/1.1" 200 -
+2024-12-16 13:56:25,877 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 13:56:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 13:56:27,684 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 13:56:27] "GET /contrato/detalle/3 HTTP/1.1" 200 -
+2024-12-16 13:56:29,363 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 13:56:29] "GET /sucursal HTTP/1.1" 200 -
+2024-12-16 13:56:29,386 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 13:56:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 13:56:33,951 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 13:56:33] "GET /jornadas HTTP/1.1" 200 -
+2024-12-16 13:56:33,974 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 13:56:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:08:21,452 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:08:21] "GET /empresas HTTP/1.1" 200 -
+2024-12-16 15:08:21,488 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:08:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:08:23,018 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:08:23] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 15:08:23,038 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:08:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:08:23,882 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:08:23] "GET /proyectos HTTP/1.1" 200 -
+2024-12-16 15:08:23,903 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:08:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:15,622 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:15] "GET /empresas HTTP/1.1" 200 -
+2024-12-16 15:35:15,655 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:16,803 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:16] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 15:35:16,826 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:17,558 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:17] "GET /empresas HTTP/1.1" 200 -
+2024-12-16 15:35:17,584 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:18,372 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:18] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 15:35:18,399 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:19,399 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:19] "GET /proyectos HTTP/1.1" 200 -
+2024-12-16 15:35:19,425 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:20,034 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:20] "GET /representantes HTTP/1.1" 200 -
+2024-12-16 15:35:20,054 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:20,659 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:20] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 15:35:20,682 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:21,301 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:21] "GET /empresas HTTP/1.1" 200 -
+2024-12-16 15:35:21,329 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:22,465 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:22] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 15:35:22,486 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:23,168 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:23] "GET /proyectos HTTP/1.1" 200 -
+2024-12-16 15:35:23,189 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:24,217 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:24] "GET /empresas HTTP/1.1" 200 -
+2024-12-16 15:35:24,240 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:25,422 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:25] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 15:35:25,451 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:26,061 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:26] "GET /proyectos HTTP/1.1" 200 -
+2024-12-16 15:35:26,085 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:27,940 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:27] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 15:35:27,971 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:28,672 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:28] "GET /empresas HTTP/1.1" 200 -
+2024-12-16 15:35:28,695 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:54,428 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:54] "GET /sucursal HTTP/1.1" 200 -
+2024-12-16 15:35:54,448 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:56,095 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:56] "GET /jornadas HTTP/1.1" 200 -
+2024-12-16 15:35:56,118 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:35:56,972 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:56] "GET /contrato HTTP/1.1" 200 -
+2024-12-16 15:35:56,994 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:35:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:36:01,008 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:36:01] "GET /clientes HTTP/1.1" 200 -
+2024-12-16 15:36:01,029 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:36:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:37:45,194 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-16 15:37:45,194 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 15:37:45,784 - app - ERROR - Exception on /empresas [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 1096, in lista_empresas
+    return render_template('empresas/lista_empresas.html', form=form, empresas=empresas)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/empresas/lista_empresas.html", line 84, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2024-12-16 15:37:45,792 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-16 15:37:45,797 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:45] "[35m[1mGET /empresas HTTP/1.1[0m" 500 -
+2024-12-16 15:37:47,302 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:47] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 15:37:47,414 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:47] "GET /trabajador HTTP/1.1" 200 -
+2024-12-16 15:37:47,442 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:37:48,938 - app - ERROR - Exception on /empresas [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 1096, in lista_empresas
+    return render_template('empresas/lista_empresas.html', form=form, empresas=empresas)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/empresas/lista_empresas.html", line 84, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2024-12-16 15:37:48,941 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-16 15:37:48,943 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:48] "[35m[1mGET /empresas HTTP/1.1[0m" 500 -
+2024-12-16 15:37:56,510 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:56] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 15:37:56,536 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:56] "GET /trabajador HTTP/1.1" 200 -
+2024-12-16 15:37:56,557 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:37:58,123 - app - ERROR - Exception on /empresas [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 1096, in lista_empresas
+    return render_template('empresas/lista_empresas.html', form=form, empresas=empresas)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/empresas/lista_empresas.html", line 84, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2024-12-16 15:37:58,125 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-16 15:37:58,126 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:58] "[35m[1mGET /empresas HTTP/1.1[0m" 500 -
+2024-12-16 15:37:59,525 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:59] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 15:37:59,551 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:59] "GET /trabajador HTTP/1.1" 200 -
+2024-12-16 15:37:59,572 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:37:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:38:00,468 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:00] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 15:38:00,494 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:38:01,170 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:01] "GET /proyectos HTTP/1.1" 200 -
+2024-12-16 15:38:01,194 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:38:01,872 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:01] "GET /representantes HTTP/1.1" 200 -
+2024-12-16 15:38:01,896 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:38:00,884 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:00] "GET /clientes HTTP/1.1" 200 -
+2024-12-16 15:38:00,907 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:38:01,445 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:01] "GET /jornadas HTTP/1.1" 200 -
+2024-12-16 15:38:01,470 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:38:02,121 - app - ERROR - Exception on /sucursal [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 504, in lista_sucursal
+    return render_template('sucursal/lista_sucursal.html', form=form, sucursales=sucursales)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/sucursal/lista_sucursal.html", line 127, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2024-12-16 15:38:02,123 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-16 15:38:02,124 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:02] "[35m[1mGET /sucursal HTTP/1.1[0m" 500 -
+2024-12-16 15:38:03,749 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:03] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 15:38:03,772 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:03] "GET /trabajador HTTP/1.1" 200 -
+2024-12-16 15:38:03,791 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:38:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:39:03,018 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-16 15:39:03,018 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 15:39:03,405 - app - ERROR - Exception on /empresas [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 1096, in lista_empresas
+    return render_template('empresas/lista_empresas.html', form=form, empresas=empresas)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/empresas/lista_empresas.html", line 84, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2024-12-16 15:39:03,407 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-16 15:39:03,409 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:39:03] "[35m[1mGET /empresas HTTP/1.1[0m" 500 -
+2024-12-16 15:39:46,386 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:39:46] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 15:39:46,457 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:39:46] "GET /trabajador HTTP/1.1" 200 -
+2024-12-16 15:39:46,486 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:39:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:39:50,798 - app - ERROR - Exception on /sucursal [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 504, in lista_sucursal
+    return render_template('sucursal/lista_sucursal.html', form=form, sucursales=sucursales)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/sucursal/lista_sucursal.html", line 127, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2024-12-16 15:39:50,800 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-16 15:39:50,802 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:39:50] "[35m[1mGET /sucursal HTTP/1.1[0m" 500 -
+2024-12-16 15:39:57,621 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:39:57] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 15:39:57,647 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:39:57] "GET /trabajador HTTP/1.1" 200 -
+2024-12-16 15:39:57,671 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:39:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:42:37,983 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-16 15:42:37,983 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-16 15:42:41,533 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:41] "GET /empresas HTTP/1.1" 200 -
+2024-12-16 15:42:41,569 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:42:44,743 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:44] "GET /sucursal HTTP/1.1" 200 -
+2024-12-16 15:42:44,782 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:42:46,025 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:46] "GET /contrato HTTP/1.1" 200 -
+2024-12-16 15:42:46,057 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:42:46,855 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:46] "GET /trabajador HTTP/1.1" 200 -
+2024-12-16 15:42:46,886 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:42:48,256 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:48] "GET /jornadas HTTP/1.1" 200 -
+2024-12-16 15:42:48,289 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:42:49,598 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:49] "GET /clientes HTTP/1.1" 200 -
+2024-12-16 15:42:49,634 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:42:50,889 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:50] "GET /representantes HTTP/1.1" 200 -
+2024-12-16 15:42:50,918 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:42:52,251 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:52] "GET /proyectos HTTP/1.1" 200 -
+2024-12-16 15:42:52,283 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:42:53,436 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:53] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 15:42:53,470 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:42:54,555 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:54] "GET /empresas HTTP/1.1" 200 -
+2024-12-16 15:42:54,605 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:42:58,993 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:58] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 15:42:59,031 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:42:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:43:00,614 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:43:00] "GET /proyectos HTTP/1.1" 200 -
+2024-12-16 15:43:00,646 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:43:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:43:01,536 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:43:01] "GET /representantes HTTP/1.1" 200 -
+2024-12-16 15:43:01,568 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:43:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:43:02,344 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:43:02] "GET /clientes HTTP/1.1" 200 -
+2024-12-16 15:43:02,377 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:43:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 15:43:02,818 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:43:02] "GET /jornadas HTTP/1.1" 200 -
+2024-12-16 15:43:02,848 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 15:43:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 18:15:45,381 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:15:45] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 18:15:45,410 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:15:45] "GET /trabajador HTTP/1.1" 200 -
+2024-12-16 18:15:45,446 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:15:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 18:48:31,739 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:48:31] "GET /trabajador/detalle/1 HTTP/1.1" 200 -
+2024-12-16 18:48:31,754 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:48:31] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-12-16 18:48:43,800 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:48:43] "GET /trabajador/detalle/5 HTTP/1.1" 200 -
+2024-12-16 18:48:43,821 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:48:43] "GET /opciones_selectores HTTP/1.1" 200 -
+2024-12-16 18:49:00,320 - app - WARNING - Intento de eliminación de trabajador con contratos: ID 1
+2024-12-16 18:49:00,322 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:49:00] "[32mPOST /delete_trabajador/1 HTTP/1.1[0m" 302 -
+2024-12-16 18:49:00,344 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:49:00] "GET /trabajador HTTP/1.1" 200 -
+2024-12-16 18:49:00,368 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:49:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 18:49:06,082 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:49:06] "GET /contrato HTTP/1.1" 200 -
+2024-12-16 18:49:06,107 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 18:49:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:01:02,677 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:01:02] "GET /jornadas HTTP/1.1" 200 -
+2024-12-16 19:01:02,712 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:01:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:02:54,238 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-16 19:02:54,291 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:02:54] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-16 19:02:54,301 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:02:54] "GET /jornadas HTTP/1.1" 200 -
+2024-12-16 19:02:54,322 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:02:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:02:57,835 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:02:57] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-16 19:03:04,366 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-16 19:03:04,382 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:03:04] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-16 19:03:04,391 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:03:04] "GET /jornadas HTTP/1.1" 200 -
+2024-12-16 19:03:04,409 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:03:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:03:08,170 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:03:08] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-16 19:06:28,502 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:06:28] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-16 19:07:01,558 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-16 19:07:01,574 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:07:01] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-16 19:07:01,585 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:07:01] "GET /jornadas HTTP/1.1" 200 -
+2024-12-16 19:07:01,610 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:07:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:07:12,484 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:07:12] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-16 19:07:27,499 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-16 19:07:27,514 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:07:27] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-16 19:07:27,523 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:07:27] "GET /jornadas HTTP/1.1" 200 -
+2024-12-16 19:07:27,548 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:07:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:07:28,847 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:07:28] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-16 19:07:52,845 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:07:52] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-16 19:08:12,884 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:08:12] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-16 19:08:12,912 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:08:12] "GET /trabajador HTTP/1.1" 200 -
+2024-12-16 19:08:12,961 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:08:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:09:22,067 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:09:22] "GET /contrato HTTP/1.1" 200 -
+2024-12-16 19:09:22,091 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:09:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:09:25,739 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:09:25] "GET /contrato/detalle/3 HTTP/1.1" 200 -
+2024-12-16 19:09:29,397 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:09:29] "GET /contrato/detalle/6 HTTP/1.1" 200 -
+2024-12-16 19:09:33,849 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:09:33] "GET /contrato/detalle/6 HTTP/1.1" 200 -
+2024-12-16 19:09:35,402 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:09:35] "GET /contrato/detalle/6 HTTP/1.1" 200 -
+2024-12-16 19:09:35,442 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:09:35] "GET /static/pdfs/contrato_18000000-1_2024-12-06.pdf HTTP/1.1" 200 -
+2024-12-16 19:09:35,715 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:09:35] "GET /static/pdfs/contrato_18000000-1_2024-12-06.pdf HTTP/1.1" 200 -
+2024-12-16 19:09:54,182 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:09:54] "GET /representantes HTTP/1.1" 200 -
+2024-12-16 19:09:54,212 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:09:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:10:04,336 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:04] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:10:05,081 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:05] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:10:05,500 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:05] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:10:05,690 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:05] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:10:06,041 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:06] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:10:06,215 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:06] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:10:07,240 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:07] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:10:07,435 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:07] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:10:07,616 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:07] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:10:12,407 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:12] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:10:43,775 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:43] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:10:44,838 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:10:44] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:12:04,593 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:04] "[32mPOST /representantes/guardar HTTP/1.1[0m" 302 -
+2024-12-16 19:12:04,606 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:04] "GET /representantes HTTP/1.1" 200 -
+2024-12-16 19:12:04,633 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:12:06,201 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:06] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-16 19:12:07,173 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:07] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-16 19:12:08,000 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:08] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-16 19:12:08,647 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:08] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-16 19:12:09,111 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:09] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-16 19:12:10,719 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:10] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-16 19:12:14,165 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:14] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-16 19:12:18,291 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:18] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:12:19,100 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:19] "GET /representantes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:12:20,588 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:20] "[32mPOST /representantes/eliminar/1 HTTP/1.1[0m" 302 -
+2024-12-16 19:12:20,598 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:20] "GET /representantes HTTP/1.1" 200 -
+2024-12-16 19:12:20,617 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:12:21,623 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:21] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-16 19:12:22,212 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:22] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-16 19:12:22,431 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:22] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-16 19:12:38,123 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:38] "GET /proyectos HTTP/1.1" 200 -
+2024-12-16 19:12:38,147 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:12:40,747 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:40] "GET /representantes HTTP/1.1" 200 -
+2024-12-16 19:12:40,770 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:12:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:13:55,390 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:13:55] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-16 19:13:57,426 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:13:57] "GET /proyectos HTTP/1.1" 200 -
+2024-12-16 19:13:57,451 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:13:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:16:07,415 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:16:07] "GET /clientes HTTP/1.1" 200 -
+2024-12-16 19:16:07,447 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:16:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:16:09,359 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:16:09] "GET /clientes/detalle/1 HTTP/1.1" 200 -
+2024-12-16 19:17:30,939 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:17:30] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 19:17:30,968 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:17:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:18:15,352 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:18:15] "[32mPOST /servicios/agregar HTTP/1.1[0m" 302 -
+2024-12-16 19:18:15,362 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:18:15] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 19:18:15,385 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:18:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:18:34,786 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:18:34] "[32mPOST /servicios/agregar HTTP/1.1[0m" 302 -
+2024-12-16 19:18:34,796 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:18:34] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 19:18:34,817 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:18:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:19:11,670 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:19:11] "GET /servicios/1 HTTP/1.1" 200 -
+2024-12-16 19:19:31,454 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:19:31] "GET /servicios/1 HTTP/1.1" 200 -
+2024-12-16 19:19:42,637 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:19:42] "GET /empresas HTTP/1.1" 200 -
+2024-12-16 19:19:42,665 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:19:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:20:34,610 - flask_wtf.csrf - INFO - The CSRF token is missing.
+2024-12-16 19:20:34,611 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:20:34] "[31m[1mPOST /empresas/agregar HTTP/1.1[0m" 400 -
+2024-12-16 19:24:20,252 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:24:20] "GET /jornadas HTTP/1.1" 200 -
+2024-12-16 19:24:20,282 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:24:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-16 19:25:10,642 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:25:10] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-16 19:30:37,631 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:30:37] "GET /servicios HTTP/1.1" 200 -
+2024-12-16 19:30:37,663 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:30:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
