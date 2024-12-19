@@ -3,32 +3,31 @@
 {% block content %}
 <h1>Gestión de Servicios</h1>
 
+<!-- Botón para agregar un nuevo servicio -->
+<button type="button" class="btn btn-primary mb-3" onclick="openModal()">Agregar Servicio</button>
+
 <!-- Tabla de Servicios -->
 <div class="container">
-    <button type="button" class="btn btn-primary mb-3" onclick="openModal()">Agregar Servicio</button>
     <table class="table table-bordered">
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Cliente</th>
                 <th>Fecha Inicio</th>
-                <th>Fecha Término</th>
                 <th>Activo</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody id="servicios-container">
             {% for servicio in servicios %}
-            <tr>
+            <tr onclick="editServicio('{{ servicio.id }}')" style="cursor: pointer;">
                 <td>{{ servicio.nombre }}</td>
                 <td>{{ servicio.cliente.razon_social }}</td>
                 <td>{{ servicio.fecha_inicio.strftime('%d-%m-%Y') }}</td>
-                <td>{{ servicio.fecha_termino.strftime('%d-%m-%Y') if servicio.fecha_termino else 'N/A' }}</td>
                 <td>{{ 'Sí' if servicio.activo else 'No' }}</td>
                 <td>
-                    <button class="btn btn-sm btn-warning" onclick="editServicio('{{ servicio.id }}')">Editar</button>
                     <form method="POST" action="{{ url_for('eliminar_servicio', id=servicio.id) }}" style="display:inline;">
-                        <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
+                        <button class="btn btn-sm btn-danger" type="submit" onclick="event.stopPropagation(); return confirm('¿Estás seguro de eliminar este servicio?');">Eliminar</button>
                     </form>
                 </td>
             </tr>
@@ -72,8 +71,11 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="fecha_termino">Fecha de Término</label>
-                        <input type="date" class="form-control" id="fecha_termino" name="fecha_termino">
+                        <label for="activo">Activo</label>
+                        <select class="form-control" id="activo" name="activo" required>
+                            <option value="1">Sí</option>
+                            <option value="0">No</option>
+                        </select>
                     </div>
 
                     <button type="submit" class="btn btn-success">Guardar Servicio</button>
@@ -82,48 +84,68 @@
         </div>
     </div>
 </div>
+
 <script>
-            function openModal() {
-                document.getElementById('servicioForm').reset();
-                document.getElementById('servicio_id').value = '';
-                document.getElementById('modalTitle').textContent = 'Agregar Servicio';
+    // Abrir modal para agregar un servicio
+    function openModal() {
+        document.getElementById('servicioForm').reset();
+        document.getElementById('servicio_id').value = '';
+        document.getElementById('modalTitle').textContent = 'Agregar Servicio';
+        document.getElementById('servicioModal').style.display = 'block';
+    }
+
+    // Cerrar el modal
+    function closeModal() {
+        document.getElementById('servicioModal').style.display = 'none';
+    }
+
+    // Abrir modal para editar un servicio
+    function editServicio(id) {
+        fetch(`/servicios/${id}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('servicio_id').value = data.id;
+                document.getElementById('cliente_id').value = data.cliente_id;
+                document.getElementById('nombre').value = data.nombre;
+                document.getElementById('fecha_inicio').value = data.fecha_inicio;
+                document.getElementById('activo').value = data.activo ? '1' : '0';
+                document.getElementById('modalTitle').textContent = 'Editar Servicio';
                 document.getElementById('servicioModal').style.display = 'block';
-            }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+</script>
 
-            function closeModal() {
-                document.getElementById('servicioModal').style.display = 'none';
-            }
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
 
-            function editServicio(id) {
-                fetch(`/servicios/${id}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        document.getElementById('servicio_id').value = data.id;
-                        document.getElementById('cliente_id').value = data.cliente_id;
-                        document.getElementById('nombre').value = data.nombre;
-                        document.getElementById('fecha_inicio').value = data.fecha_inicio;
-                        document.getElementById('fecha_termino').value = data.fecha_termino;
-                        document.getElementById('modalTitle').textContent = 'Editar Servicio';
-                        document.getElementById('servicioModal').style.display = 'block';
-                    })
-                    .catch(error => console.error('Error:', error));
-            }
+    .modal-dialog {
+        position: relative;
+        margin: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        max-width: 500px;
+    }
 
-            function deleteServicio(id) {
-                if (confirm('¿Estás seguro de eliminar este servicio?')) {
-                    fetch(`/servicios/eliminar/${id}`, {
-                        method: 'POST'
-                    })
-                    .then(response => {
-                        if (response.ok) {
-                            location.reload();
-                        } else {
-                            alert('Error al eliminar el servicio.');
-                        }
-                    })
-                    .catch(error => console.error('Error:', error));
-                }
-            }
-    </script>
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
 
+    .close {
+        cursor: pointer;
+    }
+</style>
 {% endblock %}

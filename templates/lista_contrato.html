@@ -6,7 +6,7 @@
 <h1>Lista de Contratos</h1>
 
 <!-- Botón para agregar contrato -->
-<button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#crearContratoModal">
+<button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#contratoModal" onclick="abrirModalCrear()">
     Crear Contrato
 </button>
 
@@ -14,146 +14,153 @@
 <table class="table table-hover">
     <thead class="thead-dark">
         <tr>
-            <th>Nombre Trabajador</th>
+            <th>ID</th>
             <th>Fecha Inicio</th>
             <th>Fecha Término</th>
-            <th>PDF</th>
-            <th>Acciones</th>
+            <th>RUT</th>
+            <th>Nombres y Apellidos</th>
         </tr>
     </thead>
     <tbody>
         {% for contrato in contratos %}
         <tr class="contrato-row" onclick="openEditarModal('{{ contrato.id }}')" style="cursor: pointer;" tabindex="0">
-            <td>{{ contrato.trabajador.nombre }} {{ contrato.trabajador.apellidop }}</td>
+            <td>{{ contrato.id }}</td>
             <td>{{ contrato.fecha_inicio.strftime('%Y-%m-%d') }}</td>
             <td>{{ contrato.fecha_termino.strftime('%Y-%m-%d') if contrato.fecha_termino else 'Indefinido' }}</td>
-            <td>
-                {% if contrato.pdf_path %}
-                <a href="{{ url_for('static', filename='pdfs/' + contrato.pdf_path) }}" target="_blank">Ver PDF</a>
-                {% else %}
-                No disponible
-                {% endif %}
-            </td>
-            <td>
-                <!-- Botón Eliminar -->
-                <form action="{{ url_for('eliminar_contrato', id=contrato.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('¿Seguro que deseas eliminar este contrato?');">
-                    {{ form.csrf_token }}
-                    <button type="submit" class="btn btn-danger btn-sm">
-                        Eliminar
-                    </button>
-                </form>
-            </td>
+            <td>{{ contrato.trabajador.rut }}</td>
+            <td>{{ contrato.trabajador.nombre }} {{ contrato.trabajador.apellidop }}{% if contrato.trabajador.apellidom %} {{ contrato.trabajador.apellidom }}{% endif %}</td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
 
-<!-- Modal para Crear Contrato -->
-<div class="modal fade" id="crearContratoModal" tabindex="-1" aria-labelledby="crearContratoModalLabel" aria-hidden="true">
+<!-- Modal para Crear/Editar Contrato -->
+<div class="modal fade" id="contratoModal" tabindex="-1" aria-labelledby="contratoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Crear Contrato</h5>
+                <h5 class="modal-title" id="contratoModalLabel">Crear Contrato</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
-                <form id="crearContratoForm" method="POST" action="{{ url_for('lista_contrato') }}" enctype="multipart/form-data">
+                <form id="contratoForm" method="POST" action="{{ url_for('lista_contrato') }}">
                     {{ form.csrf_token }}
-                    <div class="mb-3">
-                        <label for="trabajador_id" class="form-label">Trabajador</label>
-                        <select class="form-select" id="trabajador_id" name="trabajador_id" required>
-                            <option value="">Seleccionar Trabajador</option>
-                            {% for trabajador in trabajadores %}
-                            <option value="{{ trabajador.id }}">{{ trabajador.nombre }} {{ trabajador.apellidop }}</option>
-                            {% endfor %}
-                        </select>
-                        {% if form.trabajador_id.errors %}
-                            <div class="text-danger">
-                                {{ form.trabajador_id.errors[0] }}
-                            </div>
-                        {% endif %}
+                    <input type="hidden" id="contrato_id" name="id">
+
+                    <!-- Fila 1: Empresa MVS, Cliente, Servicio -->
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="empresa_mvs_id" class="form-label">Empresa MVS:</label>
+                            <select class="form-select" id="empresa_mvs_id" name="empresa_mvs_id" required>
+                                <option value="">Seleccionar Empresa MVS (Razón Social)</option>
+                                {% for empresa in empresas_mvs %}
+                                <option value="{{ empresa.id }}">{{ empresa.razon_social }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="cliente_id" class="form-label">Cliente:</label>
+                            <select class="form-select" id="cliente_id" name="cliente_id" required>
+                                <option value="">Seleccionar Cliente (Razón Social)</option>
+                                {% for cliente in clientes %}
+                                <option value="{{ cliente.id }}">{{ cliente.razon_social }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="servicio_id" class="form-label">Servicio:</label>
+                            <select class="form-select" id="servicio_id" name="servicio_id" required>
+                                <option value="">Seleccionar Servicio (Nombre)</option>
+                                {% for servicio in servicios %}
+                                <option value="{{ servicio.id }}">{{ servicio.nombre }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="fecha_inicio" class="form-label">Fecha de Inicio</label>
-                        <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required>
-                        {% if form.fecha_inicio.errors %}
-                            <div class="text-danger">
-                                {{ form.fecha_inicio.errors[0] }}
-                            </div>
-                        {% endif %}
+
+                    <!-- Fila 2: Sucursal, Comuna, Dirección -->
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="sucursal_id" class="form-label">Sucursal:</label>
+                            <select class="form-select" id="sucursal_id" name="sucursal_id" required onchange="actualizarInfoSucursal()">
+                                <option value="">Seleccionar Sucursal (Nombre)</option>
+                                {% for suc in sucursales %}
+                                <option value="{{ suc.id }}">{{ suc.nombre_sucursal }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Comercial / Comuna:</label>
+                            <span id="comuna_label" class="form-control-plaintext">--</span>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Dirección:</label>
+                            <span id="direccion_label" class="form-control-plaintext">--</span>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="fecha_termino" class="form-label">Fecha de Término</label>
-                        <input type="date" class="form-control" id="fecha_termino" name="fecha_termino">
-                        {% if form.fecha_termino.errors %}
-                            <div class="text-danger">
-                                {{ form.fecha_termino.errors[0] }}
-                            </div>
-                        {% endif %}
+
+                    <!-- Fila 3: Cliente Representante, Validador, Firmante -->
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="cliente_representante_id" class="form-label">Cliente Representante:</label>
+                            <select class="form-select" id="cliente_representante_id" name="cliente_representante_id" required>
+                                <option value="">Seleccionar Representante (RUT Nombre)</option>
+                                {% for rep in representantes %}
+                                <option value="{{ rep.id }}">{{ rep.rut }} - {{ rep.nombre }} {{ rep.apellidop }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="cliente_validador_id" class="form-label">Cliente Validador:</label>
+                            <select class="form-select" id="cliente_validador_id" name="cliente_validador_id" required>
+                                <option value="">Seleccionar Validador (RUT Nombre)</option>
+                                {% for val in validadores %}
+                                <option value="{{ val.id }}">{{ val.rut }} - {{ val.nombre }} {{ val.apellidop }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="cliente_firmante_id" class="form-label">Cliente Firmante:</label>
+                            <select class="form-select" id="cliente_firmante_id" name="cliente_firmante_id" required>
+                                <option value="">Seleccionar Firmante (RUT Nombre)</option>
+                                {% for fir in firmantes %}
+                                <option value="{{ fir.id }}">{{ fir.rut }} - {{ fir.nombre }} {{ fir.apellidop }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
                     </div>
+
+                    <!-- Fila 4: Trabajador, Fecha Inicio, Fecha Término -->
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="trabajador_id" class="form-label">Trabajador:</label>
+                            <select class="form-select" id="trabajador_id" name="trabajador_id" required>
+                                <option value="">Seleccionar Trabajador</option>
+                                {% for t in trabajadores %}
+                                <option value="{{ t.id }}">{{ t.nombre }} {{ t.apellidop }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="fecha_inicio" class="form-label">Fecha de Inicio</label>
+                            <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="fecha_termino" class="form-label">Fecha de Término</label>
+                            <input type="date" class="form-control" id="fecha_termino" name="fecha_termino">
+                        </div>
+                    </div>
+
                     <button type="submit" class="btn btn-success">Guardar Contrato</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
-
-<!-- Modal para Editar Contrato -->
-<div class="modal fade" id="editarContratoModal" tabindex="-1" aria-labelledby="editarContratoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Editar Contrato</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-            </div>
-            <div class="modal-body">
-                <form id="editarContratoForm" method="POST" action="{{ url_for('lista_contrato') }}" enctype="multipart/form-data">
-                    {{ form.csrf_token }}
-                    <input type="hidden" id="contratoId" name="id">
-                    <div class="mb-3">
-                        <label for="editar_trabajador_id" class="form-label">Trabajador</label>
-                        <select class="form-select" id="editar_trabajador_id" name="trabajador_id" required>
-                            <option value="">Seleccionar Trabajador</option>
-                            {% for trabajador in trabajadores %}
-                            <option value="{{ trabajador.id }}">{{ trabajador.nombre }} {{ trabajador.apellidop }}</option>
-                            {% endfor %}
-                        </select>
-                        {% if form.trabajador_id.errors %}
-                            <div class="text-danger">
-                                {{ form.trabajador_id.errors[0] }}
-                            </div>
-                        {% endif %}
-                    </div>
-                    <div class="mb-3">
-                        <label for="editar_fecha_inicio" class="form-label">Fecha de Inicio</label>
-                        <input type="date" class="form-control" id="editar_fecha_inicio" name="fecha_inicio" required>
-                        {% if form.fecha_inicio.errors %}
-                            <div class="text-danger">
-                                {{ form.fecha_inicio.errors[0] }}
-                            </div>
-                        {% endif %}
-                    </div>
-                    <div class="mb-3">
-                        <label for="editar_fecha_termino" class="form-label">Fecha de Término</label>
-                        <input type="date" class="form-control" id="editar_fecha_termino" name="fecha_termino">
-                        {% if form.fecha_termino.errors %}
-                            <div class="text-danger">
-                                {{ form.fecha_termino.errors[0] }}
-                            </div>
-                        {% endif %}
-                    </div>
-                    <button type="submit" class="btn btn-success">Actualizar Contrato</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
 {% endblock %}
 
 {% block styles %}
 <style>
-    /* Cambiar el cursor y agregar efecto de hover para filas clicables */
     .contrato-row:hover {
         background-color: #f1f1f1;
     }
@@ -162,19 +169,29 @@
 
 {% block scripts %}
 <script>
-    // Función para abrir el modal de editar contrato y cargar datos
+    function abrirModalCrear() {
+        document.getElementById('contratoForm').reset();
+        document.getElementById('contrato_id').value = '';
+        document.getElementById('contratoModalLabel').innerText = 'Crear Contrato';
+        document.getElementById('comuna_label').textContent = '--';
+        document.getElementById('direccion_label').textContent = '--';
+    }
+
     function openEditarModal(contratoId) {
         fetch(`/contrato/detalle/${contratoId}`)
             .then(response => response.json())
             .then(data => {
-                // Asignar los valores al formulario del modal
-                document.getElementById('contratoId').value = data.id;
-                document.getElementById('editar_trabajador_id').value = data.trabajador_id;
-                document.getElementById('editar_fecha_inicio').value = data.fecha_inicio;
-                document.getElementById('editar_fecha_termino').value = data.fecha_termino || '';
-                
-                // Mostrar el modal
-                const editarContratoModal = new bootstrap.Modal(document.getElementById('editarContratoModal'));
+                document.getElementById('contratoForm').reset();
+                document.getElementById('contrato_id').value = data.id;
+                document.getElementById('trabajador_id').value = data.trabajador_id;
+                document.getElementById('fecha_inicio').value = data.fecha_inicio;
+                document.getElementById('fecha_termino').value = data.fecha_termino || '';
+                document.getElementById('contratoModalLabel').innerText = 'Editar Contrato';
+
+                // Aquí podrías cargar también empresa_mvs_id, cliente_id, servicio_id, sucursal_id, etc.
+                // si se devuelven desde /contrato/detalle/<id> en data. Ajusta el backend si quieres preseleccionar.
+
+                const editarContratoModal = new bootstrap.Modal(document.getElementById('contratoModal'));
                 editarContratoModal.show();
             })
             .catch(error => {
@@ -183,18 +200,27 @@
             });
     }
 
-    // Mejorar accesibilidad permitiendo abrir el modal con Enter o Espacio
-    document.addEventListener('DOMContentLoaded', function() {
-        const rows = document.querySelectorAll('.contrato-row');
-        rows.forEach(row => {
-            row.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    const contratoId = this.getAttribute('onclick').match(/openEditarModal\('(\d+)'\)/)[1];
-                    openEditarModal(contratoId);
-                }
-            });
-        });
-    });
+    function actualizarInfoSucursal() {
+        const sucursalId = document.getElementById('sucursal_id').value;
+        if (sucursalId) {
+            fetch(`/sucursal/${sucursalId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Aquí debes ajustar para mostrar la comuna y dirección correctas.
+                    // Si data tiene 'comuna_id', debes obtener el nombre de la comuna, ya sea en la misma respuesta o con otra ruta.
+                    // Suponiendo que data contiene 'comuna' y 'direccion' directamente:
+                    document.getElementById('comuna_label').textContent = data.comuna || '--';
+                    document.getElementById('direccion_label').textContent = data.direccion || '--';
+                })
+                .catch(error => {
+                    console.error('Error al cargar datos de la sucursal:', error);
+                    document.getElementById('comuna_label').textContent = '--';
+                    document.getElementById('direccion_label').textContent = '--';
+                });
+        } else {
+            document.getElementById('comuna_label').textContent = '--';
+            document.getElementById('direccion_label').textContent = '--';
+        }
+    }
 </script>
 {% endblock %}
-

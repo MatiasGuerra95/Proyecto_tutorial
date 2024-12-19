@@ -147,7 +147,8 @@ CREATE TABLE sucursal (
 CREATE TABLE jornada (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
-    descripcion VARCHAR(200)
+    descripcion VARCHAR(200),
+    horas_semanales FLOAT
 );
 
 CREATE TABLE dia_jornada (
@@ -198,6 +199,7 @@ CREATE TABLE proyectos (
     fecha_inicio DATE NOT NULL,
     fecha_termino DATE,
     cliente_id INTEGER NOT NULL,
+    activo BOOLEAN DEFAULT TRUE,
     CONSTRAINT fk_cliente FOREIGN KEY (cliente_id) REFERENCES cliente (id) ON DELETE CASCADE
 );
 
@@ -216,4 +218,17 @@ CREATE TABLE empresa (
     id SERIAL PRIMARY KEY,              -- Identificador único de la empresa
     rut VARCHAR(12) NOT NULL,           -- RUT de la empresa (máximo 12 caracteres)
     razon_social VARCHAR(255) NOT NULL  -- Razón social de la empresa
+);
+
+CREATE TABLE plataforma (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE causal_contratacion (
+    id SERIAL PRIMARY KEY,
+    letra VARCHAR(10) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    duracion VARCHAR(50)
 );

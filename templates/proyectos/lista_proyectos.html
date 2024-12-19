@@ -15,6 +15,7 @@
             <th>Fecha de Inicio</th>
             <th>Fecha de Término</th>
             <th>Cliente</th>
+            <th>Activo</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -26,6 +27,7 @@
             <td>{{ proyecto.fecha_inicio }}</td>
             <td>{{ proyecto.fecha_termino or 'Indefinida' }}</td>
             <td>{{ proyecto.cliente.razon_social }}</td>
+            <td>{{ 'Sí' if proyecto.activo else 'No' }}</td>
             <td>
                 <button class="btn btn-warning btn-sm" onclick="openEditModal('{{ proyecto.id }}')">Editar</button>
                 <form method="POST" action="{{ url_for('eliminar_proyecto', id=proyecto.id) }}" style="display:inline;" onsubmit="return confirm('¿Deseas eliminar este proyecto?');">
@@ -76,6 +78,13 @@
                             {% endfor %}
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="activo">Activo</label>
+                        <select class="form-control" id="activo" name="activo" required>
+                            <option value="1">Sí</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>                    
                     <button type="submit" class="btn btn-success">Guardar Proyecto</button>
                 </form>
             </div>
@@ -84,18 +93,22 @@
 </div>
 
 <script>
+    // Función para abrir el modal de agregar proyecto
     function openAddModal() {
         const modal = document.getElementById('proyectoModal');
         document.getElementById('modalTitle').innerText = 'Agregar Proyecto';
         document.getElementById('proyectoForm').action = '{{ url_for("agregar_proyecto") }}';
+        document.getElementById('proyecto_id').value = ''; // Limpiar ID
         document.getElementById('nombre').value = '';
         document.getElementById('descripcion').value = '';
         document.getElementById('fecha_inicio').value = '';
         document.getElementById('fecha_termino').value = '';
         document.getElementById('cliente_id').value = '';
+        document.getElementById('activo').value = '1'; // Predeterminado a "Sí"
         modal.style.display = 'block';
     }
 
+    // Función para abrir el modal de edición
     function openEditModal(proyectoId) {
         fetch(`/proyectos/detalle/${proyectoId}`)
             .then(response => response.json())
@@ -103,15 +116,19 @@
                 const modal = document.getElementById('proyectoModal');
                 document.getElementById('modalTitle').innerText = 'Editar Proyecto';
                 document.getElementById('proyectoForm').action = `/proyectos/editar/${data.id}`;
+                document.getElementById('proyecto_id').value = data.id;
                 document.getElementById('nombre').value = data.nombre;
-                document.getElementById('descripcion').value = data.descripcion;
+                document.getElementById('descripcion').value = data.descripcion || '';
                 document.getElementById('fecha_inicio').value = data.fecha_inicio;
-                document.getElementById('fecha_termino').value = data.fecha_termino;
+                document.getElementById('fecha_termino').value = data.fecha_termino || '';
                 document.getElementById('cliente_id').value = data.cliente_id;
+                document.getElementById('activo').value = data.activo ? '1' : '0'; // Asignar valor de activo
                 modal.style.display = 'block';
-            });
+            })
+            .catch(error => console.error('Error al cargar los datos del proyecto:', error));
     }
 
+    // Función para cerrar el modal
     function closeModal() {
         document.getElementById('proyectoModal').style.display = 'none';
     }

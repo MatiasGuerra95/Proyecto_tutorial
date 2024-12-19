@@ -123,8 +123,8 @@ function openEditModal(representanteId) {
         .then(data => {
             document.getElementById('modalTitle').innerText = 'Editar Representante';
             document.getElementById('representante_id').value = data.id;
-            document.getElementById('cliente').value = data.cliente_id;
-            document.getElementById('rol_firma_contratos').value = data.rol_firma_contratos_id;
+            document.getElementById('cliente_id').value = data.cliente_id;  // Corrección aquí
+            document.getElementById('rol_firma_contratos_id').value = data.rol_firma_contratos_id;  // Corrección aquí
             document.getElementById('nombre').value = data.nombre;
             document.getElementById('apellido_p').value = data.apellido_p;
             document.getElementById('apellido_m').value = data.apellido_m;
@@ -133,6 +133,7 @@ function openEditModal(representanteId) {
             document.getElementById('representanteModal').style.display = 'block';
         });
 }
+
 
 // Cerrar modal
 function closeModal() {

@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Plataformas de Asistencia</h1>
+
+<button class="btn btn-primary mb-3" onclick="openAddModal()">Agregar Plataforma</button>
+
+<input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Buscar plataformas..." class="form-control mb-3">
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for plat in plataformas %}
+        <tr onclick="openEditModal('{{ plat.id }}')" style="cursor: pointer;">
+            <td>{{ plat.nombre }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('eliminar_plataforma', id=plat.id) }}" style="display: inline;" onsubmit="return confirm('¿Deseas eliminar esta plataforma?');">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Modal para Agregar/Editar Plataforma -->
+<div id="plataformaModal" class="modal" style="display:none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Agregar Plataforma</h5>
+                <span class="close" onclick="closeModal()" style="cursor: pointer;">&times;</span>
+            </div>
+            <div class="modal-body">
+                <!-- Información general -->
+                <h4>Información general</h4>
+                <form id="plataformaForm" method="POST" action="{{ url_for('lista_plataformas') }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <input type="hidden" id="plataforma_id" name="plataforma_id">
+                    
+                    <div class="form-group">
+                        <label for="id_plat">ID:</label>
+                        <input type="text" class="form-control" id="id_plat" name="id_plat" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre_plat">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre_plat" name="nombre_plat" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success mt-3">Guardar Plataforma</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openAddModal() {
+    resetModal();
+    document.getElementById('modalTitle').innerText = 'Agregar Plataforma';
+    document.getElementById('plataformaModal').style.display = 'block';
+}
+
+function openEditModal(plataformaId) {
+    fetch(`/plataforma/detalle/${plataformaId}`)
+        .then(response => response.json())
+        .then(data => {
+            resetModal();
+            document.getElementById('modalTitle').innerText = 'Editar Plataforma';
+            document.getElementById('plataforma_id').value = data.id;
+            document.getElementById('id_plat').value = data.id;
+            document.getElementById('nombre_plat').value = data.nombre;
+            document.getElementById('plataformaModal').style.display = 'block';
+        });
+}
+
+function closeModal() {
+    document.getElementById('plataformaModal').style.display = 'none';
+    resetModal();
+}
+
+function resetModal() {
+    document.getElementById('plataforma_id').value = '';
+    document.getElementById('id_plat').value = '';
+    document.getElementById('nombre_plat').value = '';
+}
+
+function filterTable() {
+    const input = document.getElementById('searchInput').value.toUpperCase();
+    const rows = document.querySelectorAll('table tbody tr');
+    rows.forEach(row => {
+        const nombre = row.cells[0].innerText;
+        row.style.display = nombre.toUpperCase().includes(input) ? '' : 'none';
+    });
+}
+</script>
+
+<style>
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-dialog {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 600px; /* más pequeño que la jornada */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+</style>
+
+{% endblock %}

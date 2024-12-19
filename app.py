@@ -4,8 +4,8 @@ from flask import Flask, render_template, redirect, url_for, flash, jsonify, sen
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
-from forms import BancoForm, TrabajadorForm, ContratoForm, DiaContratoForm, AfpForm, ComunaForm, CuentaForm, PaisForm, PrevisionForm, RegionForm, Estado_CivilForm, GeneroForm, SucursalForm, DiaJornadaForm, JornadaForm, ClienteForm ,RepresentanteForm, ProyectoForm, ServicioForm, EmpresaForm
-from models import Bancos, Trabajador, Contrato, DiaContrato, Afp, Comuna, Tipo_cuenta, Pais, Prev_salud, Region, Estado_Civil, Genero, FormaPago, Sucursal, Cliente, Jornada, DiaJornada, RolFirmaContratos, Representante, Proyecto, Servicio, Empresa
+from forms import BancoForm, TrabajadorForm, ContratoForm, DiaContratoForm, AfpForm, ComunaForm, CuentaForm, PaisForm, PrevisionForm, RegionForm, Estado_CivilForm, GeneroForm, SucursalForm, DiaJornadaForm, JornadaForm, ClienteForm ,RepresentanteForm, ProyectoForm, ServicioForm, EmpresaForm, PlataformaForm, CausalContratacionForm
+from models import Bancos, Trabajador, Contrato, DiaContrato, Afp, Comuna, Tipo_cuenta, Pais, Prev_salud, Region, Estado_Civil, Genero, FormaPago, Sucursal, Cliente, Jornada, DiaJornada, RolFirmaContratos, Representante, Proyecto, Servicio, Empresa, Plataforma, CausalContratacion
 from utils import generar_pdf, sanitize_input
 from datetime import datetime
 import os
@@ -330,21 +330,33 @@ def opciones_selectores():
     })
 
 
-# Ruta para listar y manejar contratos
 @app.route('/contrato', methods=['GET', 'POST'])
 def lista_contrato():
     form = ContratoForm()
-    form.trabajador_id.choices = [
-        (trabajador.id, f"{trabajador.nombre} {trabajador.apellidop}")
-        for trabajador in Trabajador.query.all()
-    ]
+
+    # Consultar listas para los select
     trabajadores = Trabajador.query.all()
+    empresas_mvs = Empresa.query.all()
+    clientes = Cliente.query.all()
+    servicios = Servicio.query.all()
+    sucursales = Sucursal.query.all()
+    representantes = Representante.query.all()
+    
+    # Si tu lógica para validador y firmante es similar:
+    # validadores = Validador.query.all()  # Si existe un modelo Validador
+    # firmantes = Firmante.query.all()      # Si existe un modelo Firmante
+    # O si no los tienes, puedes dejarlos vacíos o usar trabajadores filtrados
+    #validadores = trabajadores  # Placeholder hasta definir la lógica real
+    #firmantes = trabajadores    # Placeholder hasta definir la lógica real
+
+    form.trabajador_id.choices = [
+        (t.id, f"{t.nombre} {t.apellidop}") for t in trabajadores
+    ]
 
     if request.method == 'POST':
-        contrato_id = request.form.get('id')  # Campo oculto para identificar edición
-
+        contrato_id = request.form.get('id')  
         if contrato_id:
-            # **Editar Contrato**
+            # Editar Contrato
             contrato = Contrato.query.get_or_404(contrato_id)
             if form.validate_on_submit():
                 contrato.trabajador_id = form.trabajador_id.data
@@ -353,28 +365,22 @@ def lista_contrato():
 
                 try:
                     db.session.commit()
-                    # Generar el PDF después de guardar los cambios
                     pdf_filename = generar_pdf(contrato.trabajador, contrato.fecha_inicio, contrato.fecha_termino)
                     if pdf_filename:
                         contrato.pdf_path = pdf_filename
-                        db.session.commit()  # Guardar la ruta del PDF
+                        db.session.commit()
                         flash("Contrato actualizado y PDF generado exitosamente.", "success")
-                        logging.info(f"Contrato actualizado y PDF generado: {contrato}")
                     else:
                         flash("Contrato actualizado pero falló la generación del PDF.", "warning")
-                        logging.warning(f"Contrato actualizado pero falló la generación del PDF: {contrato}")
                 except SQLAlchemyError as e:
                     db.session.rollback()
                     flash(f"Error al actualizar el contrato: {e}", "danger")
-                    logging.error(f"Error al actualizar el contrato con ID {contrato_id}: {e}")
                 except Exception as e:
                     flash(f"Error al generar el PDF del contrato: {e}", "danger")
-                    logging.error(f"Error al generar el PDF para contrato con ID {contrato_id}: {e}")
             else:
                 flash("Por favor, corrige los errores en el formulario.", "danger")
-                logging.warning(f"Errores de validación en ContratoForm: {form.errors}")
         else:
-            # **Crear Contrato**
+            # Crear Contrato
             if form.validate_on_submit():
                 trabajador_id = form.trabajador_id.data
                 fecha_inicio = form.fecha_inicio.data
@@ -383,7 +389,6 @@ def lista_contrato():
                 trabajador = Trabajador.query.get(trabajador_id)
                 if not trabajador:
                     flash("El trabajador seleccionado no existe.", "danger")
-                    logging.error(f"Trabajador con ID {trabajador_id} no encontrado.")
                     return redirect(url_for("lista_contrato"))
 
                 nuevo_contrato = Contrato(
@@ -395,33 +400,37 @@ def lista_contrato():
                 try:
                     db.session.add(nuevo_contrato)
                     db.session.commit()
-                    # Generar el PDF después de guardar el contrato
                     pdf_filename = generar_pdf(trabajador, fecha_inicio, fecha_termino)
                     if pdf_filename:
                         nuevo_contrato.pdf_path = pdf_filename
-                        db.session.commit()  # Guardar la ruta del PDF
+                        db.session.commit()
                         flash("Contrato creado y PDF generado exitosamente.", "success")
-                        logging.info(f"Contrato creado y PDF generado: {nuevo_contrato}")
                     else:
                         flash("Contrato creado pero falló la generación del PDF.", "warning")
-                        logging.warning(f"Contrato creado pero falló la generación del PDF: {nuevo_contrato}")
                 except SQLAlchemyError as e:
                     db.session.rollback()
                     flash(f"Error al crear el contrato: {e}", "danger")
-                    logging.error(f"Error al crear el contrato: {e}")
                 except Exception as e:
                     flash(f"Error al generar el PDF del contrato: {e}", "danger")
-                    logging.error(f"Error al generar el PDF para contrato: {e}")
             else:
                 flash("Por favor, corrige los errores en el formulario.", "danger")
-                logging.warning(f"Errores de validación en ContratoForm: {form.errors}")
 
         return redirect(url_for("lista_contrato"))
 
-    # **GET Request:** Listar Contratos
+    # GET: Listar Contratos
     contratos = Contrato.query.options(joinedload(Contrato.trabajador)).all()
 
-    return render_template('lista_contrato.html', contratos=contratos, trabajadores=trabajadores, form=form)
+    return render_template(
+        'lista_contrato.html',
+        contratos=contratos,
+        trabajadores=trabajadores,
+        form=form,
+        empresas_mvs=empresas_mvs,
+        clientes=clientes,
+        servicios=servicios,
+        sucursales=sucursales,
+        representantes=representantes
+    )
 
 # Ruta para eliminar contratos
 @app.route('/contrato/eliminar/<int:id>', methods=['POST'])
@@ -551,13 +560,21 @@ def calcular_horas(hora_ingreso, hora_salida_colacion, hora_ingreso_colacion, ho
         return 0
 
 
-def procesar_dias(dias):
+def procesar_dias(dias_form, eliminar_dias_ids):
     lista_dias = []
-    for dia_form in dias.entries:
-        hora_ingreso = dia_form.data.get('hora_ingreso')
-        hora_salida_colacion = dia_form.data.get('hora_salida_colacion')
-        hora_ingreso_colacion = dia_form.data.get('hora_ingreso_colacion')
-        hora_salida = dia_form.data.get('hora_salida')
+
+    for dia_form in dias_form.entries:
+        dia_id = dia_form.dia_id.data
+        if dia_id and str(dia_id) in eliminar_dias_ids:
+            continue
+
+        numero_dia = dia_form.numero_dia.data
+        habilitado = dia_form.habilitado.data
+        hora_ingreso = dia_form.hora_ingreso.data
+        hora_salida_colacion = dia_form.hora_salida_colacion.data
+        hora_ingreso_colacion = dia_form.hora_ingreso_colacion.data
+        hora_salida = dia_form.hora_salida.data
+        turno_gv = dia_form.turno_gv.data
 
         def hora_a_minutos(hora):
             return hora.hour * 60 + hora.minute if hora else 0
@@ -567,73 +584,138 @@ def procesar_dias(dias):
             salida_min = hora_a_minutos(hora_salida)
             colacion_salida_min = hora_a_minutos(hora_salida_colacion)
             colacion_ingreso_min = hora_a_minutos(hora_ingreso_colacion)
-
-            # Aplicar la fórmula exacta sin condiciones:
-            # HORAS = (Salida - Ingreso) - (IngresoColación - SalidaColación)
-            horas_trabajadas_min = (salida_min - ingreso_min) - (colacion_ingreso_min - colacion_salida_min)
-
-            # Convertir a horas directamente
-            total_horas = round(horas_trabajadas_min / 60, 2)
+            total_minutos = (salida_min - ingreso_min) - ((colacion_ingreso_min - colacion_salida_min)
+                if hora_salida_colacion and hora_ingreso_colacion and colacion_ingreso_min > colacion_salida_min else 0)
+            total_horas = round(max(total_minutos, 0) / 60, 2)
         except Exception as e:
             app.logger.error(f"Error al calcular horas: {e}")
             total_horas = 0
 
         nuevo_dia = DiaJornada(
-            numero_dia=dia_form.data['numero_dia'],
-            habilitado=dia_form.data['habilitado'],
+            id=dia_id if dia_id else None,
+            numero_dia=numero_dia,
+            habilitado=habilitado,
             hora_ingreso=hora_ingreso,
             hora_salida_colacion=hora_salida_colacion,
             hora_ingreso_colacion=hora_ingreso_colacion,
             hora_salida=hora_salida,
-            turno_gv=dia_form.data.get('turno_gv'),
+            turno_gv=turno_gv,
             total_horas=total_horas
         )
         lista_dias.append(nuevo_dia)
+
     return lista_dias
 
 @app.route('/jornadas', methods=['GET', 'POST'])
 def lista_jornadas():
     form = JornadaForm()
 
-    if request.method == 'POST' and form.validate_on_submit():
-        jornada_id = form.jornada_id.data
-        try:
-            if jornada_id:  # Editar jornada
-                jornada = Jornada.query.get(jornada_id)
-                if jornada:
-                    jornada.nombre = sanitize_input(form.nombre.data)
-                    jornada.descripcion = sanitize_input(form.descripcion.data) if form.descripcion.data else None
+    if form.validate_on_submit():
+        app.logger.debug(f"Form data: {request.form}")
+        app.logger.debug(f"Form errors: {form.errors}")
 
-                    # Actualizar los días
-                    jornada.dias = procesar_dias(form.dias)
-                    db.session.commit()
-                    flash('Jornada actualizada exitosamente', 'success')
-                else:
-                    flash('Jornada no encontrada', 'danger')
-            else:  # Crear nueva jornada
+        eliminar_dias_ids = request.form.getlist('eliminar_dia')
+        jornada_id = form.jornada_id.data
+        app.logger.debug(f"Eliminar días: {eliminar_dias_ids}")
+
+        try:
+            if jornada_id:  # Editar jornada existente
+                jornada = Jornada.query.get_or_404(jornada_id)
+                jornada.nombre = form.nombre.data
+                jornada.descripcion = form.descripcion.data
+                jornada.horas_semanales = float(form.horas_semanales.data) if form.horas_semanales.data else None
+
+                # Eliminar días marcados
+                for dia_id in eliminar_dias_ids:
+                    DiaJornada.query.filter_by(id=dia_id, jornada_id=jornada.id).delete()
+
+                # Procesar días del formulario
+                for i, dia_form in enumerate(form.dias):
+                    dia_id = dia_form.dia_id.data
+                    app.logger.debug(f"Procesando dia index {i}, id: {dia_id}")
+
+                    numero_dia = dia_form.numero_dia.data
+                    habilitado = dia_form.habilitado.data
+                    hora_ingreso = dia_form.hora_ingreso.data
+                    hora_salida_colacion = dia_form.hora_salida_colacion.data
+                    hora_ingreso_colacion = dia_form.hora_ingreso_colacion.data
+                    hora_salida = dia_form.hora_salida.data
+                    turno_gv = dia_form.turno_gv.data
+
+                    if dia_id:
+                        # Día existente: actualizar
+                        dia_existente = DiaJornada.query.get(dia_id)
+                        if dia_existente:
+                            dia_existente.habilitado = habilitado
+                            dia_existente.hora_ingreso = hora_ingreso
+                            dia_existente.hora_salida_colacion = hora_salida_colacion
+                            dia_existente.hora_ingreso_colacion = hora_ingreso_colacion
+                            dia_existente.hora_salida = hora_salida
+                            dia_existente.turno_gv = turno_gv
+                            # Recalcular horas si es necesario
+                        else:
+                            app.logger.warning(f"Día con ID {dia_id} no encontrado en la BD.")
+                    else:
+                        # Día nuevo
+                        nuevo_dia = DiaJornada(
+                            numero_dia=numero_dia,
+                            habilitado=habilitado,
+                            hora_ingreso=hora_ingreso,
+                            hora_salida_colacion=hora_salida_colacion,
+                            hora_ingreso_colacion=hora_ingreso_colacion,
+                            hora_salida=hora_salida,
+                            turno_gv=turno_gv,
+                            total_horas=0.0
+                        )
+                        jornada.dias.append(nuevo_dia)
+
+                db.session.commit()
+                flash("Jornada actualizada exitosamente", "success")
+            else:
+                # Nueva jornada
                 nueva_jornada = Jornada(
-                    nombre=sanitize_input(form.nombre.data),
-                    descripcion=sanitize_input(form.descripcion.data) if form.descripcion.data else None
+                    nombre=form.nombre.data,
+                    descripcion=form.descripcion.data,
+                    horas_semanales=float(form.horas_semanales.data) if form.horas_semanales.data else None
                 )
-                nueva_jornada.dias = procesar_dias(form.dias)
+
+                # Procesar días nuevos
+                for i, dia_form in enumerate(form.dias):
+                    numero_dia = dia_form.numero_dia.data
+                    habilitado = dia_form.habilitado.data
+                    hora_ingreso = dia_form.hora_ingreso.data
+                    hora_salida_colacion = dia_form.hora_salida_colacion.data
+                    hora_ingreso_colacion = dia_form.hora_ingreso_colacion.data
+                    hora_salida = dia_form.hora_salida.data
+                    turno_gv = dia_form.turno_gv.data
+
+                    nuevo_dia = DiaJornada(
+                        numero_dia=numero_dia,
+                        habilitado=habilitado,
+                        hora_ingreso=hora_ingreso,
+                        hora_salida_colacion=hora_salida_colacion,
+                        hora_ingreso_colacion=hora_ingreso_colacion,
+                        hora_salida=hora_salida,
+                        turno_gv=turno_gv,
+                        total_horas=0.0
+                    )
+                    nueva_jornada.dias.append(nuevo_dia)
+
                 db.session.add(nueva_jornada)
                 db.session.commit()
-                flash('Jornada creada exitosamente', 'success')
+                flash("Jornada creada exitosamente", "success")
 
         except Exception as e:
             db.session.rollback()
-            flash(f'Error al procesar la operación: {e}', 'danger')
+            app.logger.error(f"Error: {e}")
+            flash(f"Error al guardar la jornada: {e}", "danger")
 
         return redirect(url_for('lista_jornadas'))
 
-    # Consulta para listar jornadas
-    try:
-        jornadas = Jornada.query.options(db.joinedload(Jornada.dias)).all()
-    except Exception as e:
-        flash(f'Error al cargar las jornadas: {e}', 'danger')
-        jornadas = []
-
+    jornadas = Jornada.query.options(db.joinedload(Jornada.dias)).all()
     return render_template('jornada/lista_jornadas.html', jornadas=jornadas, form=form)
+
+
 
 @app.route('/jornada/detalle/<int:id>', methods=['GET'])
 def jornada_detalle(id):
@@ -663,22 +745,14 @@ def jornada_detalle(id):
 
 @app.route('/jornada/eliminar/<int:id>', methods=['POST'])
 def eliminar_jornada(id):
-    """Eliminar una jornada."""
     try:
         jornada = Jornada.query.get_or_404(id)
         db.session.delete(jornada)
         db.session.commit()
         flash("Jornada eliminada exitosamente.", "success")
-        logger.info(f"Jornada eliminada exitosamente: ID {id}, Nombre: {jornada.nombre}")
-    except SQLAlchemyError as e:
-        db.session.rollback()
-        flash(f"Error al eliminar la jornada: {str(e)}", "danger")
-        logger.error(f"Error de SQLAlchemy al eliminar la jornada ID {id}: {e}")
     except Exception as e:
         db.session.rollback()
-        flash("Error inesperado al eliminar la jornada.", "danger")
-        logger.error(f"Error inesperado al eliminar la jornada ID {id}: {e}")
-
+        flash(f"Error al eliminar la jornada: {e}", "danger")
     return redirect(url_for('lista_jornadas'))
 
 
@@ -937,7 +1011,8 @@ def agregar_proyecto():
             descripcion=form.descripcion.data,
             fecha_inicio=form.fecha_inicio.data,
             fecha_termino=form.fecha_termino.data,
-            cliente_id=form.cliente_id.data
+            cliente_id=form.cliente_id.data,
+            activo=form.activo.data  # Agregar el campo activo
         )
         db.session.add(proyecto)
         db.session.commit()
@@ -951,16 +1026,22 @@ def editar_proyecto(id):
     proyecto = Proyecto.query.get_or_404(id)
     form = ProyectoForm()
     if form.validate_on_submit():
+        # Actualización de los campos del proyecto
         proyecto.nombre = form.nombre.data
         proyecto.descripcion = form.descripcion.data
         proyecto.fecha_inicio = form.fecha_inicio.data
         proyecto.fecha_termino = form.fecha_termino.data
         proyecto.cliente_id = form.cliente_id.data
+        
+        # Nuevo campo: Activo
+        proyecto.activo = form.activo.data  # Activo debe estar en tu ProyectoForm como BooleanField
+
         db.session.commit()
         flash('Proyecto actualizado exitosamente.', 'success')
     else:
         flash('Error al actualizar el proyecto.', 'danger')
     return redirect(url_for('lista_proyectos'))
+
 
 @app.route('/proyectos/eliminar/<int:id>', methods=['POST'])
 def eliminar_proyecto(id):
@@ -979,7 +1060,8 @@ def detalle_proyecto(id):
         'descripcion': proyecto.descripcion,
         'fecha_inicio': proyecto.fecha_inicio.strftime('%Y-%m-%d'),
         'fecha_termino': proyecto.fecha_termino.strftime('%Y-%m-%d') if proyecto.fecha_termino else '',
-        'cliente_id': proyecto.cliente_id
+        'cliente_id': proyecto.cliente_id,
+        'activo': proyecto.activo  # Incluir el campo activo
     })
 
 @app.route('/servicios', methods=['GET', 'POST'])
@@ -1081,15 +1163,24 @@ def obtener_servicio(id):
 @app.route('/empresas', methods=['GET', 'POST'])
 def lista_empresas():
     form = EmpresaForm()
+    empresa_id = request.form.get('empresa_id')
 
     if form.validate_on_submit():
-        nueva_empresa = Empresa(
-            rut=form.rut.data,
-            razon_social=form.razon_social.data
-        )
-        db.session.add(nueva_empresa)
+        if empresa_id:  # Si existe un ID, estamos editando
+            empresa = Empresa.query.get(empresa_id)
+            if empresa:
+                empresa.rut = form.rut.data
+                empresa.razon_social = form.razon_social.data
+                flash('Empresa actualizada exitosamente.', 'success')
+        else:  # Si no existe un ID, estamos agregando
+            nueva_empresa = Empresa(
+                rut=form.rut.data,
+                razon_social=form.razon_social.data
+            )
+            db.session.add(nueva_empresa)
+            flash('Empresa agregada exitosamente.', 'success')
+
         db.session.commit()
-        flash('Empresa agregada exitosamente.', 'success')
         return redirect(url_for('lista_empresas'))
 
     empresas = Empresa.query.all()
@@ -1104,7 +1195,6 @@ def obtener_empresa(id):
         'rut': empresa.rut,
         'razon_social': empresa.razon_social
     })
-
 
 @app.route('/empresas/agregar', methods=['POST'])
 def agregar_empresa():
@@ -1143,6 +1233,132 @@ def eliminar_empresa(id):
         db.session.rollback()
         flash(f'Error al eliminar la empresa: {e}', 'danger')
     return redirect(url_for('lista_empresas'))
+
+@app.route('/plataforma', methods=['GET', 'POST'])
+def lista_plataformas():
+    form = PlataformaForm()
+
+    if form.validate_on_submit():
+        plataforma_id = form.plataforma_id.data
+        nombre = form.nombre_plat.data
+
+        try:
+            if plataforma_id:
+                # Editar plataforma existente
+                plataforma = Plataforma.query.get_or_404(plataforma_id)
+                plataforma.nombre = nombre
+                db.session.commit()
+                flash("Plataforma actualizada exitosamente", "success")
+            else:
+                # Nueva plataforma
+                nueva_plataforma = Plataforma(nombre=nombre)
+                db.session.add(nueva_plataforma)
+                db.session.commit()
+                flash("Plataforma creada exitosamente", "success")
+        except Exception as e:
+            db.session.rollback()
+            flash(f"Error al guardar la plataforma: {e}", "danger")
+
+        return redirect(url_for('lista_plataformas'))
+
+    plataformas = Plataforma.query.all()
+    return render_template('plataforma/lista_plataformas.html', plataformas=plataformas, form=form)
+
+@app.route('/plataforma/detalle/<int:id>', methods=['GET'])
+def plataforma_detalle(id):
+    try:
+        plataforma = Plataforma.query.get_or_404(id)
+        data = {
+            "id": plataforma.id,
+            "nombre": plataforma.nombre
+        }
+        return jsonify(data), 200
+    except Exception as e:
+        app.logger.error(f"Error al obtener detalle de plataforma ID {id}: {e}")
+        return jsonify({"error": "Error al obtener los detalles de la plataforma"}), 500
+
+@app.route('/eliminar_plataforma/<int:id>', methods=['POST'])
+def eliminar_plataforma(id):
+    try:
+        plataforma = Plataforma.query.get_or_404(id)
+        db.session.delete(plataforma)
+        db.session.commit()
+        flash("Plataforma eliminada exitosamente.", "success")
+    except Exception as e:
+        db.session.rollback()
+        flash(f"Error al eliminar la plataforma: {e}", "danger")
+
+    return redirect(url_for('lista_plataformas'))
+
+@app.route('/causales_contratacion', methods=['GET', 'POST'])
+def lista_causales():
+    form = CausalContratacionForm()
+
+    if form.validate_on_submit():
+        causal_id = form.causal_id.data
+        letra = form.letra.data
+        nombre = form.nombre.data
+        descripcion = form.descripcion.data
+        duracion = form.duracion.data
+
+        try:
+            if causal_id:
+                # Editar causal existente
+                causal = CausalContratacion.query.get_or_404(causal_id)
+                causal.letra = letra
+                causal.nombre = nombre
+                causal.descripcion = descripcion
+                causal.duracion = duracion
+                db.session.commit()
+                flash("Causal actualizada exitosamente", "success")
+            else:
+                # Nueva causal
+                nueva_causal = CausalContratacion(
+                    letra=letra,
+                    nombre=nombre,
+                    descripcion=descripcion,
+                    duracion=duracion
+                )
+                db.session.add(nueva_causal)
+                db.session.commit()
+                flash("Causal creada exitosamente", "success")
+        except Exception as e:
+            db.session.rollback()
+            flash(f"Error al guardar la causal: {e}", "danger")
+
+        return redirect(url_for('lista_causales'))
+
+    causales = CausalContratacion.query.all()
+    return render_template('causales/lista_causales.html', causales=causales, form=form)
+
+@app.route('/causales_contratacion/detalle/<int:id>', methods=['GET'])
+def causal_contratacion_detalle(id):
+    try:
+        causal = CausalContratacion.query.get_or_404(id)
+        data = {
+            "id": causal.id,
+            "letra": causal.letra,
+            "nombre": causal.nombre,
+            "descripcion": causal.descripcion,
+            "duracion": causal.duracion
+        }
+        return jsonify(data), 200
+    except Exception as e:
+        app.logger.error(f"Error al obtener detalle de causal ID {id}: {e}")
+        return jsonify({"error": "Error al obtener los detalles de la causal"}), 500
+
+@app.route('/causales_contratacion/eliminar/<int:id>', methods=['POST'])
+def eliminar_causal_contratacion(id):
+    try:
+        causal = CausalContratacion.query.get_or_404(id)
+        db.session.delete(causal)
+        db.session.commit()
+        flash("Causal eliminada exitosamente.", "success")
+    except Exception as e:
+        db.session.rollback()
+        flash(f"Error al eliminar la causal: {e}", "danger")
+
+    return redirect(url_for('lista_causales'))
 
 @app.route('/add_afp', methods=['GET', 'POST'])
 def add_afp():

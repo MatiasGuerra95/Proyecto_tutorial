@@ -107,6 +107,7 @@ class SucursalForm(FlaskForm):
     submit = SubmitField('Guardar')
 
 class DiaJornadaForm(FlaskForm):
+    dia_id = HiddenField('Día ID')
     numero_dia = IntegerField('Número de Día', validators=[InputRequired()])
     habilitado = BooleanField('Habilitado')
     hora_ingreso = TimeField('Hora Ingreso', validators=[InputRequired()])
@@ -118,23 +119,21 @@ class DiaJornadaForm(FlaskForm):
 
 
 class JornadaForm(FlaskForm):
-    jornada_id = HiddenField('Jornada ID')  # Campo oculto para edición
+    jornada_id = HiddenField('Jornada ID')
     nombre = StringField('Nombre de la Jornada', validators=[DataRequired(), Length(max=100)])
     descripcion = TextAreaField('Descripción', validators=[Optional(), Length(max=500)])
-    dias = FieldList(FormField(DiaJornadaForm), min_entries=1, max_entries=7)  # Limitar a 7 días
+    horas_semanales = StringField('Horas Semanales', validators=[Optional()])  # Nuevo campo
+    dias = FieldList(FormField(DiaJornadaForm), min_entries=0, max_entries=31) 
     submit = SubmitField('Guardar Jornada')
 
     def validate(self, extra_validators=None):
         if not super().validate(extra_validators):
-            logger.warning(f"Errores de validación en JornadaForm: {self.errors}")
             return False
-        # Sanitizar entradas
         self.nombre.data = sanitize_input(self.nombre.data)
         self.descripcion.data = sanitize_input(self.descripcion.data) if self.descripcion.data else None
+        self.horas_semanales.data = sanitize_input(self.horas_semanales.data) if self.horas_semanales.data else None
         for dia_form in self.dias.entries:
-            dia_form.numero_dia.data = sanitize_input(dia_form.numero_dia.data)
             dia_form.turno_gv.data = sanitize_input(dia_form.turno_gv.data) if dia_form.turno_gv.data else None
-        logger.info("JornadaForm validado exitosamente.")
         return True
 
 class TurnoGVForm(FlaskForm):
@@ -162,6 +161,7 @@ class ProyectoForm(FlaskForm):
     fecha_inicio = DateField('Fecha de Inicio', format='%Y-%m-%d', validators=[DataRequired()])
     fecha_termino = DateField('Fecha de Término', format='%Y-%m-%d', validators=[Optional()])
     cliente_id = SelectField('Cliente', coerce=int, validators=[DataRequired()])
+    activo = SelectField('Activo', choices=[('1', 'Sí'), ('0', 'No')], validators=[DataRequired()])  # Nuevo campo
     submit = SubmitField('Guardar')
   
 class ServicioForm(FlaskForm):
@@ -178,6 +178,18 @@ class EmpresaForm(FlaskForm):
     razon_social = StringField('Razón Social', validators=[DataRequired(), Length(max=100)])
     submit = SubmitField('Guardar Empresa')
 
+class PlataformaForm(FlaskForm):
+    plataforma_id = HiddenField('Plataforma ID')
+    nombre_plat = StringField('Nombre de la Plataforma', validators=[DataRequired(), Length(max=100)])
+    submit = SubmitField('Guardar Plataforma')
+
+class CausalContratacionForm(FlaskForm):
+    causal_id = HiddenField('Causal ID')
+    letra = StringField('Letra', validators=[DataRequired(), Length(max=10)])
+    nombre = StringField('Nombre', validators=[DataRequired(), Length(max=100)])
+    descripcion = TextAreaField('Descripción', validators=[Length(max=500)])
+    duracion = StringField('Duración', validators=[Length(max=50)])
+    submit = SubmitField('Guardar Causal')
 
 class AfpForm(FlaskForm):
     name = StringField('Nombre de la AFP', validators=[DataRequired()])

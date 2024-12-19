@@ -229,13 +229,13 @@ class Jornada(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(100), nullable=False)
     descripcion = db.Column(db.Text, nullable=True)
+    horas_semanales = db.Column(db.Float, nullable=True)  # Nuevo campo
     
-    # Relación con DiaJornada
     dias = db.relationship(
         'DiaJornada',
-        back_populates='jornada',  # Usar back_populates en lugar de backref
+        back_populates='jornada',
         cascade='all, delete-orphan',
-        lazy='joined'  # Considerar 'joined' para evitar consultas adicionales
+        lazy='joined'
     )
 
     def __repr__(self):
@@ -257,6 +257,10 @@ class DiaJornada(db.Model):
     
     # Relación inversa con Jornada
     jornada = db.relationship('Jornada', back_populates='dias')
+
+    __table_args__ = (
+        db.UniqueConstraint('jornada_id', 'numero_dia', name='unique_numero_dia_por_jornada'),
+    )    
 
     def __repr__(self):
         return f'<DiaJornada {self.id}: Día {self.numero_dia} de {self.jornada.nombre}>'
@@ -300,10 +304,9 @@ class Proyecto(db.Model):
     descripcion = Column(String(500))
     fecha_inicio = Column(db.Date, nullable=False)
     fecha_termino = Column(db.Date, nullable=True)
-
     # Foreign key para referenciar a Cliente
     cliente_id = Column(Integer, ForeignKey('cliente.id'), nullable=False)
-
+    activo = db.Column(db.Boolean, default=True)
     # Relación con Cliente
     cliente = relationship('Cliente', back_populates='proyectos')
 
@@ -335,7 +338,26 @@ class Empresa(db.Model):
     def __repr__(self):
         return f'<Empresa {self.razon_social}>'
 
+class Plataforma(db.Model):
+    __tablename__ = 'plataforma'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.String(100), nullable=False)
 
+    def __repr__(self):
+        return f'<Plataforma {self.id}: {self.nombre}>'
+    
+class CausalContratacion(db.Model):
+    __tablename__ = 'causal_contratacion'
+
+    id = db.Column(db.Integer, primary_key=True)
+    letra = db.Column(db.String(10), nullable=False)
+    nombre = db.Column(db.String(100), nullable=False)
+    descripcion = db.Column(db.Text, nullable=True)
+    duracion = db.Column(db.String(50), nullable=True)
+
+    def __repr__(self):
+        return f'<CausalContratacion {self.id}: {self.nombre}>'
 
     
 class Afp(db.Model):

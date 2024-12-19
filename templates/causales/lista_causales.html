@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Causales de Contratación</h1>
+
+<button class="btn btn-primary mb-3" onclick="openAddModal()">Agregar Causal</button>
+
+<input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Buscar causales..." class="form-control mb-3">
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Letra</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Duración</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in causales %}
+        <tr onclick="openEditModal('{{ c.id }}')" style="cursor: pointer;">
+            <td>{{ c.letra }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.descripcion }}</td>
+            <td>{{ c.duracion }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('eliminar_causal_contratacion', id=c.id) }}" style="display: inline;" onsubmit="return confirm('¿Deseas eliminar esta causal?');">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Modal para Agregar/Editar Causal -->
+<div id="causalModal" class="modal" style="display:none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Agregar Causal</h5>
+                <span class="close" onclick="closeModal()" style="cursor: pointer;">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h4>Información general</h4>
+                <form id="causalForm" method="POST" action="{{ url_for('lista_causales') }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                    <input type="hidden" id="causal_id" name="causal_id">
+
+                    <div class="form-group">
+                        <label for="letra">Letra</label>
+                        <input type="text" class="form-control" id="letra" name="letra" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="duracion">Duración</label>
+                        <input type="text" class="form-control" id="duracion" name="duracion">
+                    </div>
+
+                    <button type="submit" class="btn btn-success mt-3">Guardar Causal</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openAddModal() {
+    resetModal();
+    document.getElementById('modalTitle').innerText = 'Agregar Causal';
+    document.getElementById('causalModal').style.display = 'block';
+}
+
+function openEditModal(causalId) {
+    fetch(`/causales_contratacion/detalle/${causalId}`)
+        .then(response => response.json())
+        .then(data => {
+            resetModal();
+            document.getElementById('modalTitle').innerText = 'Editar Causal';
+            document.getElementById('causal_id').value = data.id;
+            document.getElementById('letra').value = data.letra;
+            document.getElementById('nombre').value = data.nombre;
+            document.getElementById('descripcion').value = data.descripcion;
+            document.getElementById('duracion').value = data.duracion;
+            document.getElementById('causalModal').style.display = 'block';
+        });
+}
+
+function closeModal() {
+    document.getElementById('causalModal').style.display = 'none';
+    resetModal();
+}
+
+function resetModal() {
+    document.getElementById('causal_id').value = '';
+    document.getElementById('letra').value = '';
+    document.getElementById('nombre').value = '';
+    document.getElementById('descripcion').value = '';
+    document.getElementById('duracion').value = '';
+}
+
+function filterTable() {
+    const input = document.getElementById('searchInput').value.toUpperCase();
+    const rows = document.querySelectorAll('table tbody tr');
+    rows.forEach(row => {
+        const nombre = row.cells[1].innerText; // indice 1 = columna "Nombre"
+        row.style.display = nombre.toUpperCase().includes(input) ? '' : 'none';
+    });
+}
+</script>
+
+<style>
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-dialog {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 600px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+</style>
+
+{% endblock %}

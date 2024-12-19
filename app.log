@@ -23790,3 +23790,1490 @@ jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was loo
 2024-12-16 19:25:10,642 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:25:10] "GET /jornada/detalle/25 HTTP/1.1" 200 -
 2024-12-16 19:30:37,631 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:30:37] "GET /servicios HTTP/1.1" 200 -
 2024-12-16 19:30:37,663 - werkzeug - INFO - 172.19.0.1 - - [16/Dec/2024 19:30:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 12:51:28,284 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 12:51:28,285 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 12:51:36,908 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 12:51:36] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-17 12:51:37,166 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 12:51:37] "GET /trabajador HTTP/1.1" 200 -
+2024-12-17 12:51:37,183 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 12:51:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 12:51:37,983 - venv - WARNING - Error 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-12-17 12:51:37,987 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 12:51:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-17 13:59:30,636 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 13:59:30] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 13:59:30,664 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 13:59:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 14:03:55,715 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 14:03:55,716 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 14:04:01,106 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:04:01] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 14:04:01,122 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:04:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 14:04:16,386 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:04:16] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 14:11:08,692 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 14:11:08,693 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 14:11:13,302 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:11:13] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 14:11:13,326 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:11:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 14:48:24,188 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 14:48:24,191 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 14:48:42,814 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:48:42] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 14:48:42,839 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:48:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 14:49:04,541 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:04] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 14:49:11,113 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 14:49:11,153 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:11] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 14:49:11,164 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:11] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 14:49:11,184 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 14:49:14,223 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:14] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 14:49:17,983 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:17] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 14:49:19,610 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:19] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 14:49:23,088 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:23] "GET /jornada/detalle/23 HTTP/1.1" 200 -
+2024-12-17 14:49:26,130 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:26] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 14:49:29,984 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:29] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 14:49:33,226 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:33] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 14:49:34,520 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:34] "GET /jornada/detalle/23 HTTP/1.1" 200 -
+2024-12-17 14:49:35,732 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:35] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 14:49:41,473 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:41] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 14:49:51,586 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:51] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 14:49:53,367 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 14:49:53] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 15:52:46,863 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 15:52:46,865 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 15:52:47,090 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:52:47] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 15:52:47,113 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:52:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 15:52:49,179 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:52:49] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 15:52:54,035 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 15:52:54,153 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:52:54] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 15:52:54,180 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:52:54] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 15:52:54,225 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:52:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 15:52:55,286 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:52:55] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 15:52:57,420 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:52:57] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 15:52:59,311 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:52:59] "GET /jornada/detalle/23 HTTP/1.1" 200 -
+2024-12-17 15:53:02,787 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:53:02] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 15:53:06,780 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:53:06] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 15:53:08,065 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:53:08] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 15:53:54,722 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 15:53:54,722 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 15:55:59,836 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:55:59] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 15:55:59,855 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:55:59] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 15:56:00,677 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:56:00] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 15:56:50,432 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 15:56:50,448 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:56:50] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 15:56:50,456 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:56:50] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 15:56:50,474 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:56:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 15:56:51,927 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:56:51] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 15:56:53,780 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:56:53] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 15:57:03,952 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 15:57:03,966 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:57:03] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 15:57:03,976 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:57:03] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 15:57:03,998 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:57:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 15:57:05,655 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 15:57:05] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 16:01:27,348 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 16:01:27,349 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 16:01:29,760 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:01:29] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 16:01:29,777 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:01:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 16:01:31,599 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:01:31] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 16:01:53,312 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 16:01:53,328 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:01:53] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 16:01:53,337 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:01:53] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 16:01:53,355 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:01:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 16:01:54,541 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:01:54] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 16:01:58,130 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 16:01:58,143 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:01:58] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 16:01:58,152 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:01:58] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 16:01:58,171 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:01:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 16:01:59,589 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:01:59] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 16:02:25,434 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 16:02:25,447 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:02:25] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 16:02:25,457 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:02:25] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 16:02:25,475 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:02:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 16:02:27,947 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:02:27] "GET /jornada/detalle/23 HTTP/1.1" 200 -
+2024-12-17 16:02:35,491 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:02:35] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 16:02:39,168 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:02:39] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 16:03:05,364 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 16:03:05,378 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:03:05] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 16:03:05,388 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:03:05] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 16:03:05,404 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:03:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 16:03:06,972 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:03:06] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 16:03:09,041 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:03:09] "GET /jornada/detalle/23 HTTP/1.1" 200 -
+2024-12-17 16:03:10,724 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 16:03:10] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 17:47:03,266 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:47:03] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 17:47:03,295 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:47:03] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 17:48:28,215 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 17:48:28,347 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:48:28] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 17:48:28,357 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:48:28] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 17:48:28,379 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:48:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 17:48:32,061 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:48:32] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 17:48:37,405 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 17:48:37,418 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:48:37] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 17:48:37,426 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:48:37] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 17:48:37,444 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:48:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 17:48:39,073 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:48:39] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 17:59:46,609 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 17:59:46,610 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 17:59:47,609 - app - ERROR - Exception on /jornadas [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 638, in lista_jornadas
+    return render_template('lista_jornadas.html', jornadas=jornadas, form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: lista_jornadas.html
+2024-12-17 17:59:47,616 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-17 17:59:47,636 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:59:47] "[35m[1mGET /jornadas HTTP/1.1[0m" 500 -
+2024-12-17 17:59:49,309 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:59:49] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-17 17:59:49,411 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:59:49] "GET /trabajador HTTP/1.1" 200 -
+2024-12-17 17:59:49,431 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:59:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 17:59:53,377 - app - ERROR - Exception on /jornadas [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 638, in lista_jornadas
+    return render_template('lista_jornadas.html', jornadas=jornadas, form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: lista_jornadas.html
+2024-12-17 17:59:53,378 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-17 17:59:53,380 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 17:59:53] "[35m[1mGET /jornadas HTTP/1.1[0m" 500 -
+2024-12-17 18:04:05,577 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 18:04:05,578 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 18:04:07,875 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:07] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 18:04:07,892 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:04:10,525 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:10] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 18:04:34,505 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 18:04:34,529 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:34] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 18:04:34,539 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:34] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 18:04:34,557 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:04:36,751 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:36] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 18:04:41,773 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 18:04:41,808 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:41] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 18:04:41,816 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:41] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 18:04:41,833 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:04:43,356 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:43] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 18:04:51,038 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:51] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 18:04:52,564 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:52] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 18:04:53,891 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:53] "GET /jornada/detalle/23 HTTP/1.1" 200 -
+2024-12-17 18:04:55,086 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:55] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 18:04:56,969 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:04:56] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 18:05:15,599 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:05:15] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 18:05:18,852 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 18:05:18,870 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:05:18] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 18:05:18,881 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:05:18] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 18:05:18,905 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:05:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:05:20,584 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:05:20] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 18:07:15,197 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:07:15] "GET /representantes HTTP/1.1" 200 -
+2024-12-17 18:07:15,226 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:07:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:07:15,992 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:07:15] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-17 18:09:56,387 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 18:09:56,387 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 18:09:57,402 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:09:57] "GET /representantes HTTP/1.1" 200 -
+2024-12-17 18:09:57,420 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:09:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:09:58,337 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:09:58] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-17 18:10:07,503 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:10:07] "[32mPOST /representantes/guardar HTTP/1.1[0m" 302 -
+2024-12-17 18:10:07,513 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:10:07] "GET /representantes HTTP/1.1" 200 -
+2024-12-17 18:10:07,540 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:10:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:39:02,267 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 18:39:02,267 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 18:39:12,797 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:39:12] "GET /representantes HTTP/1.1" 200 -
+2024-12-17 18:39:12,816 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:39:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:39:16,159 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:39:16] "GET /proyectos HTTP/1.1" 200 -
+2024-12-17 18:39:16,180 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:39:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:40:12,623 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:40:12] "GET /clientes HTTP/1.1" 200 -
+2024-12-17 18:40:12,654 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:40:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:41:02,757 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:41:02] "GET /servicios HTTP/1.1" 200 -
+2024-12-17 18:41:02,781 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:41:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:51:28,329 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 18:51:28,329 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 18:51:28,736 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:51:28] "GET /servicios HTTP/1.1" 200 -
+2024-12-17 18:51:28,760 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:51:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 18:51:29,921 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:51:29] "GET /servicios/1 HTTP/1.1" 200 -
+2024-12-17 18:52:21,816 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:52:21] "GET /empresas HTTP/1.1" 200 -
+2024-12-17 18:52:21,836 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 18:52:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:04:57,112 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 19:04:57,113 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 19:05:00,547 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:05:00] "GET /empresas HTTP/1.1" 200 -
+2024-12-17 19:05:00,568 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:05:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:05:26,575 - flask_wtf.csrf - INFO - The CSRF token is missing.
+2024-12-17 19:05:26,576 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:05:26] "[31m[1mPOST /empresas/agregar HTTP/1.1[0m" 400 -
+2024-12-17 19:07:55,216 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 19:07:55,216 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 19:07:57,894 - flask_wtf.csrf - INFO - The CSRF token is missing.
+2024-12-17 19:07:57,895 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:07:57] "[31m[1mPOST /empresas/agregar HTTP/1.1[0m" 400 -
+2024-12-17 19:08:02,674 - venv - WARNING - Error 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-12-17 19:08:02,678 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:02] "[33mGET /empresas/ HTTP/1.1[0m" 404 -
+2024-12-17 19:08:04,512 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:04] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-17 19:08:04,698 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:04] "GET /trabajador HTTP/1.1" 200 -
+2024-12-17 19:08:04,726 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:08:06,077 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:06] "GET /empresas HTTP/1.1" 200 -
+2024-12-17 19:08:06,097 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:08:22,823 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:22] "[32mPOST /empresas/agregar HTTP/1.1[0m" 302 -
+2024-12-17 19:08:22,832 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:22] "GET /empresas HTTP/1.1" 200 -
+2024-12-17 19:08:22,851 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:08:38,372 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:38] "[32mPOST /empresas/agregar HTTP/1.1[0m" 302 -
+2024-12-17 19:08:38,388 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:38] "GET /empresas HTTP/1.1" 200 -
+2024-12-17 19:08:38,421 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:08:48,809 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:48] "[32mPOST /empresas/agregar HTTP/1.1[0m" 302 -
+2024-12-17 19:08:48,818 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:48] "GET /empresas HTTP/1.1" 200 -
+2024-12-17 19:08:48,838 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:08:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:27:22,131 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 19:27:22,131 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 19:27:33,426 - app - ERROR - Exception on /jornadas [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 643, in lista_jornadas
+    return render_template('jornada/lista_jornadas.html', jornadas=jornadas, form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/jornada/lista_jornadas.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 51, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/templates/jornada/lista_jornadas.html", line 27, in block 'content'
+    <form method="POST" action="{{ url_for('eliminar_jornada', id=jornada.id) }}" style="display: inline;" onsubmit="return confirm('¿Deseas eliminar esta jornada?');">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'eliminar_jornada' with values ['id']. Did you mean 'eliminar_dia' instead?
+2024-12-17 19:27:33,435 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-17 19:27:33,437 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:27:33] "[35m[1mGET /jornadas HTTP/1.1[0m" 500 -
+2024-12-17 19:27:35,659 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:27:35] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-17 19:27:35,718 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:27:35] "GET /trabajador HTTP/1.1" 200 -
+2024-12-17 19:27:35,740 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:27:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:27:38,118 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:27:38] "GET /trabajador HTTP/1.1" 200 -
+2024-12-17 19:27:38,139 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:27:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:27:38,926 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:27:38] "GET /contrato HTTP/1.1" 200 -
+2024-12-17 19:27:38,949 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:27:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:27:39,504 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:27:39] "GET /sucursal HTTP/1.1" 200 -
+2024-12-17 19:27:39,529 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:27:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:27:40,158 - app - ERROR - Exception on /jornadas [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 643, in lista_jornadas
+    return render_template('jornada/lista_jornadas.html', jornadas=jornadas, form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/jornada/lista_jornadas.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 51, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/templates/jornada/lista_jornadas.html", line 27, in block 'content'
+    <form method="POST" action="{{ url_for('eliminar_jornada', id=jornada.id) }}" style="display: inline;" onsubmit="return confirm('¿Deseas eliminar esta jornada?');">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'eliminar_jornada' with values ['id']. Did you mean 'eliminar_dia' instead?
+2024-12-17 19:27:40,163 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-17 19:27:40,164 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:27:40] "[35m[1mGET /jornadas HTTP/1.1[0m" 500 -
+2024-12-17 19:33:48,656 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 19:33:48,656 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 19:35:46,076 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:35:46] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 19:35:46,107 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:35:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:35:50,324 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:35:50] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 19:35:54,493 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 19:35:54,509 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:35:54] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 19:35:54,519 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:35:54] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 19:35:54,541 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:35:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:35:55,846 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:35:55] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 19:36:11,187 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:36:11] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-17 19:36:12,796 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:36:12] "GET /jornada/detalle/23 HTTP/1.1" 200 -
+2024-12-17 19:36:14,371 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:36:14] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 19:36:17,152 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:36:17] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 19:36:23,352 - forms - INFO - JornadaForm validado exitosamente.
+2024-12-17 19:36:23,364 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:36:23] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-17 19:36:23,373 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:36:23] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 19:36:23,394 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:36:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:36:24,272 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:36:24] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 19:37:00,953 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:37:00] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 19:39:10,138 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 19:39:10,138 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 19:39:13,337 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:39:13] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 19:39:13,357 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:39:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:39:14,355 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:39:14] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 19:40:13,317 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:40:13] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 19:47:16,602 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 19:47:16,602 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 19:47:18,411 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:47:18] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 19:47:18,438 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:47:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:47:19,371 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:47:19] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 19:47:49,965 - venv - WARNING - Error 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-12-17 19:47:49,968 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:47:49] "[33mPOST /jornada/editar/25 HTTP/1.1[0m" 404 -
+2024-12-17 19:55:04,823 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 19:55:04,823 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 19:55:07,547 - venv - WARNING - Error 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-12-17 19:55:07,553 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:55:07] "[33mPOST /jornada/editar/25 HTTP/1.1[0m" 404 -
+2024-12-17 19:55:08,593 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:55:08] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-17 19:55:08,776 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:55:08] "GET /trabajador HTTP/1.1" 200 -
+2024-12-17 19:55:08,795 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:55:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:55:10,630 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:55:10] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 19:55:10,657 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:55:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:55:23,282 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:55:23] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 19:56:05,014 - forms - WARNING - Errores de validación en JornadaForm: {'dias': [{'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}]}
+2024-12-17 19:56:05,018 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:56:05] "POST /jornadas HTTP/1.1" 200 -
+2024-12-17 19:56:05,044 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:56:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:56:06,176 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:56:06] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-17 19:56:12,762 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:56:12] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 19:56:38,711 - forms - WARNING - Errores de validación en JornadaForm: {'dias': [{'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}, {'numero_dia': ['This field is required.']}]}
+2024-12-17 19:56:38,717 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:56:38] "POST /jornadas HTTP/1.1" 200 -
+2024-12-17 19:56:38,736 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:56:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 19:56:40,123 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 19:56:40] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-17 20:08:02,187 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 20:08:02,187 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 20:08:08,066 - app - ERROR - Exception on /jornadas [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column jornada.horas_semanales does not exist
+LINE 1: ...mbre, jornada.descripcion AS jornada_descripcion, jornada.ho...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 651, in lista_jornadas
+    jornadas = Jornada.query.options(db.joinedload(Jornada.dias)).all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column jornada.horas_semanales does not exist
+LINE 1: ...mbre, jornada.descripcion AS jornada_descripcion, jornada.ho...
+                                                             ^
+
+[SQL: SELECT jornada.id AS jornada_id, jornada.nombre AS jornada_nombre, jornada.descripcion AS jornada_descripcion, jornada.horas_semanales AS jornada_horas_semanales, dia_jornada_1.id AS dia_jornada_1_id, dia_jornada_1.numero_dia AS dia_jornada_1_numero_dia, dia_jornada_1.habilitado AS dia_jornada_1_habilitado, dia_jornada_1.hora_ingreso AS dia_jornada_1_hora_ingreso, dia_jornada_1.hora_salida_colacion AS dia_jornada_1_hora_salida_colacion, dia_jornada_1.hora_ingreso_colacion AS dia_jornada_1_hora_ingreso_colacion, dia_jornada_1.hora_salida AS dia_jornada_1_hora_salida, dia_jornada_1.turno_gv AS dia_jornada_1_turno_gv, dia_jornada_1.total_horas AS dia_jornada_1_total_horas, dia_jornada_1.jornada_id AS dia_jornada_1_jornada_id 
+FROM jornada LEFT OUTER JOIN dia_jornada AS dia_jornada_1 ON jornada.id = dia_jornada_1.jornada_id]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-12-17 20:08:08,086 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-17 20:08:08,089 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:08:08] "[35m[1mPOST /jornadas HTTP/1.1[0m" 500 -
+2024-12-17 20:08:14,086 - app - ERROR - Exception on /jornadas [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column jornada.horas_semanales does not exist
+LINE 1: ...mbre, jornada.descripcion AS jornada_descripcion, jornada.ho...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 651, in lista_jornadas
+    jornadas = Jornada.query.options(db.joinedload(Jornada.dias)).all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column jornada.horas_semanales does not exist
+LINE 1: ...mbre, jornada.descripcion AS jornada_descripcion, jornada.ho...
+                                                             ^
+
+[SQL: SELECT jornada.id AS jornada_id, jornada.nombre AS jornada_nombre, jornada.descripcion AS jornada_descripcion, jornada.horas_semanales AS jornada_horas_semanales, dia_jornada_1.id AS dia_jornada_1_id, dia_jornada_1.numero_dia AS dia_jornada_1_numero_dia, dia_jornada_1.habilitado AS dia_jornada_1_habilitado, dia_jornada_1.hora_ingreso AS dia_jornada_1_hora_ingreso, dia_jornada_1.hora_salida_colacion AS dia_jornada_1_hora_salida_colacion, dia_jornada_1.hora_ingreso_colacion AS dia_jornada_1_hora_ingreso_colacion, dia_jornada_1.hora_salida AS dia_jornada_1_hora_salida, dia_jornada_1.turno_gv AS dia_jornada_1_turno_gv, dia_jornada_1.total_horas AS dia_jornada_1_total_horas, dia_jornada_1.jornada_id AS dia_jornada_1_jornada_id 
+FROM jornada LEFT OUTER JOIN dia_jornada AS dia_jornada_1 ON jornada.id = dia_jornada_1.jornada_id]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-12-17 20:08:14,089 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-17 20:08:14,090 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:08:14] "[35m[1mPOST /jornadas HTTP/1.1[0m" 500 -
+2024-12-17 20:08:14,906 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:08:14] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-17 20:08:14,985 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:08:14] "GET /trabajador HTTP/1.1" 200 -
+2024-12-17 20:08:15,017 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:08:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 20:08:17,358 - app - ERROR - Exception on /jornadas [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column jornada.horas_semanales does not exist
+LINE 1: ...mbre, jornada.descripcion AS jornada_descripcion, jornada.ho...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 651, in lista_jornadas
+    jornadas = Jornada.query.options(db.joinedload(Jornada.dias)).all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column jornada.horas_semanales does not exist
+LINE 1: ...mbre, jornada.descripcion AS jornada_descripcion, jornada.ho...
+                                                             ^
+
+[SQL: SELECT jornada.id AS jornada_id, jornada.nombre AS jornada_nombre, jornada.descripcion AS jornada_descripcion, jornada.horas_semanales AS jornada_horas_semanales, dia_jornada_1.id AS dia_jornada_1_id, dia_jornada_1.numero_dia AS dia_jornada_1_numero_dia, dia_jornada_1.habilitado AS dia_jornada_1_habilitado, dia_jornada_1.hora_ingreso AS dia_jornada_1_hora_ingreso, dia_jornada_1.hora_salida_colacion AS dia_jornada_1_hora_salida_colacion, dia_jornada_1.hora_ingreso_colacion AS dia_jornada_1_hora_ingreso_colacion, dia_jornada_1.hora_salida AS dia_jornada_1_hora_salida, dia_jornada_1.turno_gv AS dia_jornada_1_turno_gv, dia_jornada_1.total_horas AS dia_jornada_1_total_horas, dia_jornada_1.jornada_id AS dia_jornada_1_jornada_id 
+FROM jornada LEFT OUTER JOIN dia_jornada AS dia_jornada_1 ON jornada.id = dia_jornada_1.jornada_id]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-12-17 20:08:17,362 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-17 20:08:17,364 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:08:17] "[35m[1mGET /jornadas HTTP/1.1[0m" 500 -
+2024-12-17 20:08:18,702 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:08:18] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-17 20:08:18,722 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:08:18] "GET /trabajador HTTP/1.1" 200 -
+2024-12-17 20:08:18,741 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:08:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 20:08:47,506 - app - ERROR - Exception on /jornadas [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column jornada.horas_semanales does not exist
+LINE 1: ...mbre, jornada.descripcion AS jornada_descripcion, jornada.ho...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 651, in lista_jornadas
+    jornadas = Jornada.query.options(db.joinedload(Jornada.dias)).all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column jornada.horas_semanales does not exist
+LINE 1: ...mbre, jornada.descripcion AS jornada_descripcion, jornada.ho...
+                                                             ^
+
+[SQL: SELECT jornada.id AS jornada_id, jornada.nombre AS jornada_nombre, jornada.descripcion AS jornada_descripcion, jornada.horas_semanales AS jornada_horas_semanales, dia_jornada_1.id AS dia_jornada_1_id, dia_jornada_1.numero_dia AS dia_jornada_1_numero_dia, dia_jornada_1.habilitado AS dia_jornada_1_habilitado, dia_jornada_1.hora_ingreso AS dia_jornada_1_hora_ingreso, dia_jornada_1.hora_salida_colacion AS dia_jornada_1_hora_salida_colacion, dia_jornada_1.hora_ingreso_colacion AS dia_jornada_1_hora_ingreso_colacion, dia_jornada_1.hora_salida AS dia_jornada_1_hora_salida, dia_jornada_1.turno_gv AS dia_jornada_1_turno_gv, dia_jornada_1.total_horas AS dia_jornada_1_total_horas, dia_jornada_1.jornada_id AS dia_jornada_1_jornada_id 
+FROM jornada LEFT OUTER JOIN dia_jornada AS dia_jornada_1 ON jornada.id = dia_jornada_1.jornada_id]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-12-17 20:08:47,509 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-17 20:08:47,511 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:08:47] "[35m[1mGET /jornadas HTTP/1.1[0m" 500 -
+2024-12-17 20:10:29,270 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-17 20:10:29,271 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-17 20:10:30,707 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:10:30] "GET /jornadas HTTP/1.1" 200 -
+2024-12-17 20:10:30,723 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:10:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-17 20:10:32,412 - werkzeug - INFO - 172.19.0.1 - - [17/Dec/2024 20:10:32] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 12:58:03,635 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 12:58:03,636 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 12:58:04,194 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:04] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-18 12:58:04,501 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:04] "GET /trabajador HTTP/1.1" 200 -
+2024-12-18 12:58:04,523 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:04] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 12:58:04,596 - venv - WARNING - Error 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-12-18 12:58:04,598 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-18 12:58:05,824 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:05] "GET /empresas HTTP/1.1" 200 -
+2024-12-18 12:58:05,846 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 12:58:06,676 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:06] "GET /servicios HTTP/1.1" 200 -
+2024-12-18 12:58:06,698 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 12:58:07,514 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:07] "GET /empresas HTTP/1.1" 200 -
+2024-12-18 12:58:07,535 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 12:58:09,551 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:09] "GET /servicios HTTP/1.1" 200 -
+2024-12-18 12:58:09,573 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 12:58:10,484 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:10] "GET /proyectos HTTP/1.1" 200 -
+2024-12-18 12:58:10,507 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 12:58:11,130 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:11] "GET /representantes HTTP/1.1" 200 -
+2024-12-18 12:58:11,150 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:11] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 12:58:12,098 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:12] "GET /clientes HTTP/1.1" 200 -
+2024-12-18 12:58:12,119 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 12:58:13,051 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:13] "GET /clientes HTTP/1.1" 200 -
+2024-12-18 12:58:13,068 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:13] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 12:58:14,745 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:14] "GET /clientes/detalle/1 HTTP/1.1" 200 -
+2024-12-18 12:58:17,899 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:17] "GET /representantes HTTP/1.1" 200 -
+2024-12-18 12:58:17,921 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 12:58:18,518 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 12:58:18] "GET /representantes/detalle/2 HTTP/1.1" 200 -
+2024-12-18 13:06:14,453 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:06:14] "GET /trabajador HTTP/1.1" 200 -
+2024-12-18 13:06:14,487 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:06:14] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:06:26,673 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:06:26] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 13:06:26,694 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:06:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:06:27,811 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:06:27] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:06:37,896 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:06:37] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-18 13:06:46,861 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:06:46] "GET /jornada/detalle/24 HTTP/1.1" 200 -
+2024-12-18 13:09:08,923 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:09:08] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 13:09:08,946 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:09:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:12:23,290 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 13:12:23,291 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 13:14:10,505 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:14:10] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 13:14:10,524 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:14:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:18:03,174 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 13:18:03,174 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 13:18:06,557 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:18:06] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 13:18:06,573 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:18:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:18:27,143 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:18:27] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:19:01,834 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:19:01] "POST /jornadas HTTP/1.1" 200 -
+2024-12-18 13:19:01,849 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:19:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:19:03,929 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:19:03] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:21:44,086 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 13:21:44,086 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 13:21:48,693 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:21:48] "POST /jornadas HTTP/1.1" 200 -
+2024-12-18 13:21:48,713 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:21:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:21:51,878 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:21:51] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:22:02,760 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:22:02] "POST /jornadas HTTP/1.1" 200 -
+2024-12-18 13:22:02,778 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:22:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:22:04,553 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:22:04] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:22:34,227 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:22:34] "POST /jornadas HTTP/1.1" 200 -
+2024-12-18 13:22:34,244 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:22:34] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:22:35,355 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:22:35] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:22:38,216 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:22:38] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-18 13:24:42,520 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:24:42] "POST /jornadas HTTP/1.1" 200 -
+2024-12-18 13:24:42,536 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:24:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:24:51,869 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:24:51] "POST /jornadas HTTP/1.1" 200 -
+2024-12-18 13:24:51,888 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:24:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:26:27,115 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 13:26:27,116 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 13:26:33,426 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:26:33] "POST /jornadas HTTP/1.1" 200 -
+2024-12-18 13:26:33,449 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:26:33] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:26:40,511 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:26:40] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:27:05,366 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:27:05] "POST /jornadas HTTP/1.1" 200 -
+2024-12-18 13:27:05,382 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:27:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:27:07,094 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:27:07] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:40:19,524 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 13:40:19,526 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 13:40:22,037 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:40:22] "POST /jornadas HTTP/1.1" 200 -
+2024-12-18 13:40:22,061 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:40:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:40:23,155 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:40:23] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:40:54,674 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:40:54] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:44:21,947 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 13:44:21,948 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 13:44:26,632 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:44:26] "POST /jornadas HTTP/1.1" 200 -
+2024-12-18 13:44:26,653 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:44:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:44:28,162 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:44:28] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:51:34,482 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 13:51:34,483 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 13:51:38,416 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:51:38] "POST /jornadas HTTP/1.1" 200 -
+2024-12-18 13:51:38,446 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:51:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 13:51:38,850 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:51:38] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:58:14,890 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:58:14] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 13:58:17,003 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 13:58:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:01:10,170 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LTag.VGoir1S9ueK3Y9-EH5s4jWBrhDc'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-id', '183'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-id', '189')])
+2024-12-18 14:01:10,170 - app - DEBUG - Form errors: {}
+2024-12-18 14:01:10,170 - app - DEBUG - Eliminar días: []
+2024-12-18 14:01:10,173 - app - ERROR - Error: 'str' object has no attribute 'data'
+2024-12-18 14:01:10,175 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:01:10] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 14:01:10,186 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:01:10] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:01:10,216 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:01:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:01:16,927 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:01:16] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 14:01:17,670 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LVpg.xl8E8SOnmZiWeFGQw66pfj8bX-c'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-id', '183'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-id', '189')])
+2024-12-18 14:01:17,670 - app - DEBUG - Form errors: {}
+2024-12-18 14:01:17,670 - app - DEBUG - Eliminar días: []
+2024-12-18 14:01:17,673 - app - ERROR - Error: 'str' object has no attribute 'data'
+2024-12-18 14:01:17,674 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:01:17] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 14:01:17,684 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:01:17] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:01:17,710 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:01:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:07:03,338 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 14:07:03,341 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 14:08:12,887 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:08:12] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:08:12,911 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:08:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:08:16,612 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:08:16] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 14:08:49,140 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:08:49] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:08:49,159 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:08:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:17:00,314 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:17:00] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:17:02,795 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:17:02] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 14:17:05,239 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LXcQ.0qnRO6cdi4DHKOLZQJHbCeeoh9M'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-id', '183'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-id', '189')])
+2024-12-18 14:17:05,240 - app - DEBUG - Form errors: {}
+2024-12-18 14:17:05,240 - app - DEBUG - Eliminar días: []
+2024-12-18 14:17:05,244 - app - ERROR - Error: 'str' object has no attribute 'data'
+2024-12-18 14:17:05,246 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:17:05] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 14:17:05,262 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:17:05] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:17:05,299 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:17:05] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:20:26,473 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:20:26] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 14:20:28,202 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LZYQ.t06U6wUuEj-OJJOPF6hEBopnir8'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-id', '183'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-id', '189')])
+2024-12-18 14:20:28,202 - app - DEBUG - Form errors: {}
+2024-12-18 14:20:28,202 - app - DEBUG - Eliminar días: []
+2024-12-18 14:20:28,207 - app - ERROR - Error: 'str' object has no attribute 'data'
+2024-12-18 14:20:28,209 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:20:28] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 14:20:28,219 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:20:28] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:20:28,249 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:20:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:27:45,603 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:27:45] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 14:27:56,236 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LaLA.0q8C_XEXJyhiaCRGrGJcWiWBUSE'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-id', '183'), ('eliminar_dia', '183'), ('eliminar_dia', '184'), ('eliminar_dia', '185'), ('eliminar_dia', '186'), ('eliminar_dia', '187'), ('eliminar_dia', '188'), ('eliminar_dia', '189'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-id', '189')])
+2024-12-18 14:27:56,236 - app - DEBUG - Form errors: {}
+2024-12-18 14:27:56,237 - app - DEBUG - Eliminar días: ['183', '184', '185', '186', '187', '188', '189']
+2024-12-18 14:27:56,254 - app - ERROR - Error: 'str' object has no attribute 'data'
+2024-12-18 14:27:56,255 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:27:56] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 14:27:56,267 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:27:56] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:27:56,301 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:27:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:29:10,165 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:29:10] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 14:29:18,883 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2Lb7A.i7HCjLR98Bmf7XttNkoiukM5PeE'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-id', '183'), ('eliminar_dia', '183'), ('eliminar_dia', '184'), ('eliminar_dia', '185'), ('eliminar_dia', '186'), ('eliminar_dia', '187'), ('eliminar_dia', '188'), ('eliminar_dia', '189'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-id', '189')])
+2024-12-18 14:29:18,884 - app - DEBUG - Form errors: {}
+2024-12-18 14:29:18,884 - app - DEBUG - Eliminar días: ['183', '184', '185', '186', '187', '188', '189']
+2024-12-18 14:29:18,900 - app - ERROR - Error: 'str' object has no attribute 'data'
+2024-12-18 14:29:18,902 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:29:18] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 14:29:18,914 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:29:18] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:29:18,944 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:29:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:29:36,991 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:29:36] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 14:29:39,973 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LcPg.pHDDR4JyGyarjd7D3yTfctzJkCE'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-id', '183'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-id', '189')])
+2024-12-18 14:29:39,973 - app - DEBUG - Form errors: {}
+2024-12-18 14:29:39,974 - app - DEBUG - Eliminar días: []
+2024-12-18 14:29:39,977 - app - ERROR - Error: 'str' object has no attribute 'data'
+2024-12-18 14:29:39,978 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:29:39] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 14:29:39,989 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:29:39] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:29:40,020 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:29:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:46:33,117 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 14:46:33,119 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 14:46:38,353 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:46:38] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:46:38,379 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:46:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:46:39,571 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:46:39] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 14:46:41,536 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LgTg.MARBQ-x2fc43HvdWyQGh9QVAy40'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-id', '183'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-id', '189')])
+2024-12-18 14:46:41,536 - app - DEBUG - Form errors: {}
+2024-12-18 14:46:41,537 - app - DEBUG - Eliminar días: []
+2024-12-18 14:46:41,540 - app - ERROR - Error: 'str' object has no attribute 'data'
+2024-12-18 14:46:41,542 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:46:41] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 14:46:41,555 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:46:41] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:46:41,586 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:46:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:46:44,066 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:46:44] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 14:46:51,114 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LgUQ.vRx6_HhhvQA0Aa1TUe8BYXvpHsQ'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-id', '183'), ('eliminar_dia', '183'), ('eliminar_dia', '184'), ('eliminar_dia', '185'), ('eliminar_dia', '186'), ('eliminar_dia', '187'), ('eliminar_dia', '188'), ('eliminar_dia', '189'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-id', '189')])
+2024-12-18 14:46:51,115 - app - DEBUG - Form errors: {}
+2024-12-18 14:46:51,115 - app - DEBUG - Eliminar días: ['183', '184', '185', '186', '187', '188', '189']
+2024-12-18 14:46:51,135 - app - ERROR - Error: 'str' object has no attribute 'data'
+2024-12-18 14:46:51,136 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:46:51] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 14:46:51,146 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:46:51] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 14:46:51,171 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:46:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 14:46:52,997 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 14:46:52] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 15:03:48,205 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 15:03:48,208 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 15:03:51,974 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:03:51] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 15:03:51,994 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:03:51] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 15:03:53,076 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:03:53] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 15:03:58,181 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LkVw.dZIvQuydZ1iNGJ1LZroR5JmuWBU'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-dia_id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-dia_id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-dia_id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-dia_id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-dia_id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-dia_id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-dia_id', '183'), ('eliminar_dia', '183'), ('eliminar_dia', '184'), ('eliminar_dia', '185'), ('eliminar_dia', '186'), ('eliminar_dia', '187'), ('eliminar_dia', '188'), ('eliminar_dia', '189'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-dia_id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-dia_id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-dia_id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-dia_id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-dia_id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-dia_id', '189')])
+2024-12-18 15:03:58,181 - app - DEBUG - Form errors: {}
+2024-12-18 15:03:58,182 - app - DEBUG - Eliminar días: ['183', '184', '185', '186', '187', '188', '189']
+2024-12-18 15:03:58,199 - app - ERROR - Error: 'str' object has no attribute 'data'
+2024-12-18 15:03:58,201 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:03:58] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 15:03:58,213 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:03:58] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 15:03:58,240 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:03:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 15:03:59,598 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:03:59] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 15:04:06,977 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:04:06] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 15:04:06,999 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:04:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 15:04:08,146 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:04:08] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 15:04:09,562 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LkZg.IuUugWf1D8cEGkf1_roL6PYgNzU'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-dia_id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-dia_id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-dia_id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-dia_id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-dia_id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-dia_id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-dia_id', '183'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-dia_id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-dia_id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-dia_id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-dia_id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-dia_id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-dia_id', '189')])
+2024-12-18 15:04:09,563 - app - DEBUG - Form errors: {}
+2024-12-18 15:04:09,563 - app - DEBUG - Eliminar días: []
+2024-12-18 15:04:09,566 - app - ERROR - Error: 'str' object has no attribute 'data'
+2024-12-18 15:04:09,567 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:04:09] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 15:04:09,577 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:04:09] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 15:04:09,602 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:04:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 15:08:43,028 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 15:08:43,029 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 15:08:45,649 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:08:45] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 15:08:45,671 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:08:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 15:08:46,463 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:08:46] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 15:08:53,095 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LlfQ.nsSqsiVZa6aA1e2wSTwzbDUQPI8'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-dia_id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-dia_id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-dia_id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-dia_id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-dia_id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-dia_id', '141'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-dia_id', '183'), ('eliminar_dia', '183'), ('eliminar_dia', '184'), ('eliminar_dia', '185'), ('eliminar_dia', '186'), ('eliminar_dia', '187'), ('eliminar_dia', '188'), ('eliminar_dia', '189'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:30'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:30'), ('dias-7-turno_gv', '12'), ('dias-7-dia_id', '184'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:30'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:30'), ('dias-8-turno_gv', '12'), ('dias-8-dia_id', '185'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:30'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:30'), ('dias-9-turno_gv', '12'), ('dias-9-dia_id', '186'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:30'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:30'), ('dias-10-turno_gv', '12'), ('dias-10-dia_id', '187'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', '-1'), ('dias-11-dia_id', '188'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', '-1'), ('dias-12-dia_id', '189')])
+2024-12-18 15:08:53,096 - app - DEBUG - Form errors: {}
+2024-12-18 15:08:53,096 - app - DEBUG - Eliminar días: ['183', '184', '185', '186', '187', '188', '189']
+2024-12-18 15:08:53,109 - app - DEBUG - Procesando dia index 0, id: 135
+2024-12-18 15:08:53,112 - app - DEBUG - Procesando dia index 1, id: 136
+2024-12-18 15:08:53,114 - app - DEBUG - Procesando dia index 2, id: 137
+2024-12-18 15:08:53,117 - app - DEBUG - Procesando dia index 3, id: 138
+2024-12-18 15:08:53,119 - app - DEBUG - Procesando dia index 4, id: 140
+2024-12-18 15:08:53,121 - app - DEBUG - Procesando dia index 5, id: 141
+2024-12-18 15:08:53,122 - app - DEBUG - Procesando dia index 6, id: 183
+2024-12-18 15:08:53,124 - app - WARNING - Día con ID 183 no encontrado en la BD.
+2024-12-18 15:08:53,124 - app - DEBUG - Procesando dia index 7, id: 184
+2024-12-18 15:08:53,126 - app - WARNING - Día con ID 184 no encontrado en la BD.
+2024-12-18 15:08:53,126 - app - DEBUG - Procesando dia index 8, id: 185
+2024-12-18 15:08:53,127 - app - WARNING - Día con ID 185 no encontrado en la BD.
+2024-12-18 15:08:53,127 - app - DEBUG - Procesando dia index 9, id: 186
+2024-12-18 15:08:53,128 - app - WARNING - Día con ID 186 no encontrado en la BD.
+2024-12-18 15:08:53,129 - app - DEBUG - Procesando dia index 10, id: 187
+2024-12-18 15:08:53,130 - app - WARNING - Día con ID 187 no encontrado en la BD.
+2024-12-18 15:08:53,130 - app - DEBUG - Procesando dia index 11, id: 188
+2024-12-18 15:08:53,132 - app - WARNING - Día con ID 188 no encontrado en la BD.
+2024-12-18 15:08:53,132 - app - DEBUG - Procesando dia index 12, id: 189
+2024-12-18 15:08:53,134 - app - WARNING - Día con ID 189 no encontrado en la BD.
+2024-12-18 15:08:53,138 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:08:53] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 15:08:53,148 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:08:53] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 15:08:53,172 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:08:53] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 15:08:54,549 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:08:54] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 15:31:22,326 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:31:22] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 15:32:18,633 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:32:18] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-18 15:32:26,715 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LlhQ.WgjQ8vsCOyGIgPbR0dOh-_A12jg'), ('jornada_id', '26'), ('nombre', 'lun a vie 8:00 a 17:00'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:00'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:00'), ('dias-0-turno_gv', ''), ('dias-0-dia_id', '169'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:00'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:00'), ('dias-1-turno_gv', ''), ('dias-1-dia_id', '170'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:00'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:00'), ('dias-2-turno_gv', ''), ('dias-2-dia_id', '171'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:00'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:00'), ('dias-3-turno_gv', ''), ('dias-3-dia_id', '172'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', ''), ('dias-4-dia_id', '174'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', ''), ('dias-5-dia_id', '175'), ('dias-6-numero_dia', '1'), ('dias-6-habilitado', 'on'), ('dias-6-hora_ingreso', '08:00'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:00'), ('dias-6-turno_gv', ''), ('dias-6-dia_id', '176'), ('eliminar_dia', '176'), ('eliminar_dia', '177'), ('eliminar_dia', '178'), ('eliminar_dia', '179'), ('eliminar_dia', '180'), ('eliminar_dia', '181'), ('eliminar_dia', '182'), ('dias-7-numero_dia', '2'), ('dias-7-habilitado', 'on'), ('dias-7-hora_ingreso', '08:00'), ('dias-7-hora_salida_colacion', '13:00'), ('dias-7-hora_ingreso_colacion', '14:00'), ('dias-7-hora_salida', '17:00'), ('dias-7-turno_gv', ''), ('dias-7-dia_id', '177'), ('dias-8-numero_dia', '3'), ('dias-8-habilitado', 'on'), ('dias-8-hora_ingreso', '08:00'), ('dias-8-hora_salida_colacion', '13:00'), ('dias-8-hora_ingreso_colacion', '14:00'), ('dias-8-hora_salida', '17:00'), ('dias-8-turno_gv', ''), ('dias-8-dia_id', '178'), ('dias-9-numero_dia', '4'), ('dias-9-habilitado', 'on'), ('dias-9-hora_ingreso', '08:00'), ('dias-9-hora_salida_colacion', '13:00'), ('dias-9-hora_ingreso_colacion', '14:00'), ('dias-9-hora_salida', '17:00'), ('dias-9-turno_gv', ''), ('dias-9-dia_id', '179'), ('dias-10-numero_dia', '5'), ('dias-10-habilitado', 'on'), ('dias-10-hora_ingreso', '08:00'), ('dias-10-hora_salida_colacion', '13:00'), ('dias-10-hora_ingreso_colacion', '14:00'), ('dias-10-hora_salida', '17:00'), ('dias-10-turno_gv', ''), ('dias-10-dia_id', '180'), ('dias-11-numero_dia', '6'), ('dias-11-hora_ingreso', '00:00'), ('dias-11-hora_salida_colacion', '00:00'), ('dias-11-hora_ingreso_colacion', '00:00'), ('dias-11-hora_salida', '00:00'), ('dias-11-turno_gv', ''), ('dias-11-dia_id', '181'), ('dias-12-numero_dia', '7'), ('dias-12-hora_ingreso', '00:00'), ('dias-12-hora_salida_colacion', '00:00'), ('dias-12-hora_ingreso_colacion', '00:00'), ('dias-12-hora_salida', '00:00'), ('dias-12-turno_gv', ''), ('dias-12-dia_id', '182')])
+2024-12-18 15:32:26,715 - app - DEBUG - Form errors: {}
+2024-12-18 15:32:26,715 - app - DEBUG - Eliminar días: ['176', '177', '178', '179', '180', '181', '182']
+2024-12-18 15:32:26,731 - app - DEBUG - Procesando dia index 0, id: 169
+2024-12-18 15:32:26,733 - app - DEBUG - Procesando dia index 1, id: 170
+2024-12-18 15:32:26,736 - app - DEBUG - Procesando dia index 2, id: 171
+2024-12-18 15:32:26,739 - app - DEBUG - Procesando dia index 3, id: 172
+2024-12-18 15:32:26,740 - app - DEBUG - Procesando dia index 4, id: 174
+2024-12-18 15:32:26,742 - app - DEBUG - Procesando dia index 5, id: 175
+2024-12-18 15:32:26,744 - app - DEBUG - Procesando dia index 6, id: 176
+2024-12-18 15:32:26,746 - app - WARNING - Día con ID 176 no encontrado en la BD.
+2024-12-18 15:32:26,746 - app - DEBUG - Procesando dia index 7, id: 177
+2024-12-18 15:32:26,747 - app - WARNING - Día con ID 177 no encontrado en la BD.
+2024-12-18 15:32:26,748 - app - DEBUG - Procesando dia index 8, id: 178
+2024-12-18 15:32:26,749 - app - WARNING - Día con ID 178 no encontrado en la BD.
+2024-12-18 15:32:26,749 - app - DEBUG - Procesando dia index 9, id: 179
+2024-12-18 15:32:26,751 - app - WARNING - Día con ID 179 no encontrado en la BD.
+2024-12-18 15:32:26,751 - app - DEBUG - Procesando dia index 10, id: 180
+2024-12-18 15:32:26,753 - app - WARNING - Día con ID 180 no encontrado en la BD.
+2024-12-18 15:32:26,753 - app - DEBUG - Procesando dia index 11, id: 181
+2024-12-18 15:32:26,755 - app - WARNING - Día con ID 181 no encontrado en la BD.
+2024-12-18 15:32:26,755 - app - DEBUG - Procesando dia index 12, id: 182
+2024-12-18 15:32:26,756 - app - WARNING - Día con ID 182 no encontrado en la BD.
+2024-12-18 15:32:26,763 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:32:26] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 15:32:26,773 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:32:26] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 15:32:26,798 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:32:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 15:32:28,142 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:32:28] "GET /jornada/detalle/26 HTTP/1.1" 200 -
+2024-12-18 15:32:33,765 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:32:33] "GET /jornada/detalle/23 HTTP/1.1" 200 -
+2024-12-18 15:32:37,716 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2LrCg.UvWw3YbQT8psrYXXt9MMHKELJGg'), ('jornada_id', '23'), ('nombre', 'lun a jue 08:00 a 18:00 y vie 08:00 a 17:00 (60m)'), ('descripcion', 'lun a jue 08:00 a 18:00 y vie 08:00 a 17:00 (60m)'), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:00'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '18:00'), ('dias-0-turno_gv', ''), ('dias-0-dia_id', '49'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:00'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '18:00'), ('dias-1-turno_gv', ''), ('dias-1-dia_id', '50'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:00'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '18:00'), ('dias-2-turno_gv', ''), ('dias-2-dia_id', '51'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:00'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '18:00'), ('dias-3-turno_gv', ''), ('dias-3-dia_id', '52'), ('dias-4-numero_dia', '5'), ('dias-4-habilitado', 'on'), ('dias-4-hora_ingreso', '08:00'), ('dias-4-hora_salida_colacion', '13:00'), ('dias-4-hora_ingreso_colacion', '14:00'), ('dias-4-hora_salida', '17:00'), ('dias-4-turno_gv', ''), ('dias-4-dia_id', '53'), ('eliminar_dia', '53'), ('dias-5-numero_dia', '6'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', ''), ('dias-5-dia_id', '54'), ('dias-6-numero_dia', '7'), ('dias-6-hora_ingreso', '00:00'), ('dias-6-hora_salida_colacion', '00:00'), ('dias-6-hora_ingreso_colacion', '00:00'), ('dias-6-hora_salida', '00:00'), ('dias-6-turno_gv', ''), ('dias-6-dia_id', '55')])
+2024-12-18 15:32:37,717 - app - DEBUG - Form errors: {}
+2024-12-18 15:32:37,717 - app - DEBUG - Eliminar días: ['53']
+2024-12-18 15:32:37,722 - app - DEBUG - Procesando dia index 0, id: 49
+2024-12-18 15:32:37,723 - app - DEBUG - Procesando dia index 1, id: 50
+2024-12-18 15:32:37,725 - app - DEBUG - Procesando dia index 2, id: 51
+2024-12-18 15:32:37,726 - app - DEBUG - Procesando dia index 3, id: 52
+2024-12-18 15:32:37,727 - app - DEBUG - Procesando dia index 4, id: 53
+2024-12-18 15:32:37,729 - app - WARNING - Día con ID 53 no encontrado en la BD.
+2024-12-18 15:32:37,729 - app - DEBUG - Procesando dia index 5, id: 54
+2024-12-18 15:32:37,730 - app - DEBUG - Procesando dia index 6, id: 55
+2024-12-18 15:32:37,734 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:32:37] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 15:32:37,743 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:32:37] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 15:32:37,761 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:32:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 15:32:38,955 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:32:38] "GET /jornada/detalle/23 HTTP/1.1" 200 -
+2024-12-18 15:42:45,122 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 15:42:45,123 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 15:42:47,954 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:42:47] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 15:42:47,980 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:42:47] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 15:42:48,848 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:42:48] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 15:43:07,118 - app - DEBUG - Form data: ImmutableMultiDict([('csrf_token', 'ImRkYTYxZTJhMGVjOTk2NTBiM2E4MmE0MzVjZDc5MzYyNjUwNjRjOWQi.Z2Ltdw.KxoWKC8q9mjKSMGcT1E4kinR1vg'), ('jornada_id', '25'), ('nombre', 'lun a vie 8:30 a 17:30'), ('descripcion', ''), ('horas_semanales', ''), ('dias-0-numero_dia', '1'), ('dias-0-habilitado', 'on'), ('dias-0-hora_ingreso', '08:30'), ('dias-0-hora_salida_colacion', '13:00'), ('dias-0-hora_ingreso_colacion', '14:00'), ('dias-0-hora_salida', '17:30'), ('dias-0-turno_gv', '12'), ('dias-0-dia_id', '135'), ('dias-1-numero_dia', '2'), ('dias-1-habilitado', 'on'), ('dias-1-hora_ingreso', '08:30'), ('dias-1-hora_salida_colacion', '13:00'), ('dias-1-hora_ingreso_colacion', '14:00'), ('dias-1-hora_salida', '17:30'), ('dias-1-turno_gv', '12'), ('dias-1-dia_id', '136'), ('dias-2-numero_dia', '3'), ('dias-2-habilitado', 'on'), ('dias-2-hora_ingreso', '08:30'), ('dias-2-hora_salida_colacion', '13:00'), ('dias-2-hora_ingreso_colacion', '14:00'), ('dias-2-hora_salida', '17:30'), ('dias-2-turno_gv', '12'), ('dias-2-dia_id', '137'), ('dias-3-numero_dia', '4'), ('dias-3-habilitado', 'on'), ('dias-3-hora_ingreso', '08:30'), ('dias-3-hora_salida_colacion', '13:00'), ('dias-3-hora_ingreso_colacion', '14:00'), ('dias-3-hora_salida', '17:30'), ('dias-3-turno_gv', '12'), ('dias-3-dia_id', '138'), ('dias-4-numero_dia', '6'), ('dias-4-hora_ingreso', '00:00'), ('dias-4-hora_salida_colacion', '00:00'), ('dias-4-hora_ingreso_colacion', '00:00'), ('dias-4-hora_salida', '00:00'), ('dias-4-turno_gv', '-1'), ('dias-4-dia_id', '140'), ('dias-5-numero_dia', '7'), ('dias-5-hora_ingreso', '00:00'), ('dias-5-hora_salida_colacion', '00:00'), ('dias-5-hora_ingreso_colacion', '00:00'), ('dias-5-hora_salida', '00:00'), ('dias-5-turno_gv', '-1'), ('dias-5-dia_id', '141'), ('dias-6-numero_dia', '5'), ('dias-6-hora_ingreso', '08:30'), ('dias-6-hora_salida_colacion', '13:00'), ('dias-6-hora_ingreso_colacion', '14:00'), ('dias-6-hora_salida', '17:30'), ('dias-6-turno_gv', '12'), ('dias-6-dia_id', '')])
+2024-12-18 15:43:07,118 - app - DEBUG - Form errors: {}
+2024-12-18 15:43:07,118 - app - DEBUG - Eliminar días: []
+2024-12-18 15:43:07,122 - app - DEBUG - Procesando dia index 0, id: 135
+2024-12-18 15:43:07,127 - app - DEBUG - Procesando dia index 1, id: 136
+2024-12-18 15:43:07,129 - app - DEBUG - Procesando dia index 2, id: 137
+2024-12-18 15:43:07,132 - app - DEBUG - Procesando dia index 3, id: 138
+2024-12-18 15:43:07,136 - app - DEBUG - Procesando dia index 4, id: 140
+2024-12-18 15:43:07,139 - app - DEBUG - Procesando dia index 5, id: 141
+2024-12-18 15:43:07,141 - app - DEBUG - Procesando dia index 6, id: 
+2024-12-18 15:43:07,160 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:43:07] "[32mPOST /jornadas HTTP/1.1[0m" 302 -
+2024-12-18 15:43:07,171 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:43:07] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 15:43:07,191 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:43:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 15:43:09,388 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:43:09] "GET /jornada/detalle/25 HTTP/1.1" 200 -
+2024-12-18 15:44:36,816 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:44:36] "GET /proyectos HTTP/1.1" 200 -
+2024-12-18 15:44:36,838 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 15:44:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 16:03:04,422 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 16:03:04,424 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 16:03:12,476 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 16:03:12] "GET /proyectos HTTP/1.1" 200 -
+2024-12-18 16:03:12,498 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 16:03:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 16:03:15,733 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 16:03:15] "GET /proyectos HTTP/1.1" 200 -
+2024-12-18 16:03:15,760 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 16:03:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 16:04:20,085 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 16:04:20,085 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 16:04:20,655 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 16:04:20] "GET /proyectos HTTP/1.1" 200 -
+2024-12-18 16:04:20,674 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 16:04:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 16:04:22,077 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 16:04:22] "GET /plataforma HTTP/1.1" 200 -
+2024-12-18 16:04:22,098 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 16:04:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 17:13:23,077 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 17:13:23,079 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 17:13:25,490 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:13:25] "GET /plataforma HTTP/1.1" 200 -
+2024-12-18 17:13:25,523 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:13:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 17:41:39,311 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 17:41:39,314 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 17:41:39,623 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:41:39] "GET /plataforma HTTP/1.1" 200 -
+2024-12-18 17:41:39,650 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:41:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 17:41:41,593 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:41:41] "GET /plataforma HTTP/1.1" 200 -
+2024-12-18 17:41:41,620 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:41:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 17:41:42,833 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:41:42] "GET /plataforma HTTP/1.1" 200 -
+2024-12-18 17:41:42,861 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:41:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 17:42:37,212 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 17:42:37,213 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 17:43:01,584 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:43:01] "GET /plataforma HTTP/1.1" 200 -
+2024-12-18 17:43:01,607 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:43:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 17:43:02,770 - app - ERROR - Exception on /causales_contratacion [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: relation "causal_contratacion" does not exist
+LINE 2: FROM causal_contratacion
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 1322, in lista_causales
+    causales = CausalContratacion.query.all()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "causal_contratacion" does not exist
+LINE 2: FROM causal_contratacion
+             ^
+
+[SQL: SELECT causal_contratacion.id AS causal_contratacion_id, causal_contratacion.letra AS causal_contratacion_letra, causal_contratacion.nombre AS causal_contratacion_nombre, causal_contratacion.descripcion AS causal_contratacion_descripcion, causal_contratacion.duracion AS causal_contratacion_duracion 
+FROM causal_contratacion]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-12-18 17:43:02,975 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-18 17:43:02,986 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:43:02] "[35m[1mGET /causales_contratacion HTTP/1.1[0m" 500 -
+2024-12-18 17:45:00,380 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 17:45:00,380 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 17:45:01,661 - app - ERROR - Exception on /causales_contratacion [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 1323, in lista_causales
+    return render_template('causales/lista_causales.html', causales=causales, form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/causales/lista_causales.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 53, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/templates/causales/lista_causales.html", line 50, in block 'content'
+    <form id="causalForm" method="POST" action="{{ url_for('lista_causales_contratacion') }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'lista_causales_contratacion'. Did you mean 'eliminar_causal_contratacion' instead?
+2024-12-18 17:45:01,671 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-18 17:45:01,674 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:45:01] "[35m[1mGET /causales_contratacion HTTP/1.1[0m" 500 -
+2024-12-18 17:45:03,919 - app - ERROR - Exception on /causales_contratacion [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 1323, in lista_causales
+    return render_template('causales/lista_causales.html', causales=causales, form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/causales/lista_causales.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 53, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/templates/causales/lista_causales.html", line 50, in block 'content'
+    <form id="causalForm" method="POST" action="{{ url_for('lista_causales_contratacion') }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'lista_causales_contratacion'. Did you mean 'eliminar_causal_contratacion' instead?
+2024-12-18 17:45:03,927 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-18 17:45:03,928 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:45:03] "[35m[1mGET /causales_contratacion HTTP/1.1[0m" 500 -
+2024-12-18 17:45:06,002 - app - ERROR - Exception on /causales_contratacion [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 1323, in lista_causales
+    return render_template('causales/lista_causales.html', causales=causales, form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/causales/lista_causales.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/app/templates/base.html", line 53, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/templates/causales/lista_causales.html", line 50, in block 'content'
+    <form id="causalForm" method="POST" action="{{ url_for('lista_causales_contratacion') }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'lista_causales_contratacion'. Did you mean 'eliminar_causal_contratacion' instead?
+2024-12-18 17:45:06,009 - venv - ERROR - Error 500: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-12-18 17:45:06,011 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:45:06] "[35m[1mGET /causales_contratacion HTTP/1.1[0m" 500 -
+2024-12-18 17:46:14,462 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 17:46:14,462 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 17:46:15,192 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:46:15] "GET /causales_contratacion HTTP/1.1" 200 -
+2024-12-18 17:46:15,210 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:46:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 17:46:55,729 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 17:46:55,729 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 17:46:56,789 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:46:56] "GET /causales_contratacion HTTP/1.1" 200 -
+2024-12-18 17:46:56,815 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 17:46:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:16:23,618 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:16:23] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 18:16:23,665 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:16:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:15,315 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:15] "GET /trabajador HTTP/1.1" 200 -
+2024-12-18 18:17:15,336 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:16,438 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:16] "GET /sucursal HTTP/1.1" 200 -
+2024-12-18 18:17:16,461 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:16,798 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:16] "GET /sucursal HTTP/1.1" 200 -
+2024-12-18 18:17:16,828 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:16] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:17,739 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:17] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 18:17:17,760 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:18,263 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:18] "GET /trabajador HTTP/1.1" 200 -
+2024-12-18 18:17:18,303 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:19,752 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:19] "GET /clientes HTTP/1.1" 200 -
+2024-12-18 18:17:19,774 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:20,273 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:20] "GET /jornadas HTTP/1.1" 200 -
+2024-12-18 18:17:20,298 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:20] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:21,355 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:21] "GET /representantes HTTP/1.1" 200 -
+2024-12-18 18:17:21,379 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:22,038 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:22] "GET /proyectos HTTP/1.1" 200 -
+2024-12-18 18:17:22,062 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:22,968 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:22] "GET /servicios HTTP/1.1" 200 -
+2024-12-18 18:17:22,988 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:23,410 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:23] "GET /empresas HTTP/1.1" 200 -
+2024-12-18 18:17:23,436 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:23,922 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:23] "GET /plataforma HTTP/1.1" 200 -
+2024-12-18 18:17:23,946 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:23] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:24,720 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:24] "GET /causales_contratacion HTTP/1.1" 200 -
+2024-12-18 18:17:24,753 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:24] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:26,389 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:26] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 18:17:26,412 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:27,119 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:27] "GET /trabajador HTTP/1.1" 200 -
+2024-12-18 18:17:27,142 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 18:17:28,213 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:28] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 18:17:28,238 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 18:17:28] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 19:20:45,846 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 19:20:45,847 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 19:20:48,466 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:20:48] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 19:20:48,486 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:20:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 19:25:27,980 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 19:25:27,981 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 19:25:32,123 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:25:32] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 19:25:32,143 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:25:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 19:30:55,959 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:30:55] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 19:30:55,991 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:30:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 19:30:56,489 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:30:56] "GET /sucursal HTTP/1.1" 200 -
+2024-12-18 19:30:56,516 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:30:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 19:30:57,914 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:30:57] "GET /trabajador HTTP/1.1" 200 -
+2024-12-18 19:30:57,939 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:30:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 19:30:58,502 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:30:58] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 19:30:58,526 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:30:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 19:31:06,373 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:31:06] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 19:31:06,407 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:31:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 19:31:07,257 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:31:07] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 19:31:07,279 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:31:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 19:32:20,913 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 19:32:20,913 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 19:32:25,565 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:32:25] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 19:32:25,583 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:32:25] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 19:45:08,059 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 19:45:08,062 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 19:45:09,279 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:45:09] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 19:45:09,316 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 19:45:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2024-12-18 20:00:37,791 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.4:5000
+2024-12-18 20:00:37,791 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-18 20:00:45,235 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 20:00:45] "GET /contrato HTTP/1.1" 200 -
+2024-12-18 20:00:45,261 - werkzeug - INFO - 172.19.0.1 - - [18/Dec/2024 20:00:45] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -

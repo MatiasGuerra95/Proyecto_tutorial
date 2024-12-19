@@ -3,9 +3,11 @@
 {% block content %}
 <h1>Lista de Empresas</h1>
 
-
+<!-- Botón para agregar una nueva empresa -->
 <div class="container">
     <button type="button" class="btn btn-primary mb-3" onclick="openModal()">Agregar Empresa</button>
+    
+    <!-- Tabla de Empresas -->
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -16,12 +18,12 @@
         </thead>
         <tbody id="empresas-container">
             {% for empresa in empresas %}
-            <tr>
+            <tr onclick="editEmpresa('{{ empresa.id }}')" style="cursor: pointer;">
                 <td>{{ empresa.rut }}</td>
                 <td>{{ empresa.razon_social }}</td>
                 <td>
-                    <button class="btn btn-sm btn-warning" onclick="editEmpresa('{{ empresa.id }}')">Editar</button>
-                    <form method="POST" action="{{ url_for('eliminar_empresa', id=empresa.id) }}" style="display:inline;">
+                    <!-- Botón Eliminar -->
+                    <form method="POST" action="{{ url_for('eliminar_empresa', id=empresa.id) }}" style="display:inline;" onsubmit="return confirm('¿Deseas eliminar esta empresa?');">
                         <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
                     </form>
                 </td>
@@ -31,6 +33,7 @@
     </table>
 </div>
 
+<!-- Modal para Agregar/Editar Empresa -->
 <div id="empresaModal" class="modal" style="display:none;">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -39,7 +42,9 @@
                 <span class="close" onclick="closeModal()">&times;</span>
             </div>
             <div class="modal-body">
+                <!-- Formulario para Agregar/Editar Empresa -->
                 <form id="empresaForm" method="POST" action="{{ url_for('agregar_empresa') }}">
+                    {{ form.hidden_tag() }} <!-- Token CSRF -->
                     <input type="hidden" id="empresa_id" name="empresa_id">
                     <div class="form-group">
                         <label for="rut">RUT</label>
@@ -50,24 +55,24 @@
                         <input type="text" class="form-control" id="razon_social" name="razon_social" required>
                     </div>
                     <button type="submit" class="btn btn-success">Guardar Empresa</button>
-                </form>
+                </form>                
             </div>
         </div>
     </div>
 </div>
 
+<!-- Scripts -->
 <script>
+    // Abrir modal para agregar una nueva empresa
     function openModal() {
         document.getElementById('empresaForm').reset();
         document.getElementById('empresa_id').value = '';
+        document.getElementById('empresaForm').action = '{{ url_for("agregar_empresa") }}';
         document.getElementById('modalTitle').textContent = 'Agregar Empresa';
         document.getElementById('empresaModal').style.display = 'block';
     }
 
-    function closeModal() {
-        document.getElementById('empresaModal').style.display = 'none';
-    }
-
+    // Abrir modal para editar una empresa existente
     function editEmpresa(id) {
         fetch(`/empresas/${id}`)
             .then(response => response.json())
@@ -75,10 +80,54 @@
                 document.getElementById('empresa_id').value = data.id;
                 document.getElementById('rut').value = data.rut;
                 document.getElementById('razon_social').value = data.razon_social;
+                document.getElementById('empresaForm').action = `/empresas/${data.id}`; // Ruta para actualizar
                 document.getElementById('modalTitle').textContent = 'Editar Empresa';
                 document.getElementById('empresaModal').style.display = 'block';
             })
             .catch(error => console.error('Error:', error));
     }
+
+    // Cerrar modal
+    function closeModal() {
+        document.getElementById('empresaModal').style.display = 'none';
+    }
 </script>
+
+<!-- Estilos -->
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-dialog {
+        margin: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .close {
+        float: right;
+        font-size: 28px;
+        cursor: pointer;
+    }
+</style>
+
 {% endblock %}
+
